@@ -233,21 +233,6 @@ $inuit-use-markup-fix: false !default;
 
 
 /**
- * Fill up the layout system from the left-hand side. This will likely only be
- * needed when using in conjunction with `.o-layout--reverse`.
- */
-
-.o-layout--left {
-  text-align: left;
-
-  > .o-layout__item {
-    text-align: left;
-  }
-
-}
-
-
-/**
  * Reverse the rendered order of the grid system.
  */
 
@@ -256,25 +241,7 @@ $inuit-use-markup-fix: false !default;
 
   > .o-layout__item {
     direction: ltr;
-  }
-
-}
-
-
-
-
-
-/* Auto-widths modifier.
-   ========================================================================== */
-
-/**
- * Cause layout items to take up a non-explicit amount of width.
- */
-
-.o-layout--auto {
-
-  > .o-layout__item {
-    width: auto;
+    text-align: left;
   }
 
 }
