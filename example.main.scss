@@ -17,6 +17,7 @@
  * SETTINGS
  * Config...............Project-level configuration and feature switches.
  * Core.................inuitcss’ core and setup settings.
+ * Breakpoints..........Project-wide breakpoint definitions.
  * Global...............Project-wide variables and settings.
  *
  * TOOLS
@@ -69,6 +70,7 @@
  */
 // SETTINGS
 @import "settings/core";
+@import "settings/breakpoints";
 // TOOLS
 @import "tools/clearfix";
 @import "tools/hidden";
