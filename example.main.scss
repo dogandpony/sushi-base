@@ -44,11 +44,11 @@
  * Layout...............Generic layout module.
  * Media................Image- and text-like content side by side. The
  *                      poster-child of OOCSS.
- * Flag.................Table-layout-based advancement on the Media object.
+ * Media Valign.........Table-layout-based advancement on the Media object.
+ * Media Stacked........Image-on-top-of-text object.
  * List-bare............Lists with no bullets or indents.
  * List-inline..........A list whose items all site in a line.
  * Box..................Simple boxing abstraction.
- * Block................Image-on-top-of-text object.
  * Ratio................A container for maintaining aspect ratio of content.
  * Crop.................Provide a cropping context for media (images, etc.).
  * Table................Classes for manipulating `table`s.
@@ -90,11 +90,11 @@
 @import "objects/wrapper";
 @import "objects/layout";
 @import "objects/media";
-@import "objects/flag";
+@import "objects/media-valign";
+@import "objects/media-stacked";
 @import "objects/list-bare";
 @import "objects/list-inline";
 @import "objects/box";
-@import "objects/block";
 @import "objects/ratio";
 @import "objects/crop";
 @import "objects/table";
