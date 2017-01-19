@@ -23,6 +23,8 @@
  * TOOLS
  * Clearfix.............Micro clearfix mixin.
  * Hide.................Mixin for hiding elements.
+ * Position.............Mixins for advanced element positioning.
+ * Input Reset..........Mixin for resetting native inputs and buttons.
  * Sass MQ..............inuitcss’ default media query manager.
  *
  * GENERIC
@@ -63,6 +65,11 @@
  *                      classes.
  * Print................Reset-like styles taken from the HTML5 Boilerplate.
  * Display..............Helper classes for display attributes including hidden.
+ * Floats...............Helper classes for floating elements.
+ * Position.............Helper classes for positioning elements.
+ * Shadows..............Google material design shadows with depth values 1-6.
+ * Typography...........Various helper classes for advanced typesetting.
+ * Zindex...............Helper classes for consistent z-indexing levels.
  */
 // SETTINGS
 @import "settings/core";
@@ -70,6 +77,8 @@
 // TOOLS
 @import "tools/clearfix";
 @import "tools/hide";
+@import "tools/input-reset";
+@import "tools/position";
 @import "node_modules/sass-mq/mq";
 // GENERIC
 @import "generic/box-sizing";
@@ -106,3 +115,8 @@ $inuit-offsets: true;
 @import "utilities/spacings";
 @import "utilities/print";
 @import "utilities/display";
+@import "utilities/float";
+@import "utilities/position";
+@import "utilities/shadows";
+@import "utilities/typography";
+@import "utilities/z-index";
