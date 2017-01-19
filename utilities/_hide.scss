@@ -8,7 +8,7 @@
  */
 
 .u-hidden-visually {
-  @include visually-hidden();
+	@include visually-hidden();
 }
 
 
@@ -17,5 +17,5 @@
  */
 
 .u-hidden {
-  display: none !important;
+	display: none !important;
 }

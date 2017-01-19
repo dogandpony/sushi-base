@@ -12,35 +12,35 @@
  */
 
 .o-pack {
-  width: 100%; /* [1] */
-  margin-left: 0; /* [2] */
-  display: table;
-  table-layout: fixed; /* [3] */
+	width: 100%; /* [1] */
+	margin-left: 0; /* [2] */
+	display: table;
+	table-layout: fixed; /* [3] */
 }
 
 
-  /**
-   * 1. Cause children to adopt table-like structure.
-   * 2. Default item alignment is with the tops of each other.
-   */
+	/**
+	* 1. Cause children to adopt table-like structure.
+	* 2. Default item alignment is with the tops of each other.
+	*/
 
-  .o-pack__item {
-    display: table-cell; /* [1] */
-    vertical-align: top; /* [2] */
+	.o-pack__item {
+		display: table-cell; /* [1] */
+		vertical-align: top; /* [2] */
 
 
-    /* Vertical alignment variants.
-       ====================================================================== */
+		/* Vertical alignment variants.
+		   ====================================================================== */
 
-    .o-pack--middle > & {
-      vertical-align: middle;
-    }
+		.o-pack--middle > & {
+			vertical-align: middle;
+		}
 
-    .o-pack--bottom > & {
-      vertical-align: bottom;
-    }
+		.o-pack--bottom > & {
+			vertical-align: bottom;
+		}
 
-  }
+	}
 
 
 
@@ -50,7 +50,7 @@
    ========================================================================== */
 
 .o-pack--auto {
-  table-layout: auto;
+	table-layout: auto;
 }
 
 
@@ -61,19 +61,19 @@
    ========================================================================== */
 
 .o-pack--xsmall {
-  border-spacing: $global-spacing-unit-xsmall;
+	border-spacing: $global-spacing-unit-xsmall;
 }
 
 .o-pack--small {
-  border-spacing: $global-spacing-unit-small;
+	border-spacing: $global-spacing-unit-small;
 }
 
 .o-pack--large {
-  border-spacing: $global-spacing-unit-large;
+	border-spacing: $global-spacing-unit-large;
 }
 
 .o-pack--xlarge {
-  border-spacing: $global-spacing-unit-xlarge;
+	border-spacing: $global-spacing-unit-xlarge;
 }
 
 
@@ -84,10 +84,10 @@
    ========================================================================== */
 
 .o-pack--reverse {
-  direction: rtl;
+	direction: rtl;
 
-  > .o-pack__item {
-    direction: ltr;
-  }
+	> .o-pack__item {
+		direction: ltr;
+	}
 
 }

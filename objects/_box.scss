@@ -10,13 +10,13 @@
  */
 
 .o-box {
-  @include clearfix();
-  display: block; /* [1] */
-  padding: $global-spacing-unit;
+	@include clearfix();
+	display: block; /* [1] */
+	padding: $global-spacing-unit;
 
-  > :last-child {
-    margin-bottom: 0;
-  }
+	> :last-child {
+		margin-bottom: 0;
+	}
 
 }
 
@@ -28,21 +28,21 @@
    ========================================================================== */
 
 .o-box--flush {
-  padding: 0;
+	padding: 0;
 }
 
 .o-box--xsmall {
-  padding: $global-spacing-unit-xsmall;
+	padding: $global-spacing-unit-xsmall;
 }
 
 .o-box--small {
-  padding: $global-spacing-unit-small;
+	padding: $global-spacing-unit-small;
 }
 
 .o-box--large {
-  padding: $global-spacing-unit-large;
+	padding: $global-spacing-unit-large;
 }
 
 .o-box--xlarge {
-  padding: $global-spacing-unit-xlarge;
+	padding: $global-spacing-unit-xlarge;
 }

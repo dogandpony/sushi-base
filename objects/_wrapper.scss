@@ -10,17 +10,17 @@ $wrapper-width: 1200px !default;
 
 /* stylelint-disable */
 @if (type-of($wrapper-width) != number) {
-  @error "`#{$wrapper-width}` needs to be a number."
+	@error "`#{$wrapper-width}` needs to be a number."
 }
 /* stylelint-enable */
 
 .o-wrapper {
-  @include clearfix();
-  padding-right: $global-spacing-unit;
-  padding-left: $global-spacing-unit;
-  margin-right: auto;
-  margin-left:  auto;
-  max-width: $wrapper-width;
+	@include clearfix();
+	padding-right: $global-spacing-unit;
+	padding-left: $global-spacing-unit;
+	margin-right: auto;
+	margin-left:  auto;
+	max-width: $wrapper-width;
 }
 
 
@@ -31,21 +31,21 @@ $wrapper-width: 1200px !default;
    ========================================================================== */
 
 .o-wrapper--xsmall {
-  padding-right: $global-spacing-unit-xsmall;
-  padding-left: $global-spacing-unit-xsmall;
+	padding-right: $global-spacing-unit-xsmall;
+	padding-left: $global-spacing-unit-xsmall;
 }
 
 .o-wrapper--small {
-  padding-right: $global-spacing-unit-small;
-  padding-left: $global-spacing-unit-small;
+	padding-right: $global-spacing-unit-small;
+	padding-left: $global-spacing-unit-small;
 }
 
 .o-wrapper--large {
-  padding-right: $global-spacing-unit-large;
-  padding-left: $global-spacing-unit-large;
+	padding-right: $global-spacing-unit-large;
+	padding-left: $global-spacing-unit-large;
 }
 
 .o-wrapper--xlarge {
-  padding-right: $global-spacing-unit-xlarge;
-  padding-left: $global-spacing-unit-xlarge;
+	padding-right: $global-spacing-unit-xlarge;
+	padding-left: $global-spacing-unit-xlarge;
 }

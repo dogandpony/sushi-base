@@ -7,7 +7,7 @@
  */
 
 .o-table {
-  width: 100%;
+	width: 100%;
 }
 
 
@@ -27,7 +27,7 @@
  */
 
 .o-table--fixed {
-  table-layout: fixed;
+	table-layout: fixed;
 }
 
 
@@ -39,36 +39,36 @@
 
 .o-table--xsmall {
 
-  th,
-  td {
-    padding: $global-spacing-unit-xsmall;
-  }
+	th,
+	td {
+		padding: $global-spacing-unit-xsmall;
+	}
 
 }
 
 .o-table--small {
 
-  th,
-  td {
-    padding: $global-spacing-unit-small;
-  }
+	th,
+	td {
+		padding: $global-spacing-unit-small;
+	}
 
 }
 
 .o-table--large {
 
-  th,
-  td {
-    padding: $global-spacing-unit-large;
-  }
+	th,
+	td {
+		padding: $global-spacing-unit-large;
+	}
 
 }
 
 .o-table--xlarge {
 
-  th,
-  td {
-    padding: $global-spacing-unit-xlarge;
-  }
+	th,
+	td {
+		padding: $global-spacing-unit-xlarge;
+	}
 
 }

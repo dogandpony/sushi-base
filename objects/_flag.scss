@@ -15,8 +15,8 @@
  */
 
 .o-flag {
-  display: table; /* [1] */
-  width: 100%; /* [2] */
+	display: table; /* [1] */
+	width: 100%; /* [2] */
 }
 
 
@@ -28,9 +28,9 @@
 
   .o-flag__img,
   .o-flag__body {
-    display: table-cell;
-    vertical-align: middle; /* [1] */
-  }
+		display: table-cell;
+		vertical-align: middle; /* [1] */
+	}
 
 
   /**
@@ -41,19 +41,19 @@
    */
 
   .o-flag__img {
-    width: 1px; /* [1] */
-    padding-right: $global-spacing-unit;
+		width: 1px; /* [1] */
+		padding-right: $global-spacing-unit;
 
 
     /**
      * 1. Fixes problem with images disappearing.
      */
 
-    > img {
-      max-width: none; /* [1] */
-    }
+		> img {
+			max-width: none; /* [1] */
+		}
 
-  }
+	}
 
 
   /**
@@ -63,14 +63,14 @@
    */
 
   .o-flag__body {
-    width: auto; /* [1] */
+		width: auto; /* [1] */
 
-    &,
-    > :last-child {
-      margin-bottom: 0;
-    }
+		&,
+		> :last-child {
+			margin-bottom: 0;
+		}
 
-  }
+	}
 
 
 
@@ -81,78 +81,78 @@
 
 .o-flag--xsmall {
 
-  > .o-flag__img {
-    padding-right: $global-spacing-unit-xsmall;
-  }
+	> .o-flag__img {
+		padding-right: $global-spacing-unit-xsmall;
+	}
 
-  &.o-flag--reverse {
+	&.o-flag--reverse {
 
-    > .o-flag__img {
-      padding-right: 0;
-      padding-left: $global-spacing-unit-xsmall;
-    }
+		> .o-flag__img {
+			padding-right: 0;
+			padding-left: $global-spacing-unit-xsmall;
+		}
 
-  }
+	}
 
 }
 
 .o-flag--small {
 
-  > .o-flag__img {
-    padding-right: $global-spacing-unit-small;
-  }
+	> .o-flag__img {
+		padding-right: $global-spacing-unit-small;
+	}
 
-  &.o-flag--reverse {
+	&.o-flag--reverse {
 
-    > .o-flag__img {
-      padding-right: 0;
-      padding-left: $global-spacing-unit-small;
-    }
+		> .o-flag__img {
+			padding-right: 0;
+			padding-left: $global-spacing-unit-small;
+		}
 
-  }
+	}
 
 }
 
 .o-flag--large {
 
-  > .o-flag__img {
-    padding-right: $global-spacing-unit-large;
-  }
+	> .o-flag__img {
+		padding-right: $global-spacing-unit-large;
+	}
 
-  &.o-flag--reverse {
+	&.o-flag--reverse {
 
-    > .o-flag__img {
-      padding-right: 0;
-      padding-left: $global-spacing-unit-large;
-    }
+		> .o-flag__img {
+			padding-right: 0;
+			padding-left: $global-spacing-unit-large;
+		}
 
-  }
+	}
 
 }
 
 .o-flag--xlarge {
 
-  > .o-flag__img {
-    padding-right: $global-spacing-unit-xlarge;
-  }
+	> .o-flag__img {
+		padding-right: $global-spacing-unit-xlarge;
+	}
 
-  &.o-flag--reverse {
+	&.o-flag--reverse {
 
-    > .o-flag__img {
-      padding-right: 0;
-      padding-left: $global-spacing-unit-xlarge;
-    }
+		> .o-flag__img {
+			padding-right: 0;
+			padding-left: $global-spacing-unit-xlarge;
+		}
 
-  }
+	}
 
 }
 
 .o-flag--flush {
 
-  > .o-flag__img {
-    padding-right: 0;
-    padding-left:  0;
-  }
+	> .o-flag__img {
+		padding-right: 0;
+		padding-left:  0;
+	}
 
 }
 
@@ -170,17 +170,17 @@
  */
 
 .o-flag--reverse {
-  direction: rtl; /* [1] */
+	direction: rtl; /* [1] */
 
-  > .o-flag__img,
-  > .o-flag__body {
-    direction: ltr; /* [2] */
-  }
+	> .o-flag__img,
+	> .o-flag__body {
+		direction: ltr; /* [2] */
+	}
 
-  > .o-flag__img {
-    padding-right: 0; /* [3] */
-    padding-left: $global-spacing-unit; /* [3] */
-  }
+	> .o-flag__img {
+		padding-right: 0; /* [3] */
+		padding-left: $global-spacing-unit; /* [3] */
+	}
 
 }
 
@@ -197,18 +197,18 @@
 
 .o-flag--top {
 
-  > .o-flag__img,
-  > .o-flag__body {
-    vertical-align: top;
-  }
+	> .o-flag__img,
+	> .o-flag__body {
+		vertical-align: top;
+	}
 
 }
 
 .o-flag--bottom {
 
-  > .o-flag__img,
-  > .o-flag__body {
-    vertical-align: bottom;
-  }
+	> .o-flag__img,
+	> .o-flag__body {
+		vertical-align: bottom;
+	}
 
 }
