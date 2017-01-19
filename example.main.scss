@@ -22,7 +22,7 @@
  *
  * TOOLS
  * Clearfix.............Micro clearfix mixin.
- * Hidden...............Mixin for hiding elements.
+ * Hide.................Mixin for hiding elements.
  * Sass MQ..............inuitcss’ default media query manager.
  *
  * GENERIC
@@ -63,14 +63,14 @@
  * Spacings.............Nudge bits of the DOM around with these spacing
  *                      classes.
  * Print................Reset-like styles taken from the HTML5 Boilerplate.
- * Hide.................Helper classes to hide content
+ * Display..............Helper classes for display attributes including hidden.
  */
 // SETTINGS
 @import "settings/core";
 @import "settings/breakpoints";
 // TOOLS
 @import "tools/clearfix";
-@import "tools/hidden";
+@import "tools/hide";
 @import "node_modules/sass-mq/mq";
 // GENERIC
 @import "generic/box-sizing";
@@ -106,4 +106,4 @@ $inuit-offsets: true;
 @import "utilities/headings";
 @import "utilities/spacings";
 @import "utilities/print";
-@import "utilities/hide";
+@import "utilities/display";
