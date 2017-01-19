@@ -12,25 +12,25 @@
  */
 
 .u-h1 {
-	@include font-size($font-size-h1, $important: true);
+	font-size: $font-size-h1 !important;
 }
 
 .u-h2 {
-	@include font-size($font-size-h2, $important: true);
+	font-size: $font-size-h2 !important;
 }
 
 .u-h3 {
-	@include font-size($font-size-h3, $important: true);
+	font-size: $font-size-h3 !important;
 }
 
 .u-h4 {
-	@include font-size($font-size-h4, $important: true);
+	font-size: $font-size-h4 !important;
 }
 
 .u-h5 {
-	@include font-size($font-size-h5, $important: true);
+	font-size: $font-size-h5 !important;
 }
 
 .u-h6 {
-	@include font-size($font-size-h6, $important: true);
+	font-size: $font-size-h6 !important;
 }

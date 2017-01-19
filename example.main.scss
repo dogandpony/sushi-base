@@ -20,7 +20,6 @@
  * Global...............Project-wide variables and settings.
  *
  * TOOLS
- * Font-size............A mixin which guarantees baseline-friendly line-heights.
  * Clearfix.............Micro clearfix mixin.
  * Hidden...............Mixin for hiding elements.
  * Sass MQ..............inuitcss’ default media query manager.
@@ -71,7 +70,6 @@
 // SETTINGS
 @import "settings/core";
 // TOOLS
-@import "tools/font-size";
 @import "tools/clearfix";
 @import "tools/hidden";
 @import "node_modules/sass-mq/mq";
