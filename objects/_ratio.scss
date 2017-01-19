@@ -10,8 +10,6 @@ $ratio-ratios: (
 	(16:9),
 ) !default;
 
-
-
 /**
  * Create ratio-bound content blocks, to keep media (e.g. images, videos) in
  * their correct aspect ratios.
@@ -35,20 +33,17 @@ $ratio-ratios: (
 
 }
 
-
-  .o-ratio__content,
-  .o-ratio > iframe,
-  .o-ratio > embed,
-  .o-ratio > object {
-		position: absolute;
-		top:    0;
-		bottom: 0;
-		left:   0;
-		height: 100%;
-		width:  100%;
-	}
-
-
+.o-ratio__content,
+.o-ratio > iframe,
+.o-ratio > embed,
+.o-ratio > object {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
 
 /* stylelint-disable */
 

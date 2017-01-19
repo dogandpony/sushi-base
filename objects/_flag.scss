@@ -19,62 +19,54 @@
 	width: 100%; /* [2] */
 }
 
+/**
+ * Items within a flag object. There should only ever be one of each.
+ *
+ * 1. Default to aligning content to their middles.
+ */
 
-  /**
-   * Items within a flag object. There should only ever be one of each.
-   *
-   * 1. Default to aligning content to their middles.
-   */
+.o-flag__img,
+.o-flag__body {
+	display: table-cell;
+	vertical-align: middle; /* [1] */
+}
 
-  .o-flag__img,
-  .o-flag__body {
-		display: table-cell;
-		vertical-align: middle; /* [1] */
+/**
+ * Flag images have a space between them and the body of the object.
+ *
+ * 1. Force `.flag__img` to take up as little space as possible:
+ *    https://pixelsvsbytes.com/2012/02/this-css-layout-grid-is-no-holy-grail/
+ */
+
+.o-flag__img {
+	width: 1px; /* [1] */
+	padding-right: $global-spacing-unit;
+
+	/**
+	 * 1. Fixes problem with images disappearing.
+	 */
+
+	> img {
+		max-width: none; /* [1] */
 	}
 
+}
 
-  /**
-   * Flag images have a space between them and the body of the object.
-   *
-   * 1. Force `.flag__img` to take up as little space as possible:
-   *    https://pixelsvsbytes.com/2012/02/this-css-layout-grid-is-no-holy-grail/
-   */
+/**
+ * The container for the main content of the flag object.
+ *
+ * 1. Forces the `.flag__body` to take up all remaining space.
+ */
 
-  .o-flag__img {
-		width: 1px; /* [1] */
-		padding-right: $global-spacing-unit;
+.o-flag__body {
+	width: auto; /* [1] */
 
-
-    /**
-     * 1. Fixes problem with images disappearing.
-     */
-
-		> img {
-			max-width: none; /* [1] */
-		}
-
+	&,
+	> :last-child {
+		margin-bottom: 0;
 	}
 
-
-  /**
-   * The container for the main content of the flag object.
-   *
-   * 1. Forces the `.flag__body` to take up all remaining space.
-   */
-
-  .o-flag__body {
-		width: auto; /* [1] */
-
-		&,
-		> :last-child {
-			margin-bottom: 0;
-		}
-
-	}
-
-
-
-
+}
 
 /* Size variants.
    ========================================================================== */
@@ -151,14 +143,10 @@
 
 	> .o-flag__img {
 		padding-right: 0;
-		padding-left:  0;
+		padding-left: 0;
 	}
 
 }
-
-
-
-
 
 /* Reversed flag.
    ========================================================================== */
@@ -183,10 +171,6 @@
 	}
 
 }
-
-
-
-
 
 /* Alignment variants.
    ========================================================================== */

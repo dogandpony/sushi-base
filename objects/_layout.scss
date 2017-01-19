@@ -55,10 +55,6 @@
 // commenting out whitespace or minifying HTML.
 $layout-enable-markup-fix: false !default;
 
-
-
-
-
 /* Default/mandatory classes.
    ========================================================================== */
 
@@ -71,7 +67,7 @@ $layout-enable-markup-fix: false !default;
 
 .o-layout {
 	display: block; /* [1] */
-	margin:  0; /* [2] */
+	margin: 0; /* [2] */
 	padding: 0; /* [2] */
 	list-style: none; /* [1] */
 	margin-left: -$global-spacing-unit; /* [3] */
@@ -82,36 +78,31 @@ $layout-enable-markup-fix: false !default;
 
 }
 
+/**
+ * 1. Required in order to combine fluid widths with fixed gutters.
+ * 2. Allows us to manipulate grids vertically, with text-level properties,
+ *    etc.
+ * 3. Default item alignment is with the tops of each other, like most
+ *    traditional grid/layout systems.
+ * 4. By default, all layout items are full-width (mobile first).
+ * 5. Gutters provided by left padding:
+ *    http://csswizardry.com/2011/08/building-better-grid-systems/
+ * 6. Fallback for old IEs not supporting `rem` values.
+ */
 
-  /**
-   * 1. Required in order to combine fluid widths with fixed gutters.
-   * 2. Allows us to manipulate grids vertically, with text-level properties,
-   *    etc.
-   * 3. Default item alignment is with the tops of each other, like most
-   *    traditional grid/layout systems.
-   * 4. By default, all layout items are full-width (mobile first).
-   * 5. Gutters provided by left padding:
-   *    http://csswizardry.com/2011/08/building-better-grid-systems/
-   * 6. Fallback for old IEs not supporting `rem` values.
-   */
+.o-layout__item {
+	box-sizing: border-box; /* [1] */
+	display: inline-block; /* [2] */
+	vertical-align: top; /* [3] */
+	width: 100%; /* [4] */
+	padding-left: $global-spacing-unit; /* [5] */
 
-  .o-layout__item {
-		box-sizing: border-box; /* [1] */
-		display: inline-block; /* [2] */
-		vertical-align: top; /* [3] */
-		width: 100%; /* [4] */
-		padding-left: $global-spacing-unit; /* [5] */
-
-		@if ($layout-enable-markup-fix == false) {
-			font-size: $global-font-size; /* [6] */
-			font-size: 1rem;
-		}
-
+	@if ($layout-enable-markup-fix == false) {
+		font-size: $global-font-size; /* [6] */
+		font-size: 1rem;
 	}
 
-
-
-
+}
 
 /* Gutter size modifiers.
    ========================================================================== */
@@ -125,7 +116,6 @@ $layout-enable-markup-fix: false !default;
 
 }
 
-
 .o-layout--small {
 	margin-left: -$global-spacing-unit-small;
 
@@ -134,7 +124,6 @@ $layout-enable-markup-fix: false !default;
 	}
 
 }
-
 
 .o-layout--large {
 	margin-left: -$global-spacing-unit-large;
@@ -145,7 +134,6 @@ $layout-enable-markup-fix: false !default;
 
 }
 
-
 .o-layout--xlarge {
 	margin-left: -$global-spacing-unit-xlarge;
 
@@ -155,7 +143,6 @@ $layout-enable-markup-fix: false !default;
 
 }
 
-
 .o-layout--flush {
 	margin-left: 0;
 
@@ -164,10 +151,6 @@ $layout-enable-markup-fix: false !default;
 	}
 
 }
-
-
-
-
 
 /* Vertical alignment modifiers.
    ========================================================================== */
@@ -184,7 +167,6 @@ $layout-enable-markup-fix: false !default;
 
 }
 
-
 /**
  * Align all grid items to the bottoms of each other.
  */
@@ -196,10 +178,6 @@ $layout-enable-markup-fix: false !default;
 	}
 
 }
-
-
-
-
 
 /* Fill order modifiers.
    ========================================================================== */
@@ -217,7 +195,6 @@ $layout-enable-markup-fix: false !default;
 
 }
 
-
 /**
  * Fill up the layout system from the right-hand side.
  */
@@ -230,7 +207,6 @@ $layout-enable-markup-fix: false !default;
 	}
 
 }
-
 
 /**
  * Reverse the rendered order of the grid system.

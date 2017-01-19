@@ -18,33 +18,27 @@
 	table-layout: fixed; /* [3] */
 }
 
+/**
+* 1. Cause children to adopt table-like structure.
+* 2. Default item alignment is with the tops of each other.
+*/
 
-	/**
-	* 1. Cause children to adopt table-like structure.
-	* 2. Default item alignment is with the tops of each other.
-	*/
+.o-pack__item {
+	display: table-cell; /* [1] */
+	vertical-align: top; /* [2] */
 
-	.o-pack__item {
-		display: table-cell; /* [1] */
-		vertical-align: top; /* [2] */
+	/* Vertical alignment variants.
+	   ====================================================================== */
 
-
-		/* Vertical alignment variants.
-		   ====================================================================== */
-
-		.o-pack--middle > & {
-			vertical-align: middle;
-		}
-
-		.o-pack--bottom > & {
-			vertical-align: bottom;
-		}
-
+	.o-pack--middle > & {
+		vertical-align: middle;
 	}
 
+	.o-pack--bottom > & {
+		vertical-align: bottom;
+	}
 
-
-
+}
 
 /* Unequal-width items.
    ========================================================================== */
@@ -52,10 +46,6 @@
 .o-pack--auto {
 	table-layout: auto;
 }
-
-
-
-
 
 /* Size variants.
    ========================================================================== */
@@ -75,10 +65,6 @@
 .o-pack--xlarge {
 	border-spacing: $global-spacing-unit-xlarge;
 }
-
-
-
-
 
 /* Reversed order packs
    ========================================================================== */

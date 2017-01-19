@@ -12,6 +12,7 @@ $wrapper-width: 1200px !default;
 @if (type-of($wrapper-width) != number) {
 	@error "`#{$wrapper-width}` needs to be a number."
 }
+
 /* stylelint-enable */
 
 .o-wrapper {
@@ -19,13 +20,9 @@ $wrapper-width: 1200px !default;
 	padding-right: $global-spacing-unit;
 	padding-left: $global-spacing-unit;
 	margin-right: auto;
-	margin-left:  auto;
+	margin-left: auto;
 	max-width: $wrapper-width;
 }
-
-
-
-
 
 /* Size variants.
    ========================================================================== */
