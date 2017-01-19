@@ -3,8 +3,16 @@
    ========================================================================== */
 
 /**
- * Place any image- and text-like content side-by-side, as per:
- * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ * Place image and body content side-by-side:
+ * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+ * Examples: http://v4-alpha.getbootstrap.com/layout/media-object/
+ *
+ * <div class="o-media">
+ *   <img class="o-media__img" />
+ *   <div class="o-media__body">
+ *     <p>Body Content</p>
+ *   </div>
+ * </div>
  */
 
 .o-media {

@@ -1,10 +1,11 @@
-///* ========================================================================
-//   #CORE
-//   ======================================================================== */
+/* =========================================================================
+ * CORE SETTINGS
+ * ========================================================================= */
 
-// This core file sets up inuitcss’ most important setup variables. They
-// underpin a lot of how the framework functions and should be modified and
-// preconfigured with caution.
+/**
+* This file contains core settings for the framework to function including
+* base typography and spacing units.
+*/
 
 // Size declared in rems for maximum flexibility.
 // HTML font size set to 62.5% (elements/_html.sass) so that 1rem is

@@ -3,8 +3,16 @@
    ========================================================================== */
 
 /**
- * The pack object simply causes any number of elements pack up horizontally to
- * automatically fill an equal, fluid width of their parent.
+ * The pack object creates a single row of packed items containing equal
+ * widths and heights. The child items automatically fill the full width of
+ * the parent object.
+ *
+ * Includes modifiers for applying auto-widths and gutter sizes to
+ * pack items, useful for generating tabs UIs.
+ *
+ * <ul class="o-pack o-pack--xs o-pack--auto">
+ *   <li class="o-pack__item"></li>
+ * </ul>
  *
  * 1. Fill all available space.
  * 2. Remove any leftover styling from lists.
@@ -19,9 +27,9 @@
 }
 
 /**
-* 1. Cause children to adopt table-like structure.
-* 2. Default item alignment is with the tops of each other.
-*/
+ * 1. Cause children to adopt table-like structure.
+ * 2. Default item alignment is with the tops of each other.
+ */
 
 .o-pack__item {
 	display: table-cell; /* [1] */
