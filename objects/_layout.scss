@@ -53,7 +53,7 @@
 // By default we use the `font-size: 0;` trick to remove whitespace between
 // items. Set this to true in order to use a markup-based strategy like
 // commenting out whitespace or minifying HTML.
-$layout-enable-markup-fix: false !default;
+$layout-use-markup-fix: false !default;
 
 /* Default/mandatory classes.
    ========================================================================== */
@@ -61,21 +61,26 @@ $layout-enable-markup-fix: false !default;
 /**
  * 1. Allows us to use the layout object on any type of element.
  * 2. We need to defensively reset any box-model properties.
- * 3. Use the negative margin trick for multi-row grids:
- *    http://csswizardry.com/2011/08/building-better-grid-systems/
+ * 3. The layout object and child items include padded gutters equal to half
+ *    a spacing unit because they sit up against each other resulting in a
+ *    gutter of a full spacing unit both for inner and outer gutters:
+ *    http://alistapart.com/article/learning-from-lego-a-step-forward-in-modular-web-design/
+ * 4. Use negative margins on the layout object to cause the inner grid
+ *    items to sit flush against the edges of the wrapping layout object,
+ *    i.e. the outer gutters are set to bleed by default leaving only inner
+ *    gutters between grid items.
+ * 5. Use `font-size: 0;` trick to remove whitespace between items
  */
 
 .o-layout {
 	display: block; /* [1] */
-	margin: 0; /* [2] */
+	margin: 0 -($global-spacing / 2); /* [2] [4] */
 	padding: 0; /* [2] */
 	list-style: none; /* [1] */
-	margin-left: -$global-spacing-unit; /* [3] */
 
-	@if ($layout-enable-markup-fix == false) {
-		font-size: 0;
+	@if ($layout-use-markup-fix == false) {
+		font-size: 0; /* [5] */
 	}
-
 }
 
 /**
@@ -85,9 +90,11 @@ $layout-enable-markup-fix: false !default;
  * 3. Default item alignment is with the tops of each other, like most
  *    traditional grid/layout systems.
  * 4. By default, all layout items are full-width (mobile first).
- * 5. Gutters provided by left padding:
- *    http://csswizardry.com/2011/08/building-better-grid-systems/
- * 6. Fallback for old IEs not supporting `rem` values.
+ * 5. The layout object and child items include padded gutters equal to half
+ *    a spacing unit because they sit up against each other resulting in a
+ *    gutter of a full spacing unit both for inner and outer gutters:
+ *    http://alistapart.com/article/learning-from-lego-a-step-forward-in-modular-web-design/
+ * 6. Set base font size to revert 'font-size: 0;' setting above
  */
 
 .o-layout__item {
@@ -95,11 +102,10 @@ $layout-enable-markup-fix: false !default;
 	display: inline-block; /* [2] */
 	vertical-align: top; /* [3] */
 	width: 100%; /* [4] */
-	padding-left: $global-spacing-unit; /* [5] */
+	padding: 0 ($global-spacing / 2); /* [5] */
 
-	@if ($layout-enable-markup-fix == false) {
-		font-size: $global-font-size; /* [6] */
-		font-size: 1rem;
+	@if ($layout-use-markup-fix == false) {
+		font-size: $base-font-size; /* [6] */
 	}
 
 }
