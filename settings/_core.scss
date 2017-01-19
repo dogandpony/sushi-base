@@ -6,11 +6,12 @@
 // underpin a lot of how the framework functions and should be modified and
 // preconfigured with caution.
 
-// Base typographical styles and baseline grid. You need to define these values
-// in pixels: inuitcss will convert them to more appropriate units.
+// Size declared in rems for maximum flexibility.
+// HTML font size set to 62.5% (elements/_html.sass) so that 1rem is
+// generally equal to 10px.
 
-$global-font-size: 16px !default;
-$global-line-height: 24px !default;
+$base-font-size: 1.8rem !default;
+$base-line-height: 1.8 !default;
 
 // Spacing values are determined based on your project’s global line height (i.e
 // your baseline grid). It is not recommended that you modify these following
