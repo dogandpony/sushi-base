@@ -29,7 +29,7 @@
  * Box-sizing...........Better default `box-sizing`.
  * Normalize.css........A level playing field using @necolas’ Normalize.css.
  * Reset................A tiny reset to complement Normalize.css.
- * Page.................Base settings for page, typography, box-sizing etc.
+ * Base.................Base settings for page, typography, box-sizing etc.
  *
  * ELEMENTS
  * Headings.............Very minimal (i.e. only font-size information) for
@@ -78,11 +78,11 @@
 @import "tools/position";
 @import "node_modules/sass-mq/mq";
 // GENERIC
+@import "generic/base";
 @import "generic/box-sizing";
 @import "generic/margins";
 @import "generic/normalize";
 @import "generic/reset";
-@import "generic/page";
 // ELEMENTS
 @import "elements/headings";
 @import "elements/images";
