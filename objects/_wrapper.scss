@@ -17,8 +17,8 @@ $wrapper-width: 1200px !default;
 
 .o-wrapper {
 	@include clearfix();
-	padding-right: $global-spacing-unit;
-	padding-left: $global-spacing-unit;
+	padding-right: $global-spacing;
+	padding-left: $global-spacing;
 	margin-right: auto;
 	margin-left: auto;
 	max-width: $wrapper-width;
@@ -40,7 +40,7 @@ $wrapper-width: 1200px !default;
 .o-wrapper--large {
 	padding-right: $global-spacing-unit-large;
 	padding-left: $global-spacing-unit-large;
-}
+	}
 
 .o-wrapper--xlarge {
 	padding-right: $global-spacing-unit-xlarge;

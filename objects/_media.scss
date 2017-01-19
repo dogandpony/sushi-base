@@ -14,7 +14,7 @@
 
 .o-media__img {
 	float: left;
-	margin-right: $global-spacing-unit;
+	margin-right: $global-spacing;
 
 	> img {
 		display: block;
@@ -117,7 +117,7 @@
 	> .o-media__img {
 		float: right;
 		margin-right: 0;
-		margin-left: $global-spacing-unit;
+		margin-left: $global-spacing;
 	}
 
 }
