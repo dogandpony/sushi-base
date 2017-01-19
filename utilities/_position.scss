@@ -11,23 +11,23 @@
  */
 
 .u-static {
-	position: static !important;
+  position: static !important;
 }
 
 .u-relative {
-	position: relative !important;
+  position: relative !important;
 }
 
 .u-absolute {
-	position: absolute !important;
+  position: absolute !important;
 }
 
 .u-fixed {
-	position: fixed !important;
+  position: fixed !important;
 }
 
 .u-sticky {
-	position: sticky !important;
+  position: sticky !important;
 }
 
 /* [1] */
@@ -43,24 +43,24 @@
 // .u-right-neg--xl etc. – "neg" generating negative values.
 
 $position-directions: (
-	'top',
-	'right',
-	'bottom',
-	'left'
+  'top',
+  'right',
+  'bottom',
+  'left'
 ) !default;
 
 @each $direction in $position-directions {
 
-	@each $spacing-name, $spacing-size in $spacing-sizes {
+  @each $spacing-name, $spacing-size in $spacing-sizes {
 
-		.u-#{$direction}#{$spacing-name} {
-			#{$direction}: #{$spacing-size} !important;
-		}
+    .u-#{$direction}#{$spacing-name} {
+      #{$direction}: #{$spacing-size} !important;
+    }
 
-		.u-#{$direction}-neg#{$spacing-name} {
-			#{$direction}: -#{$spacing-size} !important;
-		}
+    .u-#{$direction}-neg#{$spacing-name} {
+      #{$direction}: -#{$spacing-size} !important;
+    }
 
-	}
+  }
 
 }

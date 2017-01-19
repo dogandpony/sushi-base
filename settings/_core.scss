@@ -31,14 +31,14 @@ $global-spacing-xxl: 8rem !default;
 
 @each $_rem-value in $base-font-size $global-spacing $global-spacing-s $global-spacing-xs $global-spacing-xxs $global-spacing-l $global-spacing-xl $global-spacing-xxl {
 
-	@if (type-of($_rem-value) == number) {
+  @if (type-of($_rem-value) == number) {
 
-		@if (unit($_rem-value) != "rem") {
-			@error "`#{$_rem-value}` requires a rem value.";
-		}
+    @if (unit($_rem-value) != "rem") {
+      @error "`#{$_rem-value}` requires a rem value.";
+    }
 
-	} @else {
-		@error "`#{$_rem-value}` requires a number.";
-	}
+  } @else {
+    @error "`#{$_rem-value}` requires a number.";
+  }
 
 }

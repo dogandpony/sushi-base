@@ -16,28 +16,28 @@
  */
 
 .o-media {
-	@include clearfix();
-	display: block;
+  @include clearfix();
+  display: block;
 }
 
 .o-media__img {
-	float: left;
-	margin-right: $global-spacing;
+  float: left;
+  margin-right: $global-spacing;
 
-	> img {
-		display: block;
-	}
+  > img {
+    display: block;
+  }
 
 }
 
 .o-media__body {
-	overflow: hidden;
-	display: block;
+  overflow: hidden;
+  display: block;
 
-	&,
-	> :last-child {
-		margin-bottom: 0;
-	}
+  &,
+  > :last-child {
+    margin-bottom: 0;
+  }
 
 }
 
@@ -50,30 +50,30 @@
  */
 
 $media-spacing-modifiers: (
-	'xs': $global-spacing-xs,
-	's': $global-spacing-s,
-	'l': $global-spacing-l,
-	'xl': $global-spacing-xl
+  'xs': $global-spacing-xs,
+  's': $global-spacing-s,
+  'l': $global-spacing-l,
+  'xl': $global-spacing-xl
 ) !default;
 
 @each $spacing-name, $spacing-size in $media-spacing-modifiers {
 
-	.o-media--#{$spacing-name} {
+  .o-media--#{$spacing-name} {
 
-		> .o-media__img {
-			padding-right: $spacing-size;
-		}
+    > .o-media__img {
+      padding-right: $spacing-size;
+    }
 
-		&.o-media--reverse {
+    &.o-media--reverse {
 
-			> .o-media\__img {
-				padding-right: 0;
-				padding-left: $spacing-size;
-			}
+      > .o-media\__img {
+        padding-right: 0;
+        padding-left: $spacing-size;
+      }
 
-		}
+    }
 
-	}
+  }
 
 }
 
@@ -82,11 +82,11 @@ $media-spacing-modifiers: (
 
 .o-media--reverse {
 
-	> .o-media__img {
-		float: right;
-		margin-right: 0;
-		margin-left: $global-spacing;
-	}
+  > .o-media__img {
+    float: right;
+    margin-right: 0;
+    margin-left: $global-spacing;
+  }
 
 }
 
@@ -95,9 +95,9 @@ $media-spacing-modifiers: (
 
 .o-media--flush {
 
-	> .o-media__img {
-		margin-right: 0;
-		margin-left: 0;
-	}
+  > .o-media__img {
+    margin-right: 0;
+    margin-left: 0;
+  }
 
 }

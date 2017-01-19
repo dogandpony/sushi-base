@@ -4,52 +4,52 @@
 
 @include test-module("[mixin] font-size") {
 
-	@include test("it should output a font-size and line-height based on a given input") {
+  @include test("it should output a font-size and line-height based on a given input") {
 
-		@include assert() {
+    @include assert() {
 
-			@include output {
-				@include font-size(16px);
-			}
+      @include output {
+        @include font-size(16px);
+      }
 
-			@include expect {
-				font-size: 16px;
-				font-size: 1rem;
-				line-height: 1.5;
-			}
-		}
-	}
+      @include expect {
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+    }
+  }
 
-	@include test("it should output a font-size and line-height when specifying a line-height") {
+  @include test("it should output a font-size and line-height when specifying a line-height") {
 
-		@include assert() {
+    @include assert() {
 
-			@include output {
-				@include font-size(18px, 2);
-			}
+      @include output {
+        @include font-size(18px, 2);
+      }
 
-			@include expect {
-				font-size: 18px;
-				font-size: 1.125rem;
-				line-height: 2;
-			}
-		}
-	}
+      @include expect {
+        font-size: 18px;
+        font-size: 1.125rem;
+        line-height: 2;
+      }
+    }
+  }
 
-	@include test("it should output a font-size as important when passing true") {
+  @include test("it should output a font-size as important when passing true") {
 
-		@include assert() {
+    @include assert() {
 
-			@include output {
-				@include font-size(21px, $important: true);
-			}
+      @include output {
+        @include font-size(21px, $important: true);
+      }
 
-			@include expect {
-				font-size: 21px !important;
-				font-size: 1.3125rem !important;
-				line-height: 1.14286 !important;
-			}
-		}
-	}
+      @include expect {
+        font-size: 21px !important;
+        font-size: 1.3125rem !important;
+        line-height: 1.14286 !important;
+      }
+    }
+  }
 }
 

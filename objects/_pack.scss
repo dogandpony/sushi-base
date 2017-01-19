@@ -20,10 +20,10 @@
  */
 
 .o-pack {
-	width: 100%; /* [1] */
-	margin-left: 0; /* [2] */
-	display: table;
-	table-layout: fixed; /* [3] */
+  width: 100%; /* [1] */
+  margin-left: 0; /* [2] */
+  display: table;
+  table-layout: fixed; /* [3] */
 }
 
 /**
@@ -32,19 +32,19 @@
  */
 
 .o-pack__item {
-	display: table-cell; /* [1] */
-	vertical-align: top; /* [2] */
+  display: table-cell; /* [1] */
+  vertical-align: top; /* [2] */
 
-	/* Vertical alignment variants.
+  /* Vertical alignment variants.
 	   ====================================================================== */
 
-	.o-pack--middle > & {
-		vertical-align: middle;
-	}
+  .o-pack--middle > & {
+    vertical-align: middle;
+  }
 
-	.o-pack--bottom > & {
-		vertical-align: bottom;
-	}
+  .o-pack--bottom > & {
+    vertical-align: bottom;
+  }
 
 }
 
@@ -52,24 +52,24 @@
    ========================================================================== */
 
 .o-pack--auto {
-	table-layout: auto;
+  table-layout: auto;
 }
 
 /* Size variants.
    ========================================================================== */
 
 $pack-spacing-modifiers: (
-	'xs': $global-spacing-xs,
-	's': $global-spacing-s,
-	'l': $global-spacing-l,
-	'xl': $global-spacing-xl
+  'xs': $global-spacing-xs,
+  's': $global-spacing-s,
+  'l': $global-spacing-l,
+  'xl': $global-spacing-xl
 ) !default;
 
 @each $spacing-name, $spacing-size in $pack-spacing-modifiers {
 
-	.o-pack--#{$spacing-name} {
-		border-spacing: $spacing-size;
-	}
+  .o-pack--#{$spacing-name} {
+    border-spacing: $spacing-size;
+  }
 
 }
 
@@ -77,10 +77,10 @@ $pack-spacing-modifiers: (
    ========================================================================== */
 
 .o-pack--reverse {
-	direction: rtl;
+  direction: rtl;
 
-	> .o-pack__item {
-		direction: ltr;
-	}
+  > .o-pack__item {
+    direction: ltr;
+  }
 
 }

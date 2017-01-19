@@ -6,11 +6,11 @@
 // HTML font size set to 62.5% so that 1rem is generally equal to 10px
 
 $mq-breakpoints: (
-	phone : 32em,
-	tablet-v: 60em,
-	tablet-h: 90em,
-	desktop : 120em,
-	wide : 180em
+  phone : 32em,
+  tablet-v: 60em,
+  tablet-h: 90em,
+  desktop : 120em,
+  wide : 180em
 ) !default;
 
 // If using Sass-MQ for breakpoints, define the separator for breakpoints

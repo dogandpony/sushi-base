@@ -73,14 +73,14 @@ $layout-use-markup-fix: false !default;
  */
 
 .o-layout {
-	display: block; /* [1] */
-	margin: 0 -($global-spacing / 2); /* [2] [4] */
-	padding: 0; /* [2] */
-	list-style: none; /* [1] */
+  display: block; /* [1] */
+  margin: 0 -($global-spacing / 2); /* [2] [4] */
+  padding: 0; /* [2] */
+  list-style: none; /* [1] */
 
-	@if ($layout-use-markup-fix == false) {
-		font-size: 0; /* [5] */
-	}
+  @if ($layout-use-markup-fix == false) {
+    font-size: 0; /* [5] */
+  }
 }
 
 /**
@@ -98,15 +98,15 @@ $layout-use-markup-fix: false !default;
  */
 
 .o-layout__item {
-	box-sizing: border-box; /* [1] */
-	display: inline-block; /* [2] */
-	vertical-align: top; /* [3] */
-	width: 100%; /* [4] */
-	padding: 0 ($global-spacing / 2); /* [5] */
+  box-sizing: border-box; /* [1] */
+  display: inline-block; /* [2] */
+  vertical-align: top; /* [3] */
+  width: 100%; /* [4] */
+  padding: 0 ($global-spacing / 2); /* [5] */
 
-	@if ($layout-use-markup-fix == false) {
-		font-size: $base-font-size; /* [6] */
-	}
+  @if ($layout-use-markup-fix == false) {
+    font-size: $base-font-size; /* [6] */
+  }
 
 }
 
@@ -119,21 +119,21 @@ $layout-use-markup-fix: false !default;
 // .o-layout--xl
 
 $layout-spacing-modifiers: (
-	's': $global-spacing-s,
-	'l': $global-spacing-l,
-	'xl': $global-spacing-xl
+  's': $global-spacing-s,
+  'l': $global-spacing-l,
+  'xl': $global-spacing-xl
 ) !default;
 
 @each $spacing-name, $spacing-size in $layout-spacing-modifiers {
 
-	.o-layout--#{$spacing-name} {
-		margin: 0 -($spacing-size / 2);
+  .o-layout--#{$spacing-name} {
+    margin: 0 -($spacing-size / 2);
 
-		> .o-layout__item {
-			padding: 0 ($spacing-size / 2);
-		}
+    > .o-layout__item {
+      padding: 0 ($spacing-size / 2);
+    }
 
-	}
+  }
 
 }
 
@@ -146,9 +146,9 @@ $layout-spacing-modifiers: (
 
 .o-layout--middle {
 
-	> .o-layout__item {
-		vertical-align: middle;
-	}
+  > .o-layout__item {
+    vertical-align: middle;
+  }
 
 }
 
@@ -158,9 +158,9 @@ $layout-spacing-modifiers: (
 
 .o-layout--bottom {
 
-	> .o-layout__item {
-		vertical-align: bottom;
-	}
+  > .o-layout__item {
+    vertical-align: bottom;
+  }
 
 }
 
@@ -172,11 +172,11 @@ $layout-spacing-modifiers: (
  */
 
 .o-layout--center {
-	text-align: center;
+  text-align: center;
 
-	> .o-layout__item {
-		text-align: left;
-	}
+  > .o-layout__item {
+    text-align: left;
+  }
 
 }
 
@@ -185,11 +185,11 @@ $layout-spacing-modifiers: (
  */
 
 .o-layout--right {
-	text-align: right;
+  text-align: right;
 
-	> .o-layout__item {
-		text-align: left;
-	}
+  > .o-layout__item {
+    text-align: left;
+  }
 
 }
 
@@ -198,12 +198,12 @@ $layout-spacing-modifiers: (
  */
 
 .o-layout--reverse {
-	direction: rtl;
+  direction: rtl;
 
-	> .o-layout__item {
-		direction: ltr;
-		text-align: left;
-	}
+  > .o-layout__item {
+    direction: ltr;
+    text-align: left;
+  }
 
 }
 
@@ -216,9 +216,9 @@ $layout-spacing-modifiers: (
 
 .o-layout--auto {
 
-	> .o-layout__item {
-		width: auto;
-	}
+  > .o-layout__item {
+    width: auto;
+  }
 
 }
 
@@ -235,7 +235,7 @@ $layout-spacing-modifiers: (
  */
 
 .o-layout--inset {
-	margin: 0; /* [1] */
+  margin: 0; /* [1] */
 }
 
 /**
@@ -252,26 +252,26 @@ $responsive-layout: false !default;
 
 @if (variable-exists(mq-breakpoints) and $responsive-layout == true) {
 
-	@each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+  @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
 
-		@include mq($from: $breakpoint-name) {
+    @include mq($from: $breakpoint-name) {
 
-			@each $global-spacing-name, $global-spacing-size in $global-spacing-sizes {
+      @each $global-spacing-name, $global-spacing-size in $global-spacing-sizes {
 
-				.o-layout#{$global-spacing-name}#{$breakpoint-separator}#{$breakpoint-name} {
-					padding: $global-spacing-size/2;
-					margin: -$global-spacing-size;
+        .o-layout#{$global-spacing-name}#{$breakpoint-separator}#{$breakpoint-name} {
+          padding: $global-spacing-size/2;
+          margin: -$global-spacing-size;
 
-					> .o-layout__item {
-						padding: $global-spacing-size/2;
-					}
+          > .o-layout__item {
+            padding: $global-spacing-size/2;
+          }
 
-				}
+        }
 
-			}
+      }
 
-		}
+    }
 
-	}
+  }
 
 }

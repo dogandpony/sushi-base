@@ -16,12 +16,12 @@
  */
 
 html {
-	font-size: 62.5%; /* [1] */
-	line-height: $base-line-height; /* [2] */
-	overflow-y: scroll; /* [3] */
-	min-height: 100%; /* [4] */
+  font-size: 62.5%; /* [1] */
+  line-height: $base-line-height; /* [2] */
+  overflow-y: scroll; /* [3] */
+  min-height: 100%; /* [4] */
 }
 
 body {
-	font-size: $base-font-size; /* [5] */
+  font-size: $base-font-size; /* [5] */
 }

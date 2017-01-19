@@ -12,13 +12,13 @@
  */
 
 .o-box {
-	@include clearfix();
-	display: block; /* [1] */
-	padding: $global-spacing; /* [2] */
+  @include clearfix();
+  display: block; /* [1] */
+  padding: $global-spacing; /* [2] */
 
-	> :last-child {
-		margin-bottom: 0;
-	}
+  > :last-child {
+    margin-bottom: 0;
+  }
 
 }
 
@@ -26,16 +26,16 @@
    ========================================================================== */
 
 $box-spacing-modifiers: (
-	'xs': $global-spacing-xs,
-	's': $global-spacing-s,
-	'l': $global-spacing-l,
-	'xl': $global-spacing-xl
+  'xs': $global-spacing-xs,
+  's': $global-spacing-s,
+  'l': $global-spacing-l,
+  'xl': $global-spacing-xl
 ) !default;
 
 @each $spacing-name, $spacing-size in $box-spacing-modifiers {
 
-	.o-box#{$spacing-name} {
-		padding: $spacing-size;
-	}
+  .o-box#{$spacing-name} {
+    padding: $spacing-size;
+  }
 
 }

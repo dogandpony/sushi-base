@@ -18,27 +18,27 @@
 /* stylelint-disable string-quotes, max-nesting-depth */
 
 $spacing-directions: (
-	null: null,
-	't': '-top',
-	'r': '-right',
-	'b': '-bottom',
-	'l': '-left',
-	'h': '-left' '-right',
-	'v': '-top' '-bottom',
+  null: null,
+  't': '-top',
+  'r': '-right',
+  'b': '-bottom',
+  'l': '-left',
+  'h': '-left' '-right',
+  'v': '-top' '-bottom',
 ) !default;
 
 $spacing-properties: (
-	'p': 'padding',
-	'm': 'margin',
+  'p': 'padding',
+  'm': 'margin',
 ) !default;
 
 $spacing-sizes: (
-	'1': $global-spacing-xs,
-	'2': $global-spacing-s,
-	'3': $global-spacing,
-	'4': $global-spacing-l,
-	'5': $global-spacing-xl,
-	'0': 0
+  '1': $global-spacing-xs,
+  '2': $global-spacing-s,
+  '3': $global-spacing,
+  '4': $global-spacing-l,
+  '5': $global-spacing-xl,
+  '0': 0
 ) !default;
 
 // When using Sass-MQ, this defines the separator for the breakpoints suffix
@@ -48,31 +48,31 @@ $spacing-sizes: (
 $spacing-breakpoint-separator: \@ !default;
 
 @mixin spacing(
-	$properties: $spacing-properties,
+  $properties: $spacing-properties,
 	$directions: $spacing-directions,
 	$sizes: $spacing-sizes,
 	$breakpoint: null
 ) {
 
-	@each $property-namespace, $property in $properties {
+  @each $property-namespace, $property in $properties {
 
-		@each $direction-namespace, $direction-rules in $directions {
+    @each $direction-namespace, $direction-rules in $directions {
 
-			@each $size-namespace, $size in $sizes {
+      @each $size-namespace, $size in $sizes {
 
-				.u-#{$property-namespace}#{$direction-namespace}#{$size-namespace}#{$breakpoint} {
+        .u-#{$property-namespace}#{$direction-namespace}#{$size-namespace}#{$breakpoint} {
 
-					@each $direction in $direction-rules {
-						#{$property}#{$direction}: $size !important;
-					}
+          @each $direction in $direction-rules {
+            #{$property}#{$direction}: $size !important;
+          }
 
-				}
+        }
 
-			}
+      }
 
-		}
+    }
 
-	}
+  }
 
 }
 
@@ -103,16 +103,16 @@ $spacing-responsive-directions: $spacing-directions !default;
 $spacing-responsive-sizes: $spacing-sizes !default;
 
 @if (variable-exists(mq-breakpoints) and $spacing-responsive == true) {
-	@each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
-		@include mq($from: $breakpoint-name) {
-			@include inuit-spacing(
-					$spacing-responsive-properties,
-					$spacing-responsive-directions,
-					$spacing-responsive-sizes,
-					#{$spacing-breakpoint-separator}#{$breakpoint-name}
-			);
-		}
-	}
+  @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+    @include mq($from: $breakpoint-name) {
+      @include inuit-spacing(
+          $spacing-responsive-properties,
+          $spacing-responsive-directions,
+          $spacing-responsive-sizes,
+          #{$spacing-breakpoint-separator}#{$breakpoint-name}
+      );
+    }
+  }
 }
 
 /* stylelint-enable string-quotes, max-nesting-depth */

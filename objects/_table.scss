@@ -7,7 +7,7 @@
  */
 
 .o-table {
-	width: 100%;
+  width: 100%;
 }
 
 /* Equal-width table cells.
@@ -22,28 +22,28 @@
  */
 
 .o-table--fixed {
-	table-layout: fixed;
+  table-layout: fixed;
 }
 
 /* Size variants.
    ========================================================================== */
 
 $media-valign-spacing-modifiers: (
-	'xs': $global-spacing-xs,
-	's': $global-spacing-s,
-	'l': $global-spacing-l,
-	'xl': $global-spacing-xl
+  'xs': $global-spacing-xs,
+  's': $global-spacing-s,
+  'l': $global-spacing-l,
+  'xl': $global-spacing-xl
 ) !default;
 
 @each $spacing-name, $spacing-size in $media-valign-spacing-modifiers {
 
-	.o-table--#{$spacing-name} {
+  .o-table--#{$spacing-name} {
 
-		th,
-		td {
-			padding: $spacing-size;
-		}
+    th,
+    td {
+      padding: $spacing-size;
+    }
 
-	}
+  }
 
 }

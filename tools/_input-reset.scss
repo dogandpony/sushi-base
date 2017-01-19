@@ -8,11 +8,11 @@
  */
 
 @mixin input-reset {
-	-webkit-appearance: none;
-	-moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 
-	&::-moz-focus-inner {
-		border: 0;
-		padding: 0;
-	}
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
 }

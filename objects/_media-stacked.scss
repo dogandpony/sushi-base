@@ -15,16 +15,16 @@
  */
 
 .o-media-stacked {
-	display: block;
-	text-align: center;
+  display: block;
+  text-align: center;
 }
 
 .o-media-stacked__img {
-	margin-bottom: $global-spacing;
+  margin-bottom: $global-spacing;
 }
 
 .o-media-stacked__body {
-	display: block;
+  display: block;
 }
 
 /* Spacing modifiers (margin-bottom).
@@ -35,17 +35,17 @@
  */
 
 $media-stacked-spacing-modifiers: (
-	'xs': $global-spacing-xs,
-	's': $global-spacing-s,
-	'l': $global-spacing-l,
-	'xl': $global-spacing-xl
+  'xs': $global-spacing-xs,
+  's': $global-spacing-s,
+  'l': $global-spacing-l,
+  'xl': $global-spacing-xl
 ) !default;
 
 @each $spacing-name, $spacing-size in $media-stacked-spacing-modifiers {
 
-	.o-media-stacked--#{$spacing-name} > .o-media-stacked__img {
-		margin-bottom: $spacing-size;
-	}
+  .o-media-stacked--#{$spacing-name} > .o-media-stacked__img {
+    margin-bottom: $spacing-size;
+  }
 
 }
 
@@ -53,9 +53,9 @@ $media-stacked-spacing-modifiers: (
    ========================================================================== */
 
 .o-media-stacked--right {
-	text-align: right;
+  text-align: right;
 }
 
 .o-media-stacked--left {
-	text-align: left;
+  text-align: left;
 }

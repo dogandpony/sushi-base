@@ -8,7 +8,7 @@
  */
 
 .u-hidden {
-	@include hide();
+  @include hide();
 }
 
 /**
@@ -25,15 +25,15 @@
  */
 
 .u-dn {
-	display: none !important;
+  display: none !important;
 }
 
 .u-db {
-	display: block !important;
+  display: block !important;
 }
 
 .u-dib {
-	display: inline-block !important;
+  display: inline-block !important;
 }
 
 /**
@@ -50,28 +50,28 @@ $responsive-hide: false !default;
 
 @if (variable-exists(mq-breakpoints) and $responsive-hide == true) {
 
-	@each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+  @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
 
-		@include mq($from: $breakpoint-name) {
+    @include mq($from: $breakpoint-name) {
 
-			.u-hidden#{$breakpoint-separator}#{$breakpoint-name} {
-				@include hide();
-			}
+      .u-hidden#{$breakpoint-separator}#{$breakpoint-name} {
+        @include hide();
+      }
 
-			.u-dn#{$breakpoint-separator}#{$breakpoint-name} {
-				display: none !important;
-			}
+      .u-dn#{$breakpoint-separator}#{$breakpoint-name} {
+        display: none !important;
+      }
 
-			.u-db#{$breakpoint-separator}#{$breakpoint-name} {
-				display: none !important;
-			}
+      .u-db#{$breakpoint-separator}#{$breakpoint-name} {
+        display: none !important;
+      }
 
-			.u-dib#{$breakpoint-separator}#{$breakpoint-name} {
-				display: none !important;
-			}
+      .u-dib#{$breakpoint-separator}#{$breakpoint-name} {
+        display: none !important;
+      }
 
-		}
+    }
 
-	}
+  }
 
 }

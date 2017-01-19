@@ -25,9 +25,9 @@
  */
 
 .o-media-valign {
-	display: table; /* [1] */
-	width: 100%; /* [2] */
-	border-spacing: 0; /* [3] */
+  display: table; /* [1] */
+  width: 100%; /* [2] */
+  border-spacing: 0; /* [3] */
 }
 
 /**
@@ -38,8 +38,8 @@
 
 .o-media-valign__img,
 .o-media-valign__body {
-	display: table-cell;
-	vertical-align: middle; /* [1] */
+  display: table-cell;
+  vertical-align: middle; /* [1] */
 }
 
 /**
@@ -50,16 +50,16 @@
  */
 
 .o-media-valign__img {
-	width: 1px; /* [1] */
-	padding-right: $global-spacing;
+  width: 1px; /* [1] */
+  padding-right: $global-spacing;
 
-	/**
-     * 1. Fix for responsive images shrinking to 1px cell size.
-     */
+  /**
+	 * 1. Fix for responsive images shrinking to 1px cell size.
+	 */
 
-	> img {
-		max-width: none; /* [1] */
-	}
+  > img {
+    max-width: none; /* [1] */
+  }
 
 }
 
@@ -70,12 +70,12 @@
  */
 
 .o-media-valign__body {
-	width: auto; /* [1] */
+  width: auto; /* [1] */
 
-	&,
-	> :last-child {
-		margin-bottom: 0;
-	}
+  &,
+  > :last-child {
+    margin-bottom: 0;
+  }
 
 }
 
@@ -94,30 +94,30 @@
 // .o-media-valign--xl
 
 $media-valign-spacing-modifiers: (
-	'xs': $global-spacing-xs,
-	's': $global-spacing-s,
-	'l': $global-spacing-l,
-	'xl': $global-spacing-xl
+  'xs': $global-spacing-xs,
+  's': $global-spacing-s,
+  'l': $global-spacing-l,
+  'xl': $global-spacing-xl
 ) !default;
 
 @each $spacing-name, $spacing-size in $media-valign-spacing-modifiers {
 
-	.o-media-valign--#{$spacing-name} {
+  .o-media-valign--#{$spacing-name} {
 
-		> .o-media-valign__img {
-			padding-right: $spacing-size;
-		}
+    > .o-media-valign__img {
+      padding-right: $spacing-size;
+    }
 
-		&.o-media-valign--reverse {
+    &.o-media-valign--reverse {
 
-			> .o-media-valign__img {
-				padding-right: 0;
-				padding-left: $spacing-size;
-			}
+      > .o-media-valign__img {
+        padding-right: 0;
+        padding-left: $spacing-size;
+      }
 
-		}
+    }
 
-	}
+  }
 
 }
 
@@ -131,17 +131,17 @@ $media-valign-spacing-modifiers: (
  */
 
 .o-media-valign--reverse {
-	direction: rtl; /* [1] */
+  direction: rtl; /* [1] */
 
-	> .o-media-valign__img,
-	> .o-media-valign__body {
-		direction: ltr; /* [2] */
-	}
+  > .o-media-valign__img,
+  > .o-media-valign__body {
+    direction: ltr; /* [2] */
+  }
 
-	> .o-media-valign__img {
-		padding-right: 0; /* [3] */
-		padding-left: $global-spacing; /* [3] */
-	}
+  > .o-media-valign__img {
+    padding-right: 0; /* [3] */
+    padding-left: $global-spacing; /* [3] */
+  }
 
 }
 
@@ -154,18 +154,18 @@ $media-valign-spacing-modifiers: (
 
 .o-media-valign--top {
 
-	> .o-media-valign__img,
-	> .o-media-valign__body {
-		vertical-align: top;
-	}
+  > .o-media-valign__img,
+  > .o-media-valign__body {
+    vertical-align: top;
+  }
 
 }
 
 .o-media-valign--bottom {
 
-	> .o-media-valign__img,
-	> .o-media-valign__body {
-		vertical-align: bottom;
-	}
+  > .o-media-valign__img,
+  > .o-media-valign__body {
+    vertical-align: bottom;
+  }
 
 }

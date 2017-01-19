@@ -10,35 +10,35 @@ $wrapper-width: 1200px !default;
 
 /* stylelint-disable */
 @if (type-of($wrapper-width) != number) {
-	@error "`#{$wrapper-width}` needs to be a number."
+  @error "`#{$wrapper-width}` needs to be a number."
 }
 
 /* stylelint-enable */
 
 .o-wrapper {
-	@include clearfix();
-	padding-right: $global-spacing;
-	padding-left: $global-spacing;
-	margin-right: auto;
-	margin-left: auto;
-	max-width: $wrapper-width;
+  @include clearfix();
+  padding-right: $global-spacing;
+  padding-left: $global-spacing;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: $wrapper-width;
 }
 
 /* Size variants.
    ========================================================================== */
 
 $wrapper-spacing-modifiers: (
-	'xs': $global-spacing-xs,
-	's': $global-spacing-s,
-	'l': $global-spacing-l,
-	'xl': $global-spacing-xl
+  'xs': $global-spacing-xs,
+  's': $global-spacing-s,
+  'l': $global-spacing-l,
+  'xl': $global-spacing-xl
 ) !default;
 
 @each $spacing-name, $spacing-size in $wrapper-spacing-modifiers {
 
-	.o-wrapper--#{$spacing-name} {
-		padding-right: $spacing-size;
-		padding-left: $spacing-size;
-	}
+  .o-wrapper--#{$spacing-name} {
+    padding-right: $spacing-size;
+    padding-left: $spacing-size;
+  }
 
 }
