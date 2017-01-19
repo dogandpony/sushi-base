@@ -27,22 +27,18 @@ $wrapper-width: 1200px !default;
 /* Size variants.
    ========================================================================== */
 
-.o-wrapper--xsmall {
-	padding-right: $global-spacing-unit-xsmall;
-	padding-left: $global-spacing-unit-xsmall;
-}
+$wrapper-spacing-modifiers: (
+	'xs': $global-spacing-xs,
+	's': $global-spacing-s,
+	'l': $global-spacing-l,
+	'xl': $global-spacing-xl
+) !default;
 
-.o-wrapper--small {
-	padding-right: $global-spacing-unit-small;
-	padding-left: $global-spacing-unit-small;
-}
+@each $spacing-name, $spacing-size in $wrapper-spacing-modifiers {
 
-.o-wrapper--large {
-	padding-right: $global-spacing-unit-large;
-	padding-left: $global-spacing-unit-large;
+	.o-wrapper--#{$spacing-name} {
+		padding-right: $spacing-size;
+		padding-left: $spacing-size;
 	}
 
-.o-wrapper--xlarge {
-	padding-right: $global-spacing-unit-xlarge;
-	padding-left: $global-spacing-unit-xlarge;
 }

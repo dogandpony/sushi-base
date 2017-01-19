@@ -110,50 +110,29 @@ $layout-use-markup-fix: false !default;
 
 }
 
-/* Gutter size modifiers.
+/* Spacing modifiers (gutter padding).
    ========================================================================== */
 
-.o-layout--xsmall {
-	margin-left: -$global-spacing-unit-xsmall;
+// Generates the following classes by default:
+// .o-layout--s
+// .o-layout--l
+// .o-layout--xl
 
-	> .o-layout__item {
-		padding-left: $global-spacing-unit-xsmall;
-	}
+$layout-spacing-modifiers: (
+	's': $global-spacing-s,
+	'l': $global-spacing-l,
+	'xl': $global-spacing-xl
+) !default;
 
-}
+@each $spacing-name, $spacing-size in $layout-spacing-modifiers {
 
-.o-layout--small {
-	margin-left: -$global-spacing-unit-small;
+	.o-layout--#{$spacing-name} {
+		margin: 0 -($spacing-size / 2);
 
-	> .o-layout__item {
-		padding-left: $global-spacing-unit-small;
-	}
+		> .o-layout__item {
+			padding: 0 ($spacing-size / 2);
+		}
 
-}
-
-.o-layout--large {
-	margin-left: -$global-spacing-unit-large;
-
-	> .o-layout__item {
-		padding-left: $global-spacing-unit-large;
-	}
-
-}
-
-.o-layout--xlarge {
-	margin-left: -$global-spacing-unit-xlarge;
-
-	> .o-layout__item {
-		padding-left: $global-spacing-unit-xlarge;
-	}
-
-}
-
-.o-layout--flush {
-	margin-left: 0;
-
-	> .o-layout__item {
-		padding-left: 0;
 	}
 
 }
@@ -224,6 +203,75 @@ $layout-use-markup-fix: false !default;
 	> .o-layout__item {
 		direction: ltr;
 		text-align: left;
+	}
+
+}
+
+/* Auto-widths modifier.
+   ========================================================================== */
+
+/**
+ * Cause layout items to take up a non-explicit amount of width.
+ */
+
+.o-layout--auto {
+
+	> .o-layout__item {
+		width: auto;
+	}
+
+}
+
+/* Inset padding modifier.
+   ========================================================================== */
+
+/**
+ * 1. Reset negative margins on the layout object to zero so that inner grid
+ *    items are inset from the edges of the wrapping layout object, i.e. the
+ *    layout object will include both inner and outer gutters around grid
+ *    items. Note: when using the inset modifier, you'd like use a wrapper
+ *    object with the flush modifier.
+ *
+ */
+
+.o-layout--inset {
+	margin: 0; /* [1] */
+}
+
+/**
+ * If using Sass-MQ for breakpoints, generate responsive layout
+ * classes with breakpoint suffix. Note: breakpoints are all
+ * mobile-up, i.e. mobile-first.
+ *
+ * For example:
+ *
+ * <div class="o-layout--l@wide">
+ */
+
+$responsive-layout: false !default;
+
+@if (variable-exists(mq-breakpoints) and $responsive-layout == true) {
+
+	@each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+
+		@include mq($from: $breakpoint-name) {
+
+			@each $global-spacing-name, $global-spacing-size in $global-spacing-sizes {
+
+				.o-layout#{$global-spacing-name}#{$breakpoint-separator}#{$breakpoint-name} {
+					padding: $global-spacing-size/2;
+					margin: -$global-spacing-size;
+
+					> .o-layout__item {
+						padding: $global-spacing-size/2;
+					}
+
+				}
+
+			}
+
+		}
+
 	}
 
 }

@@ -28,38 +28,22 @@
 /* Size variants.
    ========================================================================== */
 
-.o-table--xsmall {
+$media-valign-spacing-modifiers: (
+	'xs': $global-spacing-xs,
+	's': $global-spacing-s,
+	'l': $global-spacing-l,
+	'xl': $global-spacing-xl
+) !default;
 
-	th,
-	td {
-		padding: $global-spacing-unit-xsmall;
-	}
+@each $spacing-name, $spacing-size in $media-valign-spacing-modifiers {
 
-}
+	.o-table--#{$spacing-name} {
 
-.o-table--small {
+		th,
+		td {
+			padding: $spacing-size;
+		}
 
-	th,
-	td {
-		padding: $global-spacing-unit-small;
-	}
-
-}
-
-.o-table--large {
-
-	th,
-	td {
-		padding: $global-spacing-unit-large;
-	}
-
-}
-
-.o-table--xlarge {
-
-	th,
-	td {
-		padding: $global-spacing-unit-xlarge;
 	}
 
 }

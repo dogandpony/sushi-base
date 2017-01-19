@@ -49,68 +49,28 @@
  * reversible options for all available sizes.
  */
 
-.o-media--xsmall {
+$media-spacing-modifiers: (
+	'xs': $global-spacing-xs,
+	's': $global-spacing-s,
+	'l': $global-spacing-l,
+	'xl': $global-spacing-xl
+) !default;
 
-	> .o-media__img {
-		margin-right: $global-spacing-unit-xsmall;
-	}
+@each $spacing-name, $spacing-size in $media-spacing-modifiers {
 
-	&.o-media--reverse {
+	.o-media--#{$spacing-name} {
 
 		> .o-media__img {
-			margin-right: 0;
-			margin-left: $global-spacing-unit-xsmall;
+			padding-right: $spacing-size;
 		}
 
-	}
+		&.o-media--reverse {
 
-}
+			> .o-media\__img {
+				padding-right: 0;
+				padding-left: $spacing-size;
+			}
 
-.o-media--small {
-
-	> .o-media__img {
-		margin-right: $global-spacing-unit-small;
-	}
-
-	&.o-media--reverse {
-
-		> .o-media__img {
-			margin-right: 0;
-			margin-left: $global-spacing-unit-small;
-		}
-
-	}
-
-}
-
-.o-media--large {
-
-	> .o-media__img {
-		margin-right: $global-spacing-unit-large;
-	}
-
-	&.o-media--reverse {
-
-		> .o-media__img {
-			margin-right: 0;
-			margin-left: $global-spacing-unit-large;
-		}
-
-	}
-
-}
-
-.o-media--xlarge {
-
-	> .o-media__img {
-		margin-right: $global-spacing-unit-xlarge;
-	}
-
-	&.o-media--reverse {
-
-		> .o-media__img {
-			margin-right: 0;
-			margin-left: $global-spacing-unit-xlarge;
 		}
 
 	}

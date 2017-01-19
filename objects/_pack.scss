@@ -58,20 +58,19 @@
 /* Size variants.
    ========================================================================== */
 
-.o-pack--xsmall {
-	border-spacing: $global-spacing-unit-xsmall;
-}
+$pack-spacing-modifiers: (
+	'xs': $global-spacing-xs,
+	's': $global-spacing-s,
+	'l': $global-spacing-l,
+	'xl': $global-spacing-xl
+) !default;
 
-.o-pack--small {
-	border-spacing: $global-spacing-unit-small;
-}
+@each $spacing-name, $spacing-size in $pack-spacing-modifiers {
 
-.o-pack--large {
-	border-spacing: $global-spacing-unit-large;
-}
+	.o-pack--#{$spacing-name} {
+		border-spacing: $spacing-size;
+	}
 
-.o-pack--xlarge {
-	border-spacing: $global-spacing-unit-xlarge;
 }
 
 /* Reversed order packs
