@@ -29,8 +29,6 @@
  * Box-sizing...........Better default `box-sizing`.
  * Normalize.css........A level playing field using @necolas’ Normalize.css.
  * Reset................A tiny reset to complement Normalize.css.
- * Shared...............Sensibly and tersely share some global commonalities
- *                      (particularly useful when managing vertical rhythm).
  * Page.................Base settings for page, typography, box-sizing etc.
  *
  * ELEMENTS
@@ -76,9 +74,9 @@
 @import "node_modules/sass-mq/mq";
 // GENERIC
 @import "generic/box-sizing";
+@import "generic/margins";
 @import "generic/normalize";
 @import "generic/reset";
-@import "generic/shared";
 @import "generic/page";
 // ELEMENTS
 @import "elements/headings";
