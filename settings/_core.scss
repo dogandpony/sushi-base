@@ -14,6 +14,7 @@
 $base-font-size: 1.8rem !default;
 $base-line-height: 1.8 !default;
 
+
 // Spacing units measured in rems for more control over the spacing scale.
 // For example: default spacing unit is appx. 30px, instead of calculating
 // the large spacing unit in multiples of the default spacing unit,
@@ -27,9 +28,18 @@ $global-spacing-l: 4rem !default;
 $global-spacing-xl: 6rem !default;
 $global-spacing-xxl: 8rem !default;
 
+
 // Validate base-font/spacing values as rem numbers
 
-@each $_rem-value in $base-font-size $global-spacing $global-spacing-s $global-spacing-xs $global-spacing-xxs $global-spacing-l $global-spacing-xl $global-spacing-xxl {
+@each $_rem-value in
+  $base-font-size
+  $global-spacing
+  $global-spacing-s
+  $global-spacing-xs
+  $global-spacing-xxs
+  $global-spacing-l
+  $global-spacing-xl
+  $global-spacing-xxl {
 
   @if (type-of($_rem-value) == number) {
 

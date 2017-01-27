@@ -1,6 +1,6 @@
-/* ==========================================================================
-   #LAYOUT
-   ========================================================================== */
+/* =========================================================================
+ * LAYOUT
+ * ========================================================================= */
 
 /**
  * Grid-like layout system.
@@ -53,7 +53,10 @@
 // By default we use the `font-size: 0;` trick to remove whitespace between
 // items. Set this to true in order to use a markup-based strategy like
 // commenting out whitespace or minifying HTML.
-$layout-use-markup-fix: false !default;
+$enable-layout-markup-fix: false !default;
+
+
+
 
 /* Default/mandatory classes.
    ========================================================================== */
@@ -78,10 +81,11 @@ $layout-use-markup-fix: false !default;
   padding: 0; /* [2] */
   list-style: none; /* [1] */
 
-  @if ($layout-use-markup-fix == false) {
+  @if ($enable-layout-markup-fix == false) {
     font-size: 0; /* [5] */
   }
 }
+
 
 /**
  * 1. Required in order to combine fluid widths with fixed gutters.
@@ -104,11 +108,14 @@ $layout-use-markup-fix: false !default;
   width: 100%; /* [4] */
   padding: 0 ($global-spacing / 2); /* [5] */
 
-  @if ($layout-use-markup-fix == false) {
+  @if ($enable-layout-markup-fix == false) {
     font-size: $base-font-size; /* [6] */
   }
 
 }
+
+
+
 
 /* Spacing modifiers (gutter padding).
    ========================================================================== */
@@ -137,6 +144,9 @@ $layout-spacing-modifiers: (
 
 }
 
+
+
+
 /* Vertical alignment modifiers.
    ========================================================================== */
 
@@ -152,6 +162,7 @@ $layout-spacing-modifiers: (
 
 }
 
+
 /**
  * Align all grid items to the bottoms of each other.
  */
@@ -163,6 +174,9 @@ $layout-spacing-modifiers: (
   }
 
 }
+
+
+
 
 /* Fill order modifiers.
    ========================================================================== */
@@ -180,6 +194,7 @@ $layout-spacing-modifiers: (
 
 }
 
+
 /**
  * Fill up the layout system from the right-hand side.
  */
@@ -192,6 +207,7 @@ $layout-spacing-modifiers: (
   }
 
 }
+
 
 /**
  * Reverse the rendered order of the grid system.
@@ -207,6 +223,9 @@ $layout-spacing-modifiers: (
 
 }
 
+
+
+
 /* Auto-widths modifier.
    ========================================================================== */
 
@@ -221,6 +240,9 @@ $layout-spacing-modifiers: (
   }
 
 }
+
+
+
 
 /* Inset padding modifier.
    ========================================================================== */
@@ -238,6 +260,7 @@ $layout-spacing-modifiers: (
   margin: 0; /* [1] */
 }
 
+
 /**
  * If using Sass-MQ for breakpoints, generate responsive layout
  * classes with breakpoint suffix. Note: breakpoints are all
@@ -248,9 +271,9 @@ $layout-spacing-modifiers: (
  * <div class="o-layout--l@wide">
  */
 
-$responsive-layout: false !default;
+$enable-responsive-layout: false !default;
 
-@if (variable-exists(mq-breakpoints) and $responsive-layout == true) {
+@if (variable-exists(mq-breakpoints) and $enable-responsive-layout == true) {
 
   @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
 
@@ -259,11 +282,10 @@ $responsive-layout: false !default;
       @each $global-spacing-name, $global-spacing-size in $global-spacing-sizes {
 
         .o-layout#{$global-spacing-name}#{$breakpoint-separator}#{$breakpoint-name} {
-          padding: $global-spacing-size/2;
-          margin: -$global-spacing-size;
+          margin: 0 -($global-spacing-size / 2);
 
           > .o-layout__item {
-            padding: $global-spacing-size/2;
+            padding: ($global-spacing-size / 2);
           }
 
         }

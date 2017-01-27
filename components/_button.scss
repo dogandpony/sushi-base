@@ -3,8 +3,21 @@
  * ========================================================================= */
 
 /**
- * This is an example component. Extend inuitcss by building your own components
- * that make up your UI. Component classes are prefixed with a `c-`.
+ * Button
+ *
+ * Classes that can be used on an `<a>`, `<button>` or `<input>` element.
+ *
+ * .c-btn--primary - Use this class to indicate that the button is the primary
+ *                   feature of this form.
+ * .c-btn--remove  - Use this class to indicate that the button will remove a
+ *                   feature, or other negative connotations.
+ *
+ * Markup:
+ * <a href="#" class="c-btn {{modifier_class}}">Link Button</a>
+ * <button class="c-btn {{modifier_class}}">Button Element</button>
+ * <input type="button" class="c-btn {{modifier_class}}" value="input[type='button']"/>
+ *
+ * Styleguide components.button
  */
 
 /**
@@ -25,6 +38,9 @@
   cursor: pointer; /* [5] */
   padding: $global-spacing-s $global-spacing;
 }
+
+
+
 
 /* Style variants
    ========================================================================== */
@@ -84,6 +100,9 @@
 
 }
 
+
+
+
 /* Size variants
    ========================================================================== */
 
@@ -94,6 +113,9 @@
 .c-btn--large {
   padding: $global-spacing $global-spacing-l;
 }
+
+
+
 
 /* Ghost buttons
    ========================================================================== */

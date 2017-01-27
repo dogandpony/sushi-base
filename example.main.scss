@@ -1,22 +1,23 @@
 /* ==========================================================================
    INUITCSS
    ========================================================================== */
+
 /**
  * Sushi Base, by @dogandpony
  */
+
 /**
  * This is an example Sushi Base manifest file. DO NOT MODIFY THIS FILE
  * DIRECTLY. Instead, copy and paste it into your own CSS directory and make
  * additions, extensions, and modifications there.
  */
+
 /**
  * CONTENTS
  *
  * SETTINGS
- * Config...............Project-level configuration and feature switches.
  * Core.................inuitcss’ core and setup settings.
  * Breakpoints..........Project-wide breakpoint definitions.
- * Global...............Project-wide variables and settings.
  *
  * TOOLS
  * Clearfix.............Micro clearfix mixin.
@@ -68,28 +69,51 @@
  * Typography...........Various helper classes for advanced typesetting.
  * Zindex...............Helper classes for consistent z-indexing levels.
  */
-// SETTINGS
+
+
+
+// Settings
+// ---------------------------
+
 @import "settings/core";
 @import "settings/breakpoints";
-// TOOLS
+
+
+
+// Tools
+// ---------------------------
+
 @import "tools/clearfix";
 @import "tools/hide";
 @import "tools/input-reset";
 @import "tools/position";
 @import "node_modules/sass-mq/mq";
-// GENERIC
+
+
+
+// Generic
+// ---------------------------
+
 @import "generic/base";
 @import "generic/box-sizing";
 @import "generic/margins";
 @import "generic/normalize";
 @import "generic/reset";
-// ELEMENTS
+
+
+
+// Elements
+// ---------------------------
+
 @import "elements/headings";
 @import "elements/images";
 @import "elements/tables";
-// OBJECTS
-//
-// Uncomment and add to this section as necessary.
+
+
+
+// Objects
+// ---------------------------
+
 @import "objects/wrapper";
 @import "objects/layout";
 @import "objects/media";
@@ -102,9 +126,22 @@
 @import "objects/crop";
 @import "objects/table";
 @import "objects/pack";
-// COMPONENTS
+
+
+
+// Components
+//
+// Reusable components
+//
+// Styleguide: components
+
 @import "components/button";
-// UTILITIES
+
+
+
+// Utilities
+// ---------------------------
+
 @import "utilities/clearfix";
 @import "utilities/widths";
 @import "utilities/headings";

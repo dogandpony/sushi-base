@@ -1,6 +1,6 @@
-/* ==========================================================================
-   #SPACING
-   ========================================================================== */
+/* =========================================================================
+ * SPACING UTILITIES
+ * ========================================================================= */
 
 /**
  * Utility classes to put specific spacing values onto elements. The below loop
@@ -41,6 +41,7 @@ $spacing-sizes: (
   '0': 0
 ) !default;
 
+
 // When using Sass-MQ, this defines the separator for the breakpoints suffix
 // in the class name. By default, we are generating the responsive suffixes
 // for the classes with a `@` symbol so you get classes like:
@@ -76,6 +77,7 @@ $spacing-breakpoint-separator: \@ !default;
 
 }
 
+
 /**
  * A series of spacing helper classes that you can use to give spacing.
  * Use these in your markup:
@@ -86,6 +88,7 @@ $spacing-breakpoint-separator: \@ !default;
  */
 
 @include spacing();
+
 
 /**
  * If we’re using Sass-MQ, automatically generate responsive helpers for each of our
