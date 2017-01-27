@@ -42,8 +42,6 @@
 // .u-top--xxs
 // .u-top--xs
 // .u-top--s
-// .u-right-neg--l
-// .u-right-neg--xl etc. – "neg" generating negative values.
 
 $position-directions: (
   'top',
@@ -58,10 +56,6 @@ $position-directions: (
 
     .u-#{$direction}#{$spacing-name} {
       #{$direction}: #{$spacing-size} !important;
-    }
-
-    .u-#{$direction}-neg#{$spacing-name} {
-      #{$direction}: -#{$spacing-size} !important;
     }
 
   }
