@@ -37,23 +37,34 @@
    ========================================================================== */
 
 // Utility classes for position direction values, for example:
-// .u-top--xxs
-// .u-top--xs
-// .u-top--s
+// .u-top-xxs
+// .u-left-xs
+// .u-bottom-l
 
 $position-directions: (
-  'top',
-  'right',
-  'bottom',
-  'left'
+  't': 'top',
+  'r': 'right',
+  'b': 'bottom',
+  'l': 'left'
 ) !default;
 
-@each $direction in $position-directions {
+$position-sizes: (
+  '-xxs': $global-spacing-xxs,
+  '-xs': $global-spacing-xs,
+  '-s': $global-spacing-s,
+  null: $global-spacing,
+  '-l': $global-spacing-l,
+  '-xl': $global-spacing-xl,
+  '-xxl': $global-spacing-xxl
+) !default;
 
-  @each $spacing-name, $spacing-size in $spacing-sizes {
 
-    .u-#{$direction}#{$spacing-name} {
-      #{$direction}: #{$spacing-size} !important;
+@each $direction-name, $direction-value in $position-directions {
+
+  @each $spacing-name, $spacing-size in $position-sizes {
+
+    .u-#{$direction-name}#{$spacing-name} {
+      #{$direction-value}: #{$spacing-size} !important;
     }
 
   }
