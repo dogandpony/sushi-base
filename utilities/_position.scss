@@ -10,27 +10,25 @@
  *    http://caniuse.com/#feat=css-sticky
  */
 
-.u-static {
+.u-pos {
   position: static !important;
 }
 
-.u-relative {
+.u-por {
   position: relative !important;
 }
 
-.u-absolute {
+.u-poa {
   position: absolute !important;
 }
 
-.u-fixed {
+.u-pof {
   position: fixed !important;
 }
 
-.u-sticky {
-  position: sticky !important;
+.u-pot {
+  position: sticky !important; /* [1] */
 }
-
-/* [1] */
 
 
 
