@@ -11,6 +11,7 @@
   @include hide();
 }
 
+
 /**
  * Display utility classes
  *
@@ -35,6 +36,7 @@
 .u-dib {
   display: inline-block !important;
 }
+
 
 /**
  * If using Sass-MQ for breakpoints, generate responsive hide
