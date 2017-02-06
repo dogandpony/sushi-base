@@ -97,7 +97,7 @@ $spacing-breakpoint-separator: \@ !default;
  * <div class="u-m5@tablet">
  */
 
-$spacing-responsive: false !default;
+$enable-responsive-spacing: false !default;
 
 $spacing-responsive-properties: $spacing-properties !default;
 
@@ -105,7 +105,7 @@ $spacing-responsive-directions: $spacing-directions !default;
 
 $spacing-responsive-sizes: $spacing-sizes !default;
 
-@if (variable-exists(mq-breakpoints) and $spacing-responsive == true) {
+@if (variable-exists(mq-breakpoints) and $enable-responsive-spacing == true) {
   @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
     @include mq($from: $breakpoint-name) {
       @include inuit-spacing(
