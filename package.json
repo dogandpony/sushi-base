@@ -1,5 +1,5 @@
 {
-  "name" : "Sushi Base",
+  "name" : "sushi-base",
   "version" : "1.0.0",
   "description" : "Extensible, scalable, Sass-based, OOCSS base structure for CSS projects.",
   "main" : "example.main.scss",
