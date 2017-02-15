@@ -89,7 +89,7 @@
     "rule-nested-empty-line-before" : [
       "always",
       {
-        ignore : [
+        "ignore" : [
           "after-comment"
         ]
       }
