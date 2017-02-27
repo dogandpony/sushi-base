@@ -2,3 +2,37 @@
 bower.json
 CONTRIBUTING.md
 test
+
+### Example files
+example.html
+
+### Built files
+*.css
+*.css.map
+*.gz
+test/*.css
+
+### Package managers
+node_modules/
+bower_components/
+
+### Sass cache
+.sass-cache
+
+### IDEs
+.idea
+.cache
+.project
+.settings
+.tmproj
+.vscode
+nbproject
+
+### OS-generated files
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
