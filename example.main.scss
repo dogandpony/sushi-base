@@ -130,10 +130,7 @@
 
 
 // Components
-//
-// Reusable components
-//
-// Styleguide: components
+// ---------------------------
 
 @import "components/button";
 
@@ -144,12 +141,12 @@
 
 @import "utilities/clearfix";
 @import "utilities/widths";
+@import "utilities/elevation";
 @import "utilities/headings";
 @import "utilities/spacing";
 @import "utilities/print";
 @import "utilities/display";
 @import "utilities/float";
 @import "utilities/position";
-@import "utilities/shadows";
 @import "utilities/typography";
 @import "utilities/z-index";
