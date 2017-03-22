@@ -117,7 +117,7 @@
  * Ghost buttons have see-through backgrounds and are bordered.
  */
 
-$btn-ghost-border-width: 0.2rem;
+$btn-ghost-border-width: 2px;
 
 .c-btn--ghost {
   border: $btn-ghost-border-width solid currentColor;
