@@ -8,24 +8,20 @@
  * http://csswizardry.com/2016/02/managing-typography-on-large-apps/).
  */
 
-// Size declared in rems for maximum flexibility.
-// HTML font size set to 62.5% (elements/_html.sass) so that 1rem is
-// generally equal to 10px.
-
-$font-size-h1: 3.6rem !default;
-$font-size-h2: 2.8rem !default;
-$font-size-h3: 2.4rem !default;
-$font-size-h4: 2rem !default;
-$font-size-h5: 1.8rem !default;
-$font-size-h6: 1.6rem !default;
+$font-size-h1: 36px !default;
+$font-size-h2: 28px !default;
+$font-size-h3: 24px !default;
+$font-size-h4: 20px !default;
+$font-size-h5: 18px !default;
+$font-size-h6: 16px !default;
 
 
 // Supersized heading sizes for hero-banners.
 // These variables are used in 'utilities/_headings.sass' however declared
 // here to easily reference the full scale of heading sizes.
 
-$font-size-hero1: 6.4rem !default;
-$font-size-hero2: 4.8rem !default;
+$font-size-hero1: 64px !default;
+$font-size-hero2: 48px !default;
 
 
 h1 {
