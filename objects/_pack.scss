@@ -68,17 +68,10 @@
 /* Size variants.
    ========================================================================== */
 
-$pack-spacing-modifiers: (
-  'xs': $global-spacing-xs,
-  's': $global-spacing-s,
-  'l': $global-spacing-l,
-  'xl': $global-spacing-xl
-) !default;
-
-@each $spacing-name, $spacing-size in $pack-spacing-modifiers {
+@each $spacing-name, $spacing-factor in $global-spacing-factors {
 
   .o-pack--#{$spacing-name} {
-    border-spacing: $spacing-size;
+    border-spacing: ($global-spacing * $spacing-factor);
   }
 
 }

@@ -79,48 +79,6 @@
 
 }
 
-/* Spacing modifiers (padding-horizontal).
-   ========================================================================== */
-
-/**
- * Modify the amount of space between the image and body. Also include
- * the reverse modifier for all size variants.
- */
-
-// Generates the following classes by default:
-// .o-media-valign--xs
-// .o-media-valign--s
-// .o-media-valign--l
-// .o-media-valign--xl
-
-$media-valign-spacing-modifiers: (
-  'xs': $global-spacing-xs,
-  's': $global-spacing-s,
-  'l': $global-spacing-l,
-  'xl': $global-spacing-xl
-) !default;
-
-@each $spacing-name, $spacing-size in $media-valign-spacing-modifiers {
-
-  .o-media-valign--#{$spacing-name} {
-
-    > .o-media-valign__img {
-      padding-right: $spacing-size;
-    }
-
-    &.o-media-valign--reverse {
-
-      > .o-media-valign__img {
-        padding-right: 0;
-        padding-left: $spacing-size;
-      }
-
-    }
-
-  }
-
-}
-
 
 
 
@@ -172,6 +130,38 @@ $media-valign-spacing-modifiers: (
   > .o-media-valign__img,
   > .o-media-valign__body {
     vertical-align: bottom;
+  }
+
+}
+
+
+
+
+/* Spacing modifiers (padding-horizontal).
+   ========================================================================== */
+
+/**
+ * Modify the amount of space between the image and body. Also include
+ * the reverse modifier for all size variants.
+ */
+
+@each $spacing-name, $spacing-factor in $global-spacing-factors {
+
+  .o-media-valign--#{$spacing-name} {
+
+    > .o-media-valign__img {
+      padding-right: ($global-spacing * $spacing-factor);
+    }
+
+    &.o-media-valign--reverse {
+
+      > .o-media-valign__img {
+        padding-right: 0;
+        padding-left: ($global-spacing * $spacing-factor);
+      }
+
+    }
+
   }
 
 }

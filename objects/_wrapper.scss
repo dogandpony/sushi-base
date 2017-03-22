@@ -6,11 +6,12 @@
  * Page-level constraining and wrapping elements.
  */
 
-$wrapper-width: 1200px !default;
+$wrapper-max-width: 1200px !default;
+
 
 /* stylelint-disable */
-@if (type-of($wrapper-width) != number) {
-  @error "`#{$wrapper-width}` needs to be a number."
+@if (type-of($wrapper-max-width) != number) {
+  @error "`#{$wrapper-max-width}` needs to be a number."
 }
 
 /* stylelint-enable */
@@ -21,7 +22,17 @@ $wrapper-width: 1200px !default;
   padding-left: ($global-spacing / 2);
   margin-right: auto;
   margin-left: auto;
-  max-width: $wrapper-width;
+  max-width: $wrapper-max-width;
+}
+
+
+
+
+/* Flush
+   ========================================================================= */
+
+.o-wrapper--flush {
+  max-width: none;
 }
 
 
@@ -30,18 +41,11 @@ $wrapper-width: 1200px !default;
 /* Size variants.
    ========================================================================== */
 
-$wrapper-spacing-modifiers: (
-  'xs': $global-spacing-xs,
-  's': $global-spacing-s,
-  'l': $global-spacing-l,
-  'xl': $global-spacing-xl
-) !default;
-
-@each $spacing-name, $spacing-size in $wrapper-spacing-modifiers {
+@each $spacing-name, $spacing-factor in $global-spacing-factors {
 
   .o-wrapper--#{$spacing-name} {
-    padding-right: $spacing-size;
-    padding-left: $spacing-size;
+    padding-right: ($global-spacing * $spacing-factor);
+    padding-left: ($global-spacing * $spacing-factor);
   }
 
 }

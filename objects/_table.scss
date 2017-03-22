@@ -34,20 +34,13 @@
 /* Size variants.
    ========================================================================== */
 
-$media-valign-spacing-modifiers: (
-  'xs': $global-spacing-xs,
-  's': $global-spacing-s,
-  'l': $global-spacing-l,
-  'xl': $global-spacing-xl
-) !default;
-
-@each $spacing-name, $spacing-size in $media-valign-spacing-modifiers {
+@each $spacing-name, $spacing-factor in $global-spacing-factors {
 
   .o-table--#{$spacing-name} {
 
     th,
     td {
-      padding: $spacing-size;
+      padding: ($global-spacing * $spacing-factor);
     }
 
   }

@@ -49,13 +49,12 @@ $position-directions: (
 ) !default;
 
 $position-sizes: (
-  '-xxs': $global-spacing-xxs,
   '-xs': $global-spacing-xs,
   '-s': $global-spacing-s,
   null: $global-spacing,
   '-l': $global-spacing-l,
   '-xl': $global-spacing-xl,
-  '-xxl': $global-spacing-xxl
+  '-0': 0
 ) !default;
 
 
