@@ -50,9 +50,9 @@ $spacing-breakpoint-separator: \@ !default;
 
 @mixin spacing(
   $properties: $spacing-properties,
-	$directions: $spacing-directions,
-	$sizes: $spacing-sizes,
-	$breakpoint: null
+  $directions: $spacing-directions,
+  $sizes: $spacing-sizes,
+  $breakpoint: null
 ) {
 
   @each $property-namespace, $property in $properties {
@@ -108,7 +108,7 @@ $spacing-responsive-sizes: $spacing-sizes !default;
 @if (variable-exists(mq-breakpoints) and $enable-responsive-spacing == true) {
   @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
     @include mq($from: $breakpoint-name) {
-      @include inuit-spacing(
+      @include spacing(
           $spacing-responsive-properties,
           $spacing-responsive-directions,
           $spacing-responsive-sizes,
