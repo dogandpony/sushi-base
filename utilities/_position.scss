@@ -37,9 +37,8 @@
    ========================================================================== */
 
 // Utility classes for position direction values, for example:
-// .u-top-xxs
-// .u-left-xs
-// .u-bottom-l
+// .u-l-xs
+// .u-b-l
 
 $position-directions: (
   't': 'top',
@@ -48,24 +47,87 @@ $position-directions: (
   'l': 'left'
 ) !default;
 
-$position-sizes: (
-  '-xs': $global-spacing-xs,
-  '-s': $global-spacing-s,
-  null: $global-spacing,
-  '-l': $global-spacing-l,
-  '-xl': $global-spacing-xl,
-  '-0': 0
-) !default;
+$position-factors: $global-spacing-factors !default;
 
 
-@each $direction-name, $direction-value in $position-directions {
+// When using Sass-MQ, this defines the separator for the breakpoints suffix
+// in the class name. By default, we are generating the responsive suffixes
+// for the classes with a `@` symbol so you get classes like:
+// <div class="u-t-xs@tablet">
+$position-breakpoint-separator: $breakpoint-separator !default;
 
-  @each $spacing-name, $spacing-size in $position-sizes {
+@mixin position(
+  $directions: $position-directions,
+  $factors: $global-spacing-factors,
+  $breakpoint: null
+) {
 
-    .u-#{$direction-name}#{$spacing-name} {
-      #{$direction-value}: #{$spacing-size} !important;
+  // Add zero and null modifiers to the factor list so classes like `u-b-0` and
+  // `u-b` are created automatically
+  $factors: join((
+    '0': 0,
+    null: 1
+  ), $factors);
+
+  @each $direction-namespace, $direction-rules in $directions {
+
+    @each $factor-namespace, $factor in $factors {
+
+      // Add a hyphen before the namespace if it's not null
+      // `xs` = `u-l-xs`
+      // null = `u-l`
+      @if ($factor-namespace != null) {
+        $factor-namespace: "-#{$factor-namespace}";
+      }
+
+      .u-#{$direction-namespace}#{$factor-namespace}#{$breakpoint} {
+
+        @each $direction in $direction-rules {
+          #{$direction}: ($factor * $global-spacing) !important;
+        }
+
+      }
+
     }
 
   }
 
+}
+
+
+/**
+ * A series of spacing helper classes that you can use to give spacing.
+ * Use these in your markup:
+ *
+ * <div class="u-r-xs">
+ *
+ * The following will generate spacing helper classes.
+ */
+
+@include position();
+
+
+/**
+ * If we’re using Sass-MQ, automatically generate responsive helpers for each of
+ * our defined breakpoints, and give them a Responsive Suffix, e.g.:
+ *
+ * <div class="u-t-xl@tablet">
+ */
+
+$enable-responsive-position: false !default;
+
+$position-responsive-directions: $position-directions !default;
+
+$position-responsive-factors: $position-factors !default;
+
+@if (variable-exists(mq-breakpoints) and $enable-responsive-spacing == true) {
+  @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+    @include mq($from: $breakpoint-name) {
+      @include position(
+          $position-responsive-directions,
+          $position-responsive-factors,
+          #{$position-breakpoint-separator}#{$breakpoint-name}
+      );
+    }
+  }
 }

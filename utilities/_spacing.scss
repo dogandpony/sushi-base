@@ -32,39 +32,46 @@ $spacing-properties: (
   'm': 'margin',
 ) !default;
 
-$spacing-sizes: (
-  '-xs': $global-spacing-xs,
-  '-s': $global-spacing-s,
-  null: $global-spacing,
-  '-l': $global-spacing-l,
-  '-xl': $global-spacing-xl,
-  '-0': 0
-) !default;
+$spacing-factors: $global-spacing-factors !default;
 
 
 // When using Sass-MQ, this defines the separator for the breakpoints suffix
 // in the class name. By default, we are generating the responsive suffixes
 // for the classes with a `@` symbol so you get classes like:
 // <div class="u-p-l@tablet">
-$spacing-breakpoint-separator: \@ !default;
+$spacing-breakpoint-separator: $breakpoint-separator !default;
 
 @mixin spacing(
   $properties: $spacing-properties,
   $directions: $spacing-directions,
-  $sizes: $spacing-sizes,
+  $factors: $global-spacing-factors,
   $breakpoint: null
 ) {
+
+  // Add zero and null modifiers to the factor list so classes like `u-ph-0` and
+  // `u-pl` are created automatically
+  $factors: join((
+    '0': 0,
+    null: 1
+  ), $factors);
 
   @each $property-namespace, $property in $properties {
 
     @each $direction-namespace, $direction-rules in $directions {
 
-      @each $size-namespace, $size in $sizes {
+      @each $factor-namespace, $factor in $factors {
 
-        .u-#{$property-namespace}#{$direction-namespace}#{$size-namespace}#{$breakpoint} {
+        // Add a hyphen before the namespace if it's not null
+        // `xs` = `u-p-xs`
+        // null = `u-p`
+        @if ($factor-namespace != null) {
+          $factor-namespace: "-#{$factor-namespace}";
+        }
+
+        .u-#{$property-namespace}#{$direction-namespace}#{$factor-namespace}#{$breakpoint} {
 
           @each $direction in $direction-rules {
-            #{$property}#{$direction}: $size !important;
+            #{$property}#{$direction}: ($factor * $global-spacing) !important;
           }
 
         }
@@ -91,8 +98,8 @@ $spacing-breakpoint-separator: \@ !default;
 
 
 /**
- * If we’re using Sass-MQ, automatically generate responsive helpers for each of our
- * defined breakpoints, and give them a Responsive Suffix, e.g.:
+ * If we’re using Sass-MQ, automatically generate responsive helpers for each of
+ * our defined breakpoints, and give them a Responsive Suffix, e.g.:
  *
  * <div class="u-m-xl@tablet">
  */
@@ -103,7 +110,7 @@ $spacing-responsive-properties: $spacing-properties !default;
 
 $spacing-responsive-directions: $spacing-directions !default;
 
-$spacing-responsive-sizes: $spacing-sizes !default;
+$spacing-responsive-factors: $spacing-factors !default;
 
 @if (variable-exists(mq-breakpoints) and $enable-responsive-spacing == true) {
   @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
@@ -111,7 +118,7 @@ $spacing-responsive-sizes: $spacing-sizes !default;
       @include spacing(
           $spacing-responsive-properties,
           $spacing-responsive-directions,
-          $spacing-responsive-sizes,
+          $spacing-responsive-factors,
           #{$spacing-breakpoint-separator}#{$breakpoint-name}
       );
     }
