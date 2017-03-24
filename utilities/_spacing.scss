@@ -50,7 +50,7 @@ $spacing-breakpoint-separator: $breakpoint-separator !default;
 
   // Add zero and null modifiers to the factor list so classes like `u-ph-0` and
   // `u-pl` are created automatically
-  $factors: join((
+  $factors: map-merge((
     '0': 0,
     null: 1
   ), $factors);

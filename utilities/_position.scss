@@ -64,7 +64,7 @@ $position-breakpoint-separator: $breakpoint-separator !default;
 
   // Add zero and null modifiers to the factor list so classes like `u-b-0` and
   // `u-b` are created automatically
-  $factors: join((
+  $factors: map-merge((
     '0': 0,
     null: 1
   ), $factors);
