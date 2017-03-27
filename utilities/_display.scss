@@ -65,11 +65,11 @@ $enable-responsive-display: false !default;
       }
 
       .u-db#{$breakpoint-separator}#{$breakpoint-name} {
-        display: none !important;
+        display: block !important;
       }
 
       .u-dib#{$breakpoint-separator}#{$breakpoint-name} {
-        display: none !important;
+        display: inline-block !important;
       }
 
     }
