@@ -48,9 +48,9 @@
  * <div class="u-db@desktop">
  */
 
-$responsive-hide: false !default;
+$enable-responsive-display: false !default;
 
-@if (variable-exists(mq-breakpoints) and $responsive-hide == true) {
+@if (variable-exists(mq-breakpoints) and $enable-responsive-display == true) {
 
   @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
 
