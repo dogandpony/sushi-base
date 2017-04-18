@@ -117,7 +117,7 @@ $enable-responsive-layout: false !default;
   padding: 0 ($global-spacing / 2); /* [5] */
 
   @if ($enable-layout-markup-fix == false) {
-    font-size: $base-font-size; /* [6] */
+    font-size: 1rem; /* [6] */
   }
 
 }
