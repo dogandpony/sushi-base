@@ -25,7 +25,7 @@
  *  https://github.com/tachyons-css/tachyons/blob/master/src/_display.css
  */
 
-@mixin display($breakpoint) {
+@mixin display($breakpoint: null) {
 
   .u-hidden#{$breakpoint} {
     @include hide();
@@ -65,7 +65,7 @@
 
 }
 
-display();
+@include display();
 
 
 /**
@@ -86,7 +86,7 @@ $enable-responsive-display: false !default;
 
     @include mq($from: $breakpoint-name) {
 
-      display(#{$breakpoint-separator}#{$breakpoint-name})
+      @include display(#{$breakpoint-separator}#{$breakpoint-name})
 
     }
 
