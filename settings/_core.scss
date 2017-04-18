@@ -3,52 +3,68 @@
  * ========================================================================= */
 
 /**
-* This file contains core settings for the framework to function including
-* base typography and spacing units.
-*/
+ * This file contains core settings for the framework to function including
+ * base typography and spacing units.
+ */
 
-// Size declared in rems for maximum flexibility.
-// HTML font size set to 62.5% (elements/_html.sass) so that 1rem is
-// generally equal to 10px.
+// Base typographical styles
 
-$base-font-size: 1.8rem !default;
-$base-line-height: 1.8 !default;
+$base-font-size: 16px !default;
+$base-line-height: 1.5 !default;
 
 
-// Spacing units measured in rems for more control over the spacing scale.
-// For example: default spacing unit is appx. 30px, instead of calculating
-// the large spacing unit in multiples of the default spacing unit,
-// i.e. 1.33333*3rem = 4rem we can simply state 4rems instead.
+// Base spacing value
+// Each component has its own spacing variable, which default to this value.
 
-$global-spacing-xxs: 0.5rem !default;
-$global-spacing-xs: 1rem !default;
-$global-spacing-s: 2rem !default;
-$global-spacing: 3rem !default;
-$global-spacing-l: 4rem !default;
-$global-spacing-xl: 6rem !default;
-$global-spacing-xxl: 8rem !default;
+$global-spacing: 32px !default;
 
 
-// Validate base-font/spacing values as rem numbers
+// Global spacing factors
 
-@each $_rem-value in
+$global-spacing-factors: (
+  'xs': 0.5,
+  's': 0.75,
+  'l': 1.5,
+  'xl': 2
+) !default;
+
+
+
+
+/* Framework-only checks and reassignment. Do not alter anything below.
+   ========================================================================= */
+
+/**
+ * Validate base-font/spacing values as rem numbers
+ */
+
+@each $_px-value in
   $base-font-size
-  $global-spacing
-  $global-spacing-s
-  $global-spacing-xs
-  $global-spacing-xxs
-  $global-spacing-l
-  $global-spacing-xl
-  $global-spacing-xxl {
+  $global-spacing {
 
-  @if (type-of($_rem-value) == number) {
+  @if (type-of($_px-value) == number) {
 
-    @if (unit($_rem-value) != "rem") {
-      @error "`#{$_rem-value}` requires a rem value.";
+    @if (unit($_px-value) != "px") {
+      @error "`#{$_px-value}` requires a px value.";
     }
 
   } @else {
-    @error "`#{$_rem-value}` requires a number.";
+    @error "`#{$_px-value}` requires a number.";
   }
 
 }
+
+
+
+/**
+ * Spacing variables
+ *
+ * These variables are just helpers in case you need specific spacing values
+ * in your components. You may want to create similar variables if you customize
+ * `$global-spacing-factors` to add new factors.
+ */
+
+$global-spacing-xs: round($global-spacing * map_get($global-spacing-factors, 'xs'));
+$global-spacing-s:  round($global-spacing * map_get($global-spacing-factors, 's'));
+$global-spacing-l:  round($global-spacing * map_get($global-spacing-factors, 'l'));
+$global-spacing-xl: round($global-spacing * map_get($global-spacing-factors, 'xl'));

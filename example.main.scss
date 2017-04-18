@@ -94,11 +94,12 @@
 // Generic
 // ---------------------------
 
-@import "generic/base";
-@import "generic/box-sizing";
-@import "generic/margins";
 @import "generic/normalize";
 @import "generic/reset";
+@import "generic/background-images";
+@import "generic/box-sizing";
+@import "generic/margins";
+@import "generic/base";
 
 
 
@@ -116,16 +117,17 @@
 
 @import "objects/wrapper";
 @import "objects/layout";
+
+@import "objects/box";
+@import "objects/crop";
+@import "objects/list-bare";
+@import "objects/list-inline";
 @import "objects/media";
 @import "objects/media-valign";
 @import "objects/media-stacked";
-@import "objects/list-bare";
-@import "objects/list-inline";
-@import "objects/box";
-@import "objects/ratio";
-@import "objects/crop";
-@import "objects/table";
 @import "objects/pack";
+@import "objects/ratio";
+@import "objects/table";
 
 
 
@@ -139,14 +141,15 @@
 // Utilities
 // ---------------------------
 
+@import "utilities/align";
 @import "utilities/clearfix";
-@import "utilities/widths";
+@import "utilities/display";
 @import "utilities/elevation";
+@import "utilities/float";
 @import "utilities/headings";
 @import "utilities/spacing";
-@import "utilities/print";
-@import "utilities/display";
-@import "utilities/float";
 @import "utilities/position";
+@import "utilities/print";
 @import "utilities/typography";
+@import "utilities/widths";
 @import "utilities/z-index";

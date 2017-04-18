@@ -30,31 +30,6 @@
 
 
 
-/* Spacing modifiers (margin-bottom).
-       ========================================================================== */
-
-/**
- * Modify the amount of space between the image and body.
- */
-
-$media-stacked-spacing-modifiers: (
-  'xs': $global-spacing-xs,
-  's': $global-spacing-s,
-  'l': $global-spacing-l,
-  'xl': $global-spacing-xl
-) !default;
-
-@each $spacing-name, $spacing-size in $media-stacked-spacing-modifiers {
-
-  .o-media-stacked--#{$spacing-name} > .o-media-stacked__img {
-    margin-bottom: $spacing-size;
-  }
-
-}
-
-
-
-
 /* Alignment modifiers.
    ========================================================================== */
 
@@ -64,4 +39,22 @@ $media-stacked-spacing-modifiers: (
 
 .o-media-stacked--left {
   text-align: left;
+}
+
+
+
+
+/* Spacing modifiers (margin-bottom).
+       ========================================================================== */
+
+/**
+ * Modify the amount of space between the image and body.
+ */
+
+@each $spacing-name, $spacing-factor in $global-spacing-factors {
+
+  .o-media-stacked--#{$spacing-name} > .o-media-stacked__img {
+    margin-bottom: ($global-spacing * $spacing-factor);
+  }
+
 }

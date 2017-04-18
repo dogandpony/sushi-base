@@ -11,13 +11,6 @@
  *                   feature of this form.
  * .c-btn--remove  - Use this class to indicate that the button will remove a
  *                   feature, or other negative connotations.
- *
- * Markup:
- * <a href="#" class="c-btn {{modifier_class}}">Link Button</a>
- * <button class="c-btn {{modifier_class}}">Button Element</button>
- * <input type="button" class="c-btn {{modifier_class}}" value="input[type='button']"/>
- *
- * Styleguide components.button
  */
 
 /**
@@ -124,7 +117,7 @@
  * Ghost buttons have see-through backgrounds and are bordered.
  */
 
-$btn-ghost-border-width: 0.2rem;
+$btn-ghost-border-width: 2px;
 
 .c-btn--ghost {
   border: $btn-ghost-border-width solid currentColor;

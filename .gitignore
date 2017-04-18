@@ -20,6 +20,7 @@ bower_components/
 .project
 .settings
 .tmproj
+.vscode
 
 ### OS-generated files
 .DS_Store

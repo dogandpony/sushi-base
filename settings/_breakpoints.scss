@@ -2,15 +2,11 @@
  * BREAKPOINT SETTINGS
  * ========================================================================= */
 
-// Breakpoints are declared in rems for maximum flexibility
-// HTML font size set to 62.5% so that 1rem is generally equal to 10px
-
 $mq-breakpoints: (
-  phone: 1em, // Sass-MQ throws an error if we set this to 0
-  tablet-v: 60em,
-  tablet-h: 90em,
-  desktop: 120em,
-  wide: 180em
+  phone: 320px,
+  tablet-v: 600px,
+  tablet-h: 900px,
+  desktop: 1200px
 ) !default;
 
 

@@ -25,17 +25,47 @@
  *  https://github.com/tachyons-css/tachyons/blob/master/src/_display.css
  */
 
-.u-dn {
-  display: none !important;
+@mixin display($breakpoint) {
+
+  .u-hidden#{$breakpoint} {
+    @include hide();
+  }
+
+  .u-dn#{$breakpoint} {
+    display: none !important;
+  }
+
+  .u-db#{$breakpoint} {
+    display: block !important;
+  }
+
+  .u-dib#{$breakpoint} {
+    display: inline-block !important;
+  }
+
+  .u-dtb#{$breakpoint} {
+    display: table !important;
+  }
+
+  .u-dtbc#{$breakpoint} {
+    display: table-cell !important;
+  }
+
+  .u-dtbcl#{$breakpoint} {
+    display: table-column !important;
+  }
+
+  .u-dtbr#{$breakpoint} {
+    display: table-row !important;
+  }
+
+  .u-dtbrg#{$breakpoint} {
+    display: table-row-group !important;
+  }
+
 }
 
-.u-db {
-  display: block !important;
-}
-
-.u-dib {
-  display: inline-block !important;
-}
+display();
 
 
 /**
@@ -48,29 +78,15 @@
  * <div class="u-db@desktop">
  */
 
-$responsive-hide: false !default;
+$enable-responsive-display: false !default;
 
-@if (variable-exists(mq-breakpoints) and $responsive-hide == true) {
+@if (variable-exists(mq-breakpoints) and $enable-responsive-display == true) {
 
   @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
 
     @include mq($from: $breakpoint-name) {
 
-      .u-hidden#{$breakpoint-separator}#{$breakpoint-name} {
-        @include hide();
-      }
-
-      .u-dn#{$breakpoint-separator}#{$breakpoint-name} {
-        display: none !important;
-      }
-
-      .u-db#{$breakpoint-separator}#{$breakpoint-name} {
-        display: none !important;
-      }
-
-      .u-dib#{$breakpoint-separator}#{$breakpoint-name} {
-        display: none !important;
-      }
+      display(#{$breakpoint-separator}#{$breakpoint-name})
 
     }
 

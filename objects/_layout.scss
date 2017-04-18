@@ -50,10 +50,18 @@
  * There are plenty more options available to us: explore them below.
  */
 
+
 // By default we use the `font-size: 0;` trick to remove whitespace between
 // items. Set this to true in order to use a markup-based strategy like
 // commenting out whitespace or minifying HTML.
+
 $enable-layout-markup-fix: false !default;
+
+
+// By default we won't generate breakpoint-targeted classes such as
+// `.o-layout--s@desktop`.
+
+$enable-responsive-layout: false !default;
 
 
 
@@ -77,7 +85,7 @@ $enable-layout-markup-fix: false !default;
 
 .o-layout {
   display: block; /* [1] */
-  margin: 0 -($global-spacing / 2); /* [2] [4] */
+  margin: 0 (($global-spacing / 2) * -1); /* [2] [4] */
   padding: 0; /* [2] */
   list-style: none; /* [1] */
 
@@ -109,7 +117,7 @@ $enable-layout-markup-fix: false !default;
   padding: 0 ($global-spacing / 2); /* [5] */
 
   @if ($enable-layout-markup-fix == false) {
-    font-size: $base-font-size; /* [6] */
+    font-size: 1rem; /* [6] */
   }
 
 }
@@ -123,21 +131,14 @@ $enable-layout-markup-fix: false !default;
 // Generates the following classes by default:
 // .o-layout--s
 // .o-layout--l
-// .o-layout--xl
 
-$layout-spacing-modifiers: (
-  's': $global-spacing-s,
-  'l': $global-spacing-l,
-  'xl': $global-spacing-xl
-) !default;
-
-@each $spacing-name, $spacing-size in $layout-spacing-modifiers {
+@each $spacing-name, $spacing-factor in $global-spacing-factors {
 
   .o-layout--#{$spacing-name} {
-    margin: 0 -($spacing-size / 2);
+    margin: (0 (($global-spacing * $spacing-factor) / 2) * -1);
 
     > .o-layout__item {
-      padding: 0 ($spacing-size / 2);
+      padding: 0 (($global-spacing * $spacing-factor) / 2);
     }
 
   }
@@ -271,21 +272,19 @@ $layout-spacing-modifiers: (
  * <div class="o-layout--l@wide">
  */
 
-$enable-responsive-layout: false !default;
-
 @if (variable-exists(mq-breakpoints) and $enable-responsive-layout == true) {
 
   @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
 
     @include mq($from: $breakpoint-name) {
 
-      @each $global-spacing-name, $global-spacing-size in $global-spacing-sizes {
+      @each $spacing-name, $spacing-factor in $global-spacing-factors {
 
-        .o-layout#{$global-spacing-name}#{$breakpoint-separator}#{$breakpoint-name} {
-          margin: 0 -($global-spacing-size / 2);
+        .o-layout--#{$spacing-name}#{$breakpoint-separator}#{$breakpoint-name} {
+          margin: (0 (($global-spacing * $spacing-factor) / 2) * -1);
 
           > .o-layout__item {
-            padding: ($global-spacing-size / 2);
+            padding: 0 (($global-spacing * $spacing-factor) / 2);
           }
 
         }
