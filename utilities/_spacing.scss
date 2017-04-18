@@ -61,17 +61,22 @@ $spacing-breakpoint-separator: $breakpoint-separator !default;
 
       @each $factor-namespace, $factor in $factors {
 
-        // Add a hyphen before the namespace if it's not null
-        // `xs` = `u-p-xs`
-        // null = `u-p`
-        @if ($factor-namespace != null) {
-          $factor-namespace: "-#{$factor-namespace}";
-        }
+        // do not print negative padding rules
+        @if ($factor >= 0) or ($property != 'padding') {
 
-        .u-#{$property-namespace}#{$direction-namespace}#{$factor-namespace}#{$breakpoint} {
+          // Add a hyphen before the namespace if it's not null
+          // `xs` = `u-p-xs`
+          // null = `u-p`
+          @if ($factor-namespace != null) {
+            $factor-namespace: "-#{$factor-namespace}";
+          }
 
-          @each $direction in $direction-rules {
-            #{$property}#{$direction}: ($factor * $global-spacing) !important;
+          .u-#{$property-namespace}#{$direction-namespace}#{$factor-namespace}#{$breakpoint} {
+
+            @each $direction in $direction-rules {
+              #{$property}#{$direction}: ($factor * $global-spacing) !important;
+            }
+
           }
 
         }
