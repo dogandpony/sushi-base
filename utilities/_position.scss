@@ -58,7 +58,7 @@ $position-breakpoint-separator: $breakpoint-separator !default;
 
 @mixin position(
   $directions: $position-directions,
-  $factors: $global-spacing-factors,
+  $factors: $position-factors,
   $breakpoint: null
 ) {
 

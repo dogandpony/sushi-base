@@ -44,7 +44,7 @@ $spacing-breakpoint-separator: $breakpoint-separator !default;
 @mixin spacing(
   $properties: $spacing-properties,
   $directions: $spacing-directions,
-  $factors: $global-spacing-factors,
+  $factors: $spacing-factors,
   $breakpoint: null
 ) {
 
