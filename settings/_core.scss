@@ -29,7 +29,14 @@ $global-spacing-factors: (
 ) !default;
 
 
-// Validate base-font/spacing values as rem numbers
+
+
+/* Framework-only checks and reassignment. Do not alter anything below.
+   ========================================================================= */
+
+/**
+ * Validate base-font/spacing values as rem numbers
+ */
 
 @each $_px-value in
   $base-font-size
