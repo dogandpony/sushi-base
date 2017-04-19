@@ -180,7 +180,7 @@ $elevation-max-animation-length: 400ms !default;
  */
 
 @mixin elevation($elevation1, $elevation2: null, $state: null) {
-  @if $elevation1==0 {
+  @if $elevation1 == none {
     box-shadow: none !important;
   }
   @else {
@@ -190,7 +190,7 @@ $elevation-max-animation-length: 400ms !default;
   @if ($elevation2 != null) and ($state != null) {
     @include _elevation-transition($elevation2 -$elevation2);
     &:#{$state} {
-      @if $elevation1==0 {
+      @if $elevation1 == none {
         box-shadow: none !important;
       }
       @else {
