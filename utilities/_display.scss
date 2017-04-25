@@ -33,6 +33,10 @@
     display: none !important;
   }
 
+  .u-di#{$breakpoint} {
+    display: inline !important;
+  }
+
   .u-db#{$breakpoint} {
     display: block !important;
   }
