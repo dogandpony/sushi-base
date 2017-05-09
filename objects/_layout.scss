@@ -128,6 +128,14 @@ $enable-responsive-layout: false !default;
 /* Spacing modifiers (gutter padding).
    ========================================================================== */
 
+.o-layout--flush {
+  margin: 0;
+
+  > .o-layout__item {
+    padding: 0;
+  }
+}
+
 // Generates the following classes by default:
 // .o-layout--s
 // .o-layout--l
@@ -279,6 +287,14 @@ $enable-responsive-layout: false !default;
     @include mq($from: $breakpoint-name) {
 
       @each $spacing-name, $spacing-factor in $global-spacing-factors {
+
+        .o-layout--flush#{$breakpoint-separator}#{$breakpoint-name} {
+          margin: 0;
+
+          > .o-layout__item {
+            padding: 0;
+          }
+        }
 
         .o-layout--#{$spacing-name}#{$breakpoint-separator}#{$breakpoint-name} {
           margin: (0 (($global-spacing * $spacing-factor) / 2) * -1);
