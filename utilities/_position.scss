@@ -2,40 +2,6 @@
    #POSITION
    ========================================================================== */
 
-/* Position States
-   ========================================================================== */
-
-/**
- * 1. Browser support for position sticky is still lacking:
- *    http://caniuse.com/#feat=css-sticky
- */
-
-.u-pos {
-  position: static !important;
-}
-
-.u-por {
-  position: relative !important;
-}
-
-.u-poa {
-  position: absolute !important;
-}
-
-.u-pof {
-  position: fixed !important;
-}
-
-.u-pot {
-  position: sticky !important; /* [1] */
-}
-
-
-
-
-/* Position Directions/Sizes
-   ========================================================================== */
-
 // Utility classes for position direction values, for example:
 // .u-l-xs
 // .u-b-l
@@ -61,6 +27,26 @@ $position-breakpoint-separator: $breakpoint-separator !default;
   $factors: $position-factors,
   $breakpoint: null
 ) {
+
+  .u-pos#{$breakpoint} {
+    position: static !important;
+  }
+
+  .u-por#{$breakpoint} {
+    position: relative !important;
+  }
+
+  .u-poa#{$breakpoint} {
+    position: absolute !important;
+  }
+
+  .u-pof#{$breakpoint} {
+    position: fixed !important;
+  }
+
+  .u-pot#{$breakpoint} {
+    position: sticky !important; /* [1] */
+  }
 
   // Add zero and null modifiers to the factor list so classes like `u-b-0` and
   // `u-b` are created automatically
@@ -120,7 +106,7 @@ $position-responsive-directions: $position-directions !default;
 
 $position-responsive-factors: $position-factors !default;
 
-@if (variable-exists(mq-breakpoints) and $enable-responsive-spacing == true) {
+@if (variable-exists(mq-breakpoints) and $enable-responsive-position == true) {
   @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
     @include mq($from: $breakpoint-name) {
       @include position(
