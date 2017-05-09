@@ -15,17 +15,15 @@
 /**
  * Display utility classes
  *
- * Base:
- *  d = display
- * Modifiers:
- *  n     = none
- *  b     = block
- *  ib    = inline-block
- *
- *  https://github.com/tachyons-css/tachyons/blob/master/src/_display.css
+ * https://github.com/tachyons-css/tachyons/blob/master/src/_display.css
  */
 
 @mixin display($breakpoint: null) {
+
+  /**
+   * Hide only visually, but have it available for screen readers:
+   * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+   */
 
   .u-hidden#{$breakpoint} {
     @include hide();
