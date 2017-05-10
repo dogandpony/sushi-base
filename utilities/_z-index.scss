@@ -22,47 +22,54 @@
  * Article: https://philipwalton.com/articles/what-no-one-told-you-about-z-index/
  */
 
-.u-z-0 {
-  z-index: 0 !important;
+@mixin z-index-utility($breakpoint: null) {
+
+  .u-z-0#{$breakpoint} {
+    z-index: 0 !important;
+  }
+
+  .u-z-1#{$breakpoint} {
+    z-index: 1 !important;
+  }
+
+  .u-z-2#{$breakpoint} {
+    z-index: 2 !important;
+  }
+
+  .u-z-3#{$breakpoint} {
+    z-index: 3 !important;
+  }
+
+  .u-z-4#{$breakpoint} {
+    z-index: 4 !important;
+  }
+
+  .u-z-5#{$breakpoint} {
+    z-index: 5 !important;
+  }
+
+  .u-z-99#{$breakpoint} {
+    z-index: 99 !important;
+  }
+
+
+  .u-z-999#{$breakpoint} {
+    z-index: 999 !important;
+  }
+
+  .u-z-inherit#{$breakpoint} {
+    z-index: inherit !important;
+  }
+
+  .u-z-initial#{$breakpoint} {
+    z-index: initial !important;
+  }
+
+  .u-z-unset#{$breakpoint} {
+    z-index: unset !important;
+  }
+
 }
 
-.u-z-1 {
-  z-index: 1 !important;
-}
 
-.u-z-2 {
-  z-index: 2 !important;
-}
-
-.u-z-3 {
-  z-index: 3 !important;
-}
-
-.u-z-4 {
-  z-index: 4 !important;
-}
-
-.u-z-5 {
-  z-index: 5 !important;
-}
-
-.u-z-99 {
-  z-index: 99 !important;
-}
-
-
-.u-z-999 {
-  z-index: 999 !important;
-}
-
-.u-z-inherit {
-  z-index: inherit !important;
-}
-
-.u-z-initial {
-  z-index: initial !important;
-}
-
-.u-z-unset {
-  z-index: unset !important;
-}
+@include z-index-utility();

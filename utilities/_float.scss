@@ -2,14 +2,21 @@
  * FLOAT UTILITIES
  * ========================================================================= */
 
-.u-fl {
-  float: left !important;
+@mixin float-utility($breakpoint: null) {
+
+  .u-fl#{$breakpoint} {
+    float: left !important;
+  }
+
+  .u-fr#{$breakpoint} {
+    float: right !important;
+  }
+
+  .u-fn#{$breakpoint} {
+    float: none !important;
+  }
+
 }
 
-.u-fr {
-  float: right !important;
-}
 
-.u-fn {
-  float: none !important;
-}
+@include float-utility();

@@ -28,24 +28,34 @@ $wrapper-max-width: 1200px !default;
 
 
 
-/* Flush
+/* Modifiers
    ========================================================================= */
 
-.o-wrapper--flush {
-  max-width: none;
-}
+@mixin wrapper-modifiers($breakpoint: null) {
+
+  /* Flush
+     ========================================================================= */
+
+  .o-wrapper--flush#{$breakpoint} {
+    max-width: none;
+  }
 
 
 
 
-/* Size variants.
-   ========================================================================== */
+  /* Size variants.
+     ========================================================================== */
 
-@each $spacing-name, $spacing-factor in $global-spacing-factors {
+  @each $spacing-name, $spacing-factor in $global-spacing-factors {
 
-  .o-wrapper--#{$spacing-name} {
-    padding-right: ($global-spacing * $spacing-factor);
-    padding-left: ($global-spacing * $spacing-factor);
+    .o-wrapper--#{$spacing-name}#{$breakpoint} {
+      padding-right: ($global-spacing * $spacing-factor);
+      padding-left: ($global-spacing * $spacing-factor);
+    }
+
   }
 
 }
+
+
+@include wrapper-modifiers();

@@ -2,42 +2,49 @@
  * WHITE SPACE UTILITIES
  * ========================================================================= */
 
-.u-whs-n {
-  white-space: normal;
+@mixin white-space-utility($breakpoint: null) {
+
+  .u-whs-n#{$breakpoint} {
+    white-space: normal;
+  }
+
+  .u-whs-p#{$breakpoint} {
+    white-space: pre;
+  }
+
+  .u-whs-nw#{$breakpoint} {
+    white-space: nowrap;
+  }
+
+  .u-whs-pw#{$breakpoint} {
+    white-space: pre-wrap;
+  }
+
+  .u-whs-pl#{$breakpoint} {
+    white-space: pre-line;
+  }
+
+  .u-whsc-n#{$breakpoint} {
+    white-space-collapse: normal;
+  }
+
+  .u-whsc-k#{$breakpoint} {
+    white-space-collapse: keep-all;
+  }
+
+  .u-whsc-l#{$breakpoint} {
+    white-space-collapse: loose;
+  }
+
+  .u-whsc-bs#{$breakpoint} {
+    white-space-collapse: break-strict;
+  }
+
+  .u-whsc-ba#{$breakpoint} {
+    white-space-collapse: break-all;
+  }
+
 }
 
-.u-whs-p {
-  white-space: pre;
-}
 
-.u-whs-nw {
-  white-space: nowrap;
-}
-
-.u-whs-pw {
-  white-space: pre-wrap;
-}
-
-.u-whs-pl {
-  white-space: pre-line;
-}
-
-.u-whsc-n {
-  white-space-collapse: normal;
-}
-
-.u-whsc-k {
-  white-space-collapse: keep-all;
-}
-
-.u-whsc-l {
-  white-space-collapse: loose;
-}
-
-.u-whsc-bs {
-  white-space-collapse: break-strict;
-}
-
-.u-whsc-ba {
-  white-space-collapse: break-all;
-}
+@include white-space-utility();
