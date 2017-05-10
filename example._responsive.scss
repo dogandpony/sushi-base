@@ -10,13 +10,14 @@
 
     @include mq($from: $breakpoint-name) {
 
-      @include display-utility($breakpoint);
       @include layout-modifiers($breakpoint);
+      @include wrapper-modifiers($breakpoint);
+
+      @include display-utility($breakpoint);
       @include overflow-utility($breakpoint);
       @include position-utility($breakpoint);
       @include spacing-utility($breakpoint);
       @include typography-utility($breakpoint);
-      @include wrapper-modifiers($breakpoint);
 
     }
 
