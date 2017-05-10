@@ -22,39 +22,16 @@
  * Article: https://philipwalton.com/articles/what-no-one-told-you-about-z-index/
  */
 
+$z-index-depths: 0 1 2 3 4 5 10 20 30 40 50 60 70 80 90 100 !default;
+
 @mixin z-index-utility($breakpoint: null) {
 
-  .u-z-0#{$breakpoint} {
-    z-index: 0 !important;
-  }
+  @each $depth in $z-index-depths {
 
-  .u-z-1#{$breakpoint} {
-    z-index: 1 !important;
-  }
+    .u-z-#{$depth}#{$breakpoint} {
+      z-index: $depth !important;
+    }
 
-  .u-z-2#{$breakpoint} {
-    z-index: 2 !important;
-  }
-
-  .u-z-3#{$breakpoint} {
-    z-index: 3 !important;
-  }
-
-  .u-z-4#{$breakpoint} {
-    z-index: 4 !important;
-  }
-
-  .u-z-5#{$breakpoint} {
-    z-index: 5 !important;
-  }
-
-  .u-z-99#{$breakpoint} {
-    z-index: 99 !important;
-  }
-
-
-  .u-z-999#{$breakpoint} {
-    z-index: 999 !important;
   }
 
   .u-z-inherit#{$breakpoint} {
