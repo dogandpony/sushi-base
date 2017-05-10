@@ -12,6 +12,7 @@
 
       @include display-utility($breakpoint);
       @include layout-modifiers($breakpoint);
+      @include overflow-utility($breakpoint);
       @include position-utility($breakpoint);
       @include spacing-utility($breakpoint);
       @include typography-utility($breakpoint);

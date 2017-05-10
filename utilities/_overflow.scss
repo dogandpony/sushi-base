@@ -1,0 +1,45 @@
+/* =========================================================================
+ * OVERFLOW
+ * ========================================================================= */
+
+@mixin overflow-utility($breakpoint: null) {
+
+  .u-ov-a#{$breakpoint} {
+    overflow: auto !important;
+  }
+
+  .u-ovx-a#{$breakpoint} {
+    overflow-x: auto !important;
+  }
+
+  .u-ovy-a#{$breakpoint} {
+    overflow-y: auto !important;
+  }
+
+  .u-ov-h#{$breakpoint} {
+    overflow: hidden !important;
+  }
+
+  .u-ovx-h#{$breakpoint} {
+    overflow-x: hidden !important;
+  }
+
+  .u-ovy-h#{$breakpoint} {
+    overflow-y: hidden !important;
+  }
+
+  .u-ov-s#{$breakpoint} {
+    overflow: scroll !important;
+  }
+
+  .u-ovx-s#{$breakpoint} {
+    overflow-x: scroll !important;
+  }
+
+  .u-ovy-s#{$breakpoint} {
+    overflow-y: scroll !important;
+  }
+
+}
+
+@include overflow-utility();
