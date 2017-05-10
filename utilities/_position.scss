@@ -18,23 +18,23 @@ $position-factors: $global-spacing-factors !default;
 
 @mixin position-utility($breakpoint: null) {
 
-  .u-pos#{$breakpoint} {
+  .u-po-s#{$breakpoint} {
     position: static !important;
   }
 
-  .u-por#{$breakpoint} {
+  .u-po-r#{$breakpoint} {
     position: relative !important;
   }
 
-  .u-poa#{$breakpoint} {
+  .u-po-a#{$breakpoint} {
     position: absolute !important;
   }
 
-  .u-pof#{$breakpoint} {
+  .u-po-f#{$breakpoint} {
     position: fixed !important;
   }
 
-  .u-pot#{$breakpoint} {
+  .u-po-t#{$breakpoint} {
     position: sticky !important; /* [1] */
   }
 

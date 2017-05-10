@@ -24,39 +24,39 @@
     @include hide();
   }
 
-  .u-dn#{$breakpoint} {
+  .u-d-n#{$breakpoint} {
     display: none !important;
   }
 
-  .u-di#{$breakpoint} {
+  .u-d-i#{$breakpoint} {
     display: inline !important;
   }
 
-  .u-db#{$breakpoint} {
+  .u-d-b#{$breakpoint} {
     display: block !important;
   }
 
-  .u-dib#{$breakpoint} {
+  .u-d-ib#{$breakpoint} {
     display: inline-block !important;
   }
 
-  .u-dtb#{$breakpoint} {
+  .u-d-tb#{$breakpoint} {
     display: table !important;
   }
 
-  .u-dtbc#{$breakpoint} {
+  .u-d-tbc#{$breakpoint} {
     display: table-cell !important;
   }
 
-  .u-dtbcl#{$breakpoint} {
+  .u-d-tbcl#{$breakpoint} {
     display: table-column !important;
   }
 
-  .u-dtbr#{$breakpoint} {
+  .u-d-tbr#{$breakpoint} {
     display: table-row !important;
   }
 
-  .u-dtbrg#{$breakpoint} {
+  .u-d-tbrg#{$breakpoint} {
     display: table-row-group !important;
   }
 
