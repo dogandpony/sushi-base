@@ -35,31 +35,20 @@ $spacing-properties: (
 $spacing-factors: $global-spacing-factors !default;
 
 
-// When using Sass-MQ, this defines the separator for the breakpoints suffix
-// in the class name. By default, we are generating the responsive suffixes
-// for the classes with a `@` symbol so you get classes like:
-// <div class="u-p-l@tablet">
-$spacing-breakpoint-separator: $breakpoint-separator !default;
-
-@mixin spacing(
-  $properties: $spacing-properties,
-  $directions: $spacing-directions,
-  $factors: $spacing-factors,
-  $breakpoint: null
-) {
+@mixin spacing-utility($breakpoint: null) {
 
   // Add zero and null modifiers to the factor list so classes like `u-ph-0` and
   // `u-pl` are created automatically
   $factors: map-merge((
     '0': 0,
     null: 1
-  ), $factors);
+  ), $spacing-factors);
 
-  @each $property-namespace, $property in $properties {
+  @each $property-namespace, $property in $spacing-properties {
 
-    @each $direction-namespace, $direction-rules in $directions {
+    @each $direction-namespace, $direction-rules in $spacing-directions {
 
-      @each $factor-namespace, $factor in $factors {
+      @each $factor-namespace, $factor in $spacing-factors {
 
         // do not print negative padding rules
         @if ($factor >= 0) or ($property != 'padding') {
@@ -99,35 +88,4 @@ $spacing-breakpoint-separator: $breakpoint-separator !default;
  * The following will generate spacing helper classes.
  */
 
-@include spacing();
-
-
-/**
- * If we’re using Sass-MQ, automatically generate responsive helpers for each of
- * our defined breakpoints, and give them a Responsive Suffix, e.g.:
- *
- * <div class="u-m-xl@tablet">
- */
-
-$enable-responsive-spacing: false !default;
-
-$spacing-responsive-properties: $spacing-properties !default;
-
-$spacing-responsive-directions: $spacing-directions !default;
-
-$spacing-responsive-factors: $spacing-factors !default;
-
-@if (variable-exists(mq-breakpoints) and $enable-responsive-spacing == true) {
-  @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
-    @include mq($from: $breakpoint-name) {
-      @include spacing(
-          $spacing-responsive-properties,
-          $spacing-responsive-directions,
-          $spacing-responsive-factors,
-          #{$spacing-breakpoint-separator}#{$breakpoint-name}
-      );
-    }
-  }
-}
-
-/* stylelint-enable string-quotes, max-nesting-depth */
+@include spacing-utility();

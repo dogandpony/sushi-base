@@ -3,29 +3,22 @@
  * ========================================================================= */
 
 /**
- * Hide only visually, but have it available for screen readers:
- * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- */
-
-.u-hidden {
-  @include hide();
-}
-
-
-/**
  * Display utility classes
  *
- * Base:
- *  d = display
- * Modifiers:
- *  n     = none
- *  b     = block
- *  ib    = inline-block
- *
- *  https://github.com/tachyons-css/tachyons/blob/master/src/_display.css
+ * https://github.com/tachyons-css/tachyons/blob/master/src/_display.css
  */
 
-@mixin display($breakpoint: null) {
+@mixin display-utility($breakpoint: null) {
+
+  /**
+   * Hide only visually, but have it available for screen readers:
+   * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+   */
+
+  /**
+   * Hide only visually, but have it available for screen readers:
+   * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+   */
 
   .u-hidden#{$breakpoint} {
     @include hide();
@@ -33,6 +26,10 @@
 
   .u-dn#{$breakpoint} {
     display: none !important;
+  }
+
+  .u-di#{$breakpoint} {
+    display: inline !important;
   }
 
   .u-db#{$breakpoint} {
@@ -65,31 +62,5 @@
 
 }
 
-@include display();
+@include display-utility();
 
-
-/**
- * If using Sass-MQ for breakpoints, generate responsive hide
- * classes with breakpoint suffix. Note: breakpoints are all
- * mobile-up, i.e. mobile-first.
- *
- * For example:
- *
- * <div class="u-db@desktop">
- */
-
-$enable-responsive-display: false !default;
-
-@if (variable-exists(mq-breakpoints) and $enable-responsive-display == true) {
-
-  @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
-
-    @include mq($from: $breakpoint-name) {
-
-      @include display(#{$breakpoint-separator}#{$breakpoint-name})
-
-    }
-
-  }
-
-}

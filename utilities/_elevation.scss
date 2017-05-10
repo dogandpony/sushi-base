@@ -14,8 +14,19 @@ $elevation-available-depths: 1, 2, 4, 8, 16, 24 !default;
  * CSS md-elevation-z# classes
  */
 
-@each $zValue in $elevation-available-depths {
-  .u-elevation-#{$zValue} {
-    @include elevation($zValue);
+@mixin elevation-utility($breakpoint: null) {
+
+  @each $zValue in $elevation-available-depths {
+
+    .u-elevation-#{$zValue}#{$breakpoint} {
+
+      @include elevation($zValue);
+
+    }
+
   }
+
 }
+
+
+@include elevation-utility();

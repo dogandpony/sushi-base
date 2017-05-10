@@ -2,40 +2,47 @@
  * ALIGNMENT UTILITIES
  * ========================================================================= */
 
-/**
- * Vertical alignment classes.
- */
+@mixin align-utility($breakpoint: null) {
 
-.u-vabl {
-  vertical-align: baseline !important;
+  /**
+   * Vertical alignment classes.
+   */
+
+  .u-va-bl#{$breakpoint} {
+    vertical-align: baseline !important;
+  }
+
+  .u-va-b#{$breakpoint} {
+    vertical-align: bottom !important;
+  }
+
+  .u-va-m#{$breakpoint} {
+    vertical-align: middle !important;
+  }
+
+  .u-va-t#{$breakpoint} {
+    vertical-align: top !important;
+  }
+
+  .u-va-s#{$breakpoint} {
+    vertical-align: sub !important;
+  }
+
+  .u-va-p#{$breakpoint} {
+    vertical-align: super !important;
+  }
+
+
+  /**
+   * Horizontal alignment
+   */
+
+  .u-center#{$breakpoint} {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
 }
 
-.u-vab {
-  vertical-align: bottom !important;
-}
 
-.u-vam {
-  vertical-align: middle !important;
-}
-
-.u-vat {
-  vertical-align: top !important;
-}
-
-.u-vas {
-  vertical-align: sub !important;
-}
-
-.u-vap {
-  vertical-align: super !important;
-}
-
-
-/**
- * Vertical alignment classes.
- */
-
-.u-center {
-  margin-right: auto !important;
-  margin-left: auto !important;
-}
+@include align-utility();

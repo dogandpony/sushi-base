@@ -2,14 +2,21 @@
  * TRACKING UTILITIES
  * ========================================================================= */
 
-.u-tracked {
-  letter-spacing: .1em;
+@mixin tracking-utility($breakpoint: null) {
+
+  .u-tracking#{$breakpoint} {
+    letter-spacing: .1em;
+  }
+
+  .u-tracking-tight#{$breakpoint} {
+    letter-spacing: -.05em;
+  }
+
+  .u-tracking-mega #{$breakpoint}{
+    letter-spacing: .25em;
+  }
+
 }
 
-.u-tracked-tight {
-  letter-spacing: -.05em;
-}
 
-.u-tracked-mega {
-  letter-spacing: .25em;
-}
+@include tracking-utility();

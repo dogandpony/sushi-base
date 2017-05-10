@@ -2,40 +2,6 @@
    #POSITION
    ========================================================================== */
 
-/* Position States
-   ========================================================================== */
-
-/**
- * 1. Browser support for position sticky is still lacking:
- *    http://caniuse.com/#feat=css-sticky
- */
-
-.u-pos {
-  position: static !important;
-}
-
-.u-por {
-  position: relative !important;
-}
-
-.u-poa {
-  position: absolute !important;
-}
-
-.u-pof {
-  position: fixed !important;
-}
-
-.u-pot {
-  position: sticky !important; /* [1] */
-}
-
-
-
-
-/* Position Directions/Sizes
-   ========================================================================== */
-
 // Utility classes for position direction values, for example:
 // .u-l-xs
 // .u-b-l
@@ -50,26 +16,36 @@ $position-directions: (
 $position-factors: $global-spacing-factors !default;
 
 
-// When using Sass-MQ, this defines the separator for the breakpoints suffix
-// in the class name. By default, we are generating the responsive suffixes
-// for the classes with a `@` symbol so you get classes like:
-// <div class="u-t-xs@tablet">
-$position-breakpoint-separator: $breakpoint-separator !default;
+@mixin position-utility($breakpoint: null) {
 
-@mixin position(
-  $directions: $position-directions,
-  $factors: $position-factors,
-  $breakpoint: null
-) {
+  .u-pos#{$breakpoint} {
+    position: static !important;
+  }
+
+  .u-por#{$breakpoint} {
+    position: relative !important;
+  }
+
+  .u-poa#{$breakpoint} {
+    position: absolute !important;
+  }
+
+  .u-pof#{$breakpoint} {
+    position: fixed !important;
+  }
+
+  .u-pot#{$breakpoint} {
+    position: sticky !important; /* [1] */
+  }
 
   // Add zero and null modifiers to the factor list so classes like `u-b-0` and
   // `u-b` are created automatically
   $factors: map-merge((
     '0': 0,
     null: 1
-  ), $factors);
+  ), $position-factors);
 
-  @each $direction-namespace, $direction-rules in $directions {
+  @each $direction-namespace, $direction-rules in $position-directions {
 
     @each $factor-namespace, $factor in $factors {
 
@@ -104,30 +80,4 @@ $position-breakpoint-separator: $breakpoint-separator !default;
  * The following will generate spacing helper classes.
  */
 
-@include position();
-
-
-/**
- * If we’re using Sass-MQ, automatically generate responsive helpers for each of
- * our defined breakpoints, and give them a Responsive Suffix, e.g.:
- *
- * <div class="u-t-xl@tablet">
- */
-
-$enable-responsive-position: false !default;
-
-$position-responsive-directions: $position-directions !default;
-
-$position-responsive-factors: $position-factors !default;
-
-@if (variable-exists(mq-breakpoints) and $enable-responsive-spacing == true) {
-  @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
-    @include mq($from: $breakpoint-name) {
-      @include position(
-          $position-responsive-directions,
-          $position-responsive-factors,
-          #{$position-breakpoint-separator}#{$breakpoint-name}
-      );
-    }
-  }
-}
+@include position-utility();

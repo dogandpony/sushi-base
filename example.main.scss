@@ -1,5 +1,5 @@
 /* ==========================================================================
-   INUITCSS
+   SUSHI BASE
    ========================================================================== */
 
 /**
@@ -16,7 +16,7 @@
  * CONTENTS
  *
  * SETTINGS
- * Core.................inuitcss’ core and setup settings.
+ * Core.................Sushi’s core and setup settings.
  * Breakpoints..........Project-wide breakpoint definitions.
  *
  * TOOLS
@@ -24,7 +24,7 @@
  * Hide.................Mixin for hiding elements.
  * Position.............Mixins for advanced element positioning.
  * Input Reset..........Mixin for resetting native inputs and buttons.
- * Sass MQ..............inuitcss’ default media query manager.
+ * Sass MQ..............Sushi’s default media query manager.
  *
  * GENERIC
  * Box-sizing...........Better default `box-sizing`.
@@ -54,7 +54,7 @@
  *
  * COMPONENTS
  * Buttons..............An example button component, and how it fits into the
- *                      inuitcss framework.
+ *                      Sushi framework.
  *
  * UTILITIES
  * Clearfix.............Bind our clearfix onto a utility class.
@@ -142,16 +142,17 @@
 // Utilities
 // ---------------------------
 
-@import "utilities/align";
-@import "utilities/clearfix";
-@import "utilities/display";
-@import "utilities/elevation";
-@import "utilities/float";
-@import "utilities/headings";
-@import "utilities/spacing";
-@import "utilities/position";
-@import "utilities/print";
-@import "utilities/tracking";
-@import "utilities/typography";
-@import "utilities/widths";
-@import "utilities/z-index";
+@import 'utilities/align';
+@import 'utilities/clearfix';
+@import 'utilities/display';
+@import 'utilities/elevation';
+@import 'utilities/float';
+@import 'utilities/overflow';
+@import 'utilities/position';
+@import 'utilities/print';
+@import 'utilities/spacing';
+@import 'utilities/tracking';
+@import 'utilities/typography';
+@import 'utilities/widths';
+@import 'utilities/white-space';
+@import 'utilities/z-index';
