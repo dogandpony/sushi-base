@@ -4,43 +4,43 @@
 
 @mixin white-space-utility($breakpoint: null) {
 
-  .u-whs-n#{$breakpoint} {
+  .u-ws-n#{$breakpoint} {
     white-space: normal;
   }
 
-  .u-whs-p#{$breakpoint} {
+  .u-ws-p#{$breakpoint} {
     white-space: pre;
   }
 
-  .u-whs-nw#{$breakpoint} {
+  .u-ws-nw#{$breakpoint} {
     white-space: nowrap;
   }
 
-  .u-whs-pw#{$breakpoint} {
+  .u-ws-pw#{$breakpoint} {
     white-space: pre-wrap;
   }
 
-  .u-whs-pl#{$breakpoint} {
+  .u-ws-pl#{$breakpoint} {
     white-space: pre-line;
   }
 
-  .u-whsc-n#{$breakpoint} {
+  .u-wsc-n#{$breakpoint} {
     white-space-collapse: normal;
   }
 
-  .u-whsc-k#{$breakpoint} {
+  .u-wsc-k#{$breakpoint} {
     white-space-collapse: keep-all;
   }
 
-  .u-whsc-l#{$breakpoint} {
+  .u-wsc-l#{$breakpoint} {
     white-space-collapse: loose;
   }
 
-  .u-whsc-bs#{$breakpoint} {
+  .u-wsc-bs#{$breakpoint} {
     white-space-collapse: break-strict;
   }
 
-  .u-whsc-ba#{$breakpoint} {
+  .u-wsc-ba#{$breakpoint} {
     white-space-collapse: break-all;
   }
 
