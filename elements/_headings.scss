@@ -8,12 +8,12 @@
  * http://csswizardry.com/2016/02/managing-typography-on-large-apps/).
  */
 
-$font-size-h1: 36px !default;
-$font-size-h2: 28px !default;
-$font-size-h3: 24px !default;
-$font-size-h4: 20px !default;
-$font-size-h5: 18px !default;
-$font-size-h6: 16px !default;
+$font-size-1: 36px !default;
+$font-size-2: 28px !default;
+$font-size-3: 24px !default;
+$font-size-4: 20px !default;
+$font-size-5: 18px !default;
+$font-size-6: 16px !default;
 
 
 // Supersized heading sizes for hero-banners.
@@ -25,25 +25,25 @@ $font-size-hero2: 48px !default;
 
 
 h1 {
-  font-size: $font-size-h1;
+  font-size: $font-size-1;
 }
 
 h2 {
-  font-size: $font-size-h2;
+  font-size: $font-size-2;
 }
 
 h3 {
-  font-size: $font-size-h3;
+  font-size: $font-size-3;
 }
 
 h4 {
-  font-size: $font-size-h4;
+  font-size: $font-size-4;
 }
 
 h5 {
-  font-size: $font-size-h5;
+  font-size: $font-size-5;
 }
 
 h6 {
-  font-size: $font-size-h6;
+  font-size: $font-size-6;
 }
