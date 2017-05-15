@@ -48,7 +48,7 @@ $spacing-factors: $global-spacing-factors !default;
 
     @each $direction-namespace, $direction-rules in $spacing-directions {
 
-      @each $factor-namespace, $factor in $spacing-factors {
+      @each $factor-namespace, $factor in $factors {
 
         // do not print negative padding rules
         @if ($factor >= 0) or ($property != 'padding') {
