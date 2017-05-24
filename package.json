@@ -1,6 +1,6 @@
 {
   "name": "sushi-base",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "Extensible, scalable, Sass-based, OOCSS base structure for CSS projects.",
   "main": "example.main.scss",
   "scripts": {
