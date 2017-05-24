@@ -149,10 +149,18 @@
 @import 'utilities/float';
 @import 'utilities/overflow';
 @import 'utilities/position';
-@import 'utilities/print';
 @import 'utilities/spacing';
 @import 'utilities/tracking';
 @import 'utilities/typography';
 @import 'utilities/widths';
 @import 'utilities/white-space';
 @import 'utilities/z-index';
+
+@import 'utilities/print';
+
+
+
+// Responsive classes
+// ---------------------------
+
+@import "example._responsive";
