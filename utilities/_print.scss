@@ -14,12 +14,95 @@
 	 * 1. Black prints faster: http://www.sanbeiji.com/archives/953
 	 */
 
-  *,
-  *:before,
-  *:after,
-  *:first-letter,
-  *:first-line {
-    background: transparent !important;
+  /**
+   * It's necessary to list all elements and avoid using the :first-letter
+   * and :first-line selectors as these selectors crash in IE and Edge browsers
+   * when priting.
+   *
+   * Also the * selector causes crash on Edge. 
+   *
+   * Solution: list almost all HTML elements and the pseudo before and after
+   * elements
+   *
+   * READ THIS: For text color utilities, please include all classes inside of
+   * @media screen in order to avoid the utility colors being applied when printing
+   * the element.
+   *  
+   *
+   * Previous color:
+   *
+   * *,
+   * *:before,
+   * *:after,
+   * *:first-letter,
+   * *:first-line {
+   *   background: transparent !important;
+   *   color: #000 !important;
+   *   box-shadow: none !important;
+   *   text-shadow: none !important;
+   *  }
+   */
+  html,
+  body,
+  h1,h2,h3,h4,h5,h6,
+  ul,
+  ol,
+  li,
+  p,
+  span,
+  a,
+  div,
+  pre,
+  blockquote,
+  table,
+  tbody,
+  thead,
+  tr,
+  th,
+  td,
+  form,
+  button,
+  html:before,
+  body:before,
+  h1:before,h2:before,h3:before,h4:before,h5:before,h6:before,
+  ul:before,
+  ol:before,
+  li:before,
+  p:before,
+  span:before,
+  a:before,
+  div:before,
+  pre:before,
+  blockquote:before,
+  table:before,
+  tbody:before,
+  thead:before,
+  tr:before,
+  th:before,
+  td:before,
+  form:before,
+  button:before,
+  html:after,
+  body:after,
+  h1:after,h2:after,h3:after,h4:after,h5:after,h6:after,
+  ul:after,
+  ol:after,
+  li:after,
+  p:after,
+  span:after,
+  a:after,
+  div:after,
+  pre:after,
+  blockquote:after,
+  table:after,
+  tbody:after,
+  thead:after,
+  tr:after,
+  th:after,
+  td:after,
+  form:after,
+  button:after {
+	background: transparent !important;
     color: #000 !important; /* [1] */
     box-shadow: none !important;
     text-shadow: none !important;
