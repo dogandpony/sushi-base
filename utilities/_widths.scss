@@ -75,17 +75,10 @@ $width-delimiter: \/ !default;
         width: ($numerator / $denominator) * 100% !important;
       }
 
+        }
+
+
       @if ($width-enable-offsets == true) {
-
-        .u-push-0#{$breakpoint} {
-          position: relative;
-          margin-left: 0 !important;
-        }
-
-        .u-pull-0#{$breakpoint} {
-          position: relative;
-          margin-right: 0 !important;
-        }
 
         // Build a class in the format `.u-push-1/2[@<breakpoint>]`.
         .u-push-#{$numerator}#{$width-delimiter}#{$denominator}#{$breakpoint} {
@@ -101,6 +94,20 @@ $width-delimiter: \/ !default;
 
       }
 
+    }
+
+  }
+
+  @if ($width-enable-offsets == true) {
+
+    .u-push-0#{$breakpoint} {
+      position: relative;
+      margin-left: 0 !important;
+    }
+
+    .u-pull-0#{$breakpoint} {
+      position: relative;
+      margin-right: 0 !important;
     }
 
   }
