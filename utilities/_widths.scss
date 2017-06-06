@@ -70,13 +70,14 @@ $width-delimiter: \/ !default;
     // denominator.
     @for $numerator from 1 through $denominator {
 
-      // Build a class in the format `.u-3/4[@<breakpoint>]`.
-      .u-#{$numerator}#{$width-delimiter}#{$denominator}#{$breakpoint} {
-        width: ($numerator / $denominator) * 100% !important;
-      }
+      @if ($numerator != $denominator) {
 
+        // Build a class in the format `.u-3/4[@<breakpoint>]`.
+        .u-#{$numerator}#{$width-delimiter}#{$denominator}#{$breakpoint} {
+          width: ($numerator / $denominator) * 100% !important;
         }
 
+      }
 
       @if ($width-enable-offsets == true) {
 
@@ -96,6 +97,10 @@ $width-delimiter: \/ !default;
 
     }
 
+  }
+
+  .u-1#{$width-delimiter}1#{$breakpoint} {
+    width: 100% !important;
   }
 
   @if ($width-enable-offsets == true) {
