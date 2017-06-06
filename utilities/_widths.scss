@@ -103,6 +103,10 @@ $width-delimiter: \/ !default;
     width: 100% !important;
   }
 
+  .u-auto#{$breakpoint} {
+    width: auto !important;
+  }
+
   @if ($width-enable-offsets == true) {
 
     .u-push-0#{$breakpoint} {
