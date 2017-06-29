@@ -3,7 +3,7 @@
  * ========================================================================= */
 
 /**
- * inuitcss generates a series of utility classes that give a fluid width to
+ * Sushi generates a series of utility classes that give a fluid width to
  * whichever element they’re applied, e.g.:
  *
  *   <img src="" alt="" class="u-1/2" />
@@ -13,12 +13,12 @@
  *
  *   <div class="o-layout__item  u-1/2">
  *
- * By default, inuitcss will also generate responsive variants of each of these
+ * By default, Sushi will also generate responsive variants of each of these
  * classes by using your Sass MQ configuration, e.g.:
  *
  *   <div class="o-layout__item  u-1/1  u-1/2@tablet  u-1/3@desktop">
  *
- * Optionally, inuitcss can generate offset classes which can push and pull
+ * Optionally, Sushi can generate offset classes which can push and pull
  * elements left and right by a specified amount, e.g.:
  *
  *   <div class="o-layout__item  u-2/3  u-pull-1/3">
@@ -29,7 +29,7 @@
  * N.B. This option is turned off by default.
  */
 
-// Which fractions would you like in your grid system(s)? By default, inuitcss
+// Which fractions would you like in your grid system(s)? By default, Sushi
 // provides you fractions of one whole, halves, thirds, quarters and fifths,
 // e.g.:
 //
@@ -40,7 +40,7 @@
 $width-fractions: 1 2 3 4 5 12 !default;
 
 
-// Optionally, inuitcss can generate classes to offset items by a certain width.
+// Optionally, Sushi can generate classes to offset items by a certain width.
 // Would you like to generate these types of class as well? E.g.:
 //
 //   .u-push-1/3
@@ -50,7 +50,7 @@ $width-fractions: 1 2 3 4 5 12 !default;
 $width-enable-offsets: false !default;
 
 
-// By default, inuitcss uses fractions-like classes like `<div class="u-1/4">`.
+// By default, Sushi uses fractions-like classes like `<div class="u-1/4">`.
 // You can change the `/` to whatever you fancy with this variable.
 $width-delimiter: \/ !default;
 
