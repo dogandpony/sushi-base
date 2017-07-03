@@ -1,3 +1,8 @@
+### 1.5.1: 2017-07-03
+
+* Standardize code to match proposed stylelint tests
+
+
 ### 1.5.0: 2017-07-03
 
 * Fix push/pull classes being looped for each denominator
