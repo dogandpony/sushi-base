@@ -18,9 +18,10 @@
     "itcss",
     "css"
   ],
-  "author": "Bill Addison <bill@dogandponystudios.com>",
-  "contributors": [
-    "Caio Costa <caiocrcosta@gmail.com>"
+  "author" : "Bill Addison <bill@dogandponystudios.com>",
+  "contributors" : [
+    "Caio Costa <caiocrcosta@gmail.com>",
+    "Jorge Veloso <jorge@dogandponystudios.com>"
   ],
   "license": "Apache-2.0",
   "bugs": {
