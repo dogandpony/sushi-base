@@ -24,26 +24,6 @@
     white-space: pre-line !important;
   }
 
-  .u-wsc-n#{$breakpoint} {
-    white-space-collapse: normal !important;
-  }
-
-  .u-wsc-k#{$breakpoint} {
-    white-space-collapse: keep-all !important;
-  }
-
-  .u-wsc-l#{$breakpoint} {
-    white-space-collapse: loose !important;
-  }
-
-  .u-wsc-bs#{$breakpoint} {
-    white-space-collapse: break-strict !important;
-  }
-
-  .u-wsc-ba#{$breakpoint} {
-    white-space-collapse: break-all !important;
-  }
-
 }
 
 
