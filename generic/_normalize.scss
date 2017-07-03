@@ -148,6 +148,8 @@ abbr[title] {
 }
 
 
+/* stylelint-disable no-duplicate-selectors */
+
 /**
  * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
  */
@@ -166,6 +168,8 @@ b,
 strong {
   font-weight: bolder;
 }
+
+/* stylelint-enable no-duplicate-selectors */
 
 
 /**
