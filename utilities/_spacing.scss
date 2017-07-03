@@ -39,10 +39,7 @@ $spacing-factors: $global-spacing-factors !default;
 
   // Add zero and null modifiers to the factor list so classes like `u-ph-0` and
   // `u-pl` are created automatically
-  $factors: map-merge((
-    '0': 0,
-    null: 1
-  ), $spacing-factors);
+  $factors: map-merge(('0': 0, null: 1), $spacing-factors);
 
   @each $property-namespace, $property in $spacing-properties {
 
