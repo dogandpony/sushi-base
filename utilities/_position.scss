@@ -53,7 +53,7 @@ $position-factors: $global-spacing-factors !default;
       // `xs` = `u-l-xs`
       // null = `u-l`
       @if ($factor-namespace != null) {
-        $factor-namespace: "-#{$factor-namespace}";
+        $factor-namespace: '-#{$factor-namespace}';
       }
 
       .u-#{$direction-namespace}#{$factor-namespace}#{$breakpoint} {
