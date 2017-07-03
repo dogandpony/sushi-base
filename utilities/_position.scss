@@ -40,10 +40,7 @@ $position-factors: $global-spacing-factors !default;
 
   // Add zero and null modifiers to the factor list so classes like `u-b-0` and
   // `u-b` are created automatically
-  $factors: map-merge((
-    '0': 0,
-    null: 1
-  ), $position-factors);
+  $factors: map-merge(('0': 0, null: 1), $position-factors);
 
   @each $direction-namespace, $direction-rules in $position-directions {
 
@@ -53,7 +50,7 @@ $position-factors: $global-spacing-factors !default;
       // `xs` = `u-l-xs`
       // null = `u-l`
       @if ($factor-namespace != null) {
-        $factor-namespace: "-#{$factor-namespace}";
+        $factor-namespace: '-#{$factor-namespace}';
       }
 
       .u-#{$direction-namespace}#{$factor-namespace}#{$breakpoint} {
