@@ -2,16 +2,6 @@
  * CORE SETTINGS
  * ========================================================================= */
 
-/**
- * This file contains core settings for the framework to function including
- * base typography and spacing units.
- */
-
-// Base typographical styles
-
-$base-font-size: 16px !default;
-$base-line-height: 1.5 !default;
-
 
 // Base spacing value
 // Each component has its own spacing variable, which default to this value.
@@ -35,7 +25,7 @@ $global-spacing-factors: (
    ========================================================================= */
 
 /**
- * Validate base-font/spacing values as rem numbers
+ * Validate base-font/spacing values as px numbers
  */
 
 @each $_px-value in
