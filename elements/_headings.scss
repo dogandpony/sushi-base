@@ -2,48 +2,26 @@
  * HEADING ELEMENTS
  * ========================================================================= */
 
-/**
- * Simple default styles for headings 1 through 6. Anything more opinionated
- * than simple font-size changes should likely be applied via classes (see:
- * http://csswizardry.com/2016/02/managing-typography-on-large-apps/).
- */
-
-$font-size-1: 36px !default;
-$font-size-2: 28px !default;
-$font-size-3: 24px !default;
-$font-size-4: 20px !default;
-$font-size-5: 18px !default;
-$font-size-6: 16px !default;
-
-
-// Supersized heading sizes for hero-banners.
-// These variables are used in 'utilities/_headings.sass' however declared
-// here to easily reference the full scale of heading sizes.
-
-$font-size-hero1: 64px !default;
-$font-size-hero2: 48px !default;
-
-
 h1 {
-  font-size: $font-size-1;
+  font-size: get-font-size(1);
 }
 
 h2 {
-  font-size: $font-size-2;
+  font-size: get-font-size(2);
 }
 
 h3 {
-  font-size: $font-size-3;
+  font-size: get-font-size(3);
 }
 
 h4 {
-  font-size: $font-size-4;
+  font-size: get-font-size(4);
 }
 
 h5 {
-  font-size: $font-size-5;
+  font-size: get-font-size(5);
 }
 
 h6 {
-  font-size: $font-size-6;
+  font-size: get-font-size(6);
 }
