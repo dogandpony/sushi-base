@@ -87,6 +87,14 @@
   .u-d-if#{$breakpoint} {
     display: inline-flex !important;
   }
+  
+  .u-d-g#{$breakpoint} {
+    display: grid !important;
+  }
+  
+  .u-d-ig#{$breakpoint} {
+    display: inline-grid !important;
+  }
 
 }
 
