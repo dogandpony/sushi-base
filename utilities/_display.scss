@@ -60,6 +60,14 @@
     display: table-row-group !important;
   }
 
+  .u-d-f#{$breakpoint} {
+    display: flex !important;
+  }
+
+  .u-d-if#{$breakpoint} {
+    display: inline-flex !important;
+  }
+
 }
 
 @include display-utility();
