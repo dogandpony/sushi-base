@@ -24,3 +24,12 @@ $font-sizes: (
 @function get-font-size($key) {
   @return map-get($font-sizes, $key);
 }
+
+
+// Measure widths
+
+$measure-widths: (
+  "narrow": 20em, // ~45 characters
+  "": 30em,       // ~66 characters
+  "wide": 34em,   // ~80 characters
+) !default;

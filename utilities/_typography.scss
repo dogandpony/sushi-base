@@ -183,21 +183,13 @@
    * http://tachyons.io/docs/typography/measure/
    */
 
-  .u-measure#{$breakpoint} {
-    max-width: 30em !important;
-  }
+  @each $measure-variant, $measure-width in $measure-widths {
 
-  // Measure is limited to ~66 characters
-  .u-measure-narrow#{$breakpoint} {
-    max-width: 20em !important;
-  }
+    .u-measure#{$measure-variant}#{$breakpoint} {
+      max-width: $measure-width !important;
+    }
 
-  // easure is limited to ~45 characters
-  .u-measure-wide#{$breakpoint} {
-    max-width: 34em !important;
   }
-
-  // Measure is limited to ~80 characters
 
 }
 
