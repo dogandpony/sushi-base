@@ -185,6 +185,10 @@
 
   @each $measure-variant, $measure-width in $measure-widths {
 
+    @if ($measure-variant != null) {
+      $measure-variant: "-#{$measure-variant}";
+    }
+
     .u-measure#{$measure-variant}#{$breakpoint} {
       max-width: $measure-width !important;
     }
