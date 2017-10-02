@@ -267,6 +267,15 @@ $enable-responsive-layout: false !default;
   }
 
 
+  /**
+   * Bring back rendered order of the grid system.
+   */
+
+  .o-layout--forward#{$breakpoint} {
+    direction: ltr;
+  }
+
+
 
 
   /* Inset
