@@ -4,39 +4,39 @@
 
 @mixin overflow-utility($breakpoint: null) {
 
-  .u-ov-a#{$breakpoint} {
+  .#{$utility-prefix}ov-a#{$breakpoint} {
     overflow: auto !important;
   }
 
-  .u-ovx-a#{$breakpoint} {
+  .#{$utility-prefix}ovx-a#{$breakpoint} {
     overflow-x: auto !important;
   }
 
-  .u-ovy-a#{$breakpoint} {
+  .#{$utility-prefix}ovy-a#{$breakpoint} {
     overflow-y: auto !important;
   }
 
-  .u-ov-h#{$breakpoint} {
+  .#{$utility-prefix}ov-h#{$breakpoint} {
     overflow: hidden !important;
   }
 
-  .u-ovx-h#{$breakpoint} {
+  .#{$utility-prefix}ovx-h#{$breakpoint} {
     overflow-x: hidden !important;
   }
 
-  .u-ovy-h#{$breakpoint} {
+  .#{$utility-prefix}ovy-h#{$breakpoint} {
     overflow-y: hidden !important;
   }
 
-  .u-ov-s#{$breakpoint} {
+  .#{$utility-prefix}ov-s#{$breakpoint} {
     overflow: scroll !important;
   }
 
-  .u-ovx-s#{$breakpoint} {
+  .#{$utility-prefix}ovx-s#{$breakpoint} {
     overflow-x: scroll !important;
   }
 
-  .u-ovy-s#{$breakpoint} {
+  .#{$utility-prefix}ovy-s#{$breakpoint} {
     overflow-y: scroll !important;
   }
 

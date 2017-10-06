@@ -57,7 +57,7 @@ $spacing-factors: $global-spacing-factors !default;
             $factor-namespace: "-#{$factor-namespace}";
           }
 
-          .u-#{$property-namespace}#{$direction-namespace}#{$factor-namespace}#{$breakpoint} {
+          .#{$utility-prefix}#{$property-namespace}#{$direction-namespace}#{$factor-namespace}#{$breakpoint} {
 
             @each $direction in $direction-rules {
               #{$property}#{$direction}: ($factor * $global-spacing) !important;

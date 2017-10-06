@@ -20,79 +20,79 @@
    * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
    */
 
-  .u-hidden#{$breakpoint} {
+  .#{$utility-prefix}hidden#{$breakpoint} {
     @include hide();
   }
 
-  .u-d-n#{$breakpoint} {
+  .#{$utility-prefix}d-n#{$breakpoint} {
     display: none !important;
   }
 
-  .u-d-i#{$breakpoint} {
+  .#{$utility-prefix}d-i#{$breakpoint} {
     display: inline !important;
   }
 
-  .u-d-b#{$breakpoint} {
+  .#{$utility-prefix}d-b#{$breakpoint} {
     display: block !important;
   }
 
-  .u-d-li#{$breakpoint} {
+  .#{$utility-prefix}d-li#{$breakpoint} {
     display: list-item !important;
   }
 
-  .u-d-ib#{$breakpoint} {
+  .#{$utility-prefix}d-ib#{$breakpoint} {
     display: inline-block !important;
   }
 
-  .u-d-it#{$breakpoint} {
+  .#{$utility-prefix}d-it#{$breakpoint} {
     display: inline-table !important;
   }
 
-  .u-d-t#{$breakpoint} {
+  .#{$utility-prefix}d-t#{$breakpoint} {
     display: table !important;
   }
 
-  .u-d-tc#{$breakpoint} {
+  .#{$utility-prefix}d-tc#{$breakpoint} {
     display: table-cell !important;
   }
 
-  .u-d-tcl#{$breakpoint} {
+  .#{$utility-prefix}d-tcl#{$breakpoint} {
     display: table-column !important;
   }
 
-  .u-d-tcg#{$breakpoint} {
+  .#{$utility-prefix}d-tcg#{$breakpoint} {
     display: table-column-group !important;
   }
 
-  .u-d-tfg#{$breakpoint} {
+  .#{$utility-prefix}d-tfg#{$breakpoint} {
     display: table-footer-group !important;
   }
 
-  .u-d-thg#{$breakpoint} {
+  .#{$utility-prefix}d-thg#{$breakpoint} {
     display: table-header-group !important;
   }
 
-  .u-d-tr#{$breakpoint} {
+  .#{$utility-prefix}d-tr#{$breakpoint} {
     display: table-row !important;
   }
 
-  .u-d-trg#{$breakpoint} {
+  .#{$utility-prefix}d-trg#{$breakpoint} {
     display: table-row-group !important;
   }
 
-  .u-d-f#{$breakpoint} {
+  .#{$utility-prefix}d-f#{$breakpoint} {
     display: flex !important;
   }
 
-  .u-d-if#{$breakpoint} {
+  .#{$utility-prefix}d-if#{$breakpoint} {
     display: inline-flex !important;
   }
 
-  .u-d-g#{$breakpoint} {
+  .#{$utility-prefix}d-g#{$breakpoint} {
     display: grid !important;
   }
 
-  .u-d-ig#{$breakpoint} {
+  .#{$utility-prefix}d-ig#{$breakpoint} {
     display: inline-grid !important;
   }
 
