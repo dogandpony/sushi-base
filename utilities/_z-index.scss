@@ -28,21 +28,21 @@ $z-index-depths: 0 1 2 3 4 5 10 20 30 40 50 60 70 80 90 100 !default;
 
   @each $depth in $z-index-depths {
 
-    .#{$utility-prefix}z-#{$depth}#{$breakpoint} {
+    .#{$utility-prefix}z#{$utility-value-separator}#{$depth}#{$breakpoint} {
       z-index: $depth !important;
     }
 
   }
 
-  .#{$utility-prefix}z-inherit#{$breakpoint} {
+  .#{$utility-prefix}z#{$utility-value-separator}inh#{$breakpoint} {
     z-index: inherit !important;
   }
 
-  .#{$utility-prefix}z-initial#{$breakpoint} {
+  .#{$utility-prefix}z#{$utility-value-separator}ini#{$breakpoint} {
     z-index: initial !important;
   }
 
-  .#{$utility-prefix}z-unset#{$breakpoint} {
+  .#{$utility-prefix}z#{$utility-value-separator}uns#{$breakpoint} {
     z-index: unset !important;
   }
 

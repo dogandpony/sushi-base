@@ -18,23 +18,23 @@ $position-factors: $global-spacing-factors !default;
 
 @mixin position-utility($breakpoint: null) {
 
-  .#{$utility-prefix}po-s#{$breakpoint} {
+  .#{$utility-prefix}po#{$utility-value-separator}s#{$breakpoint} {
     position: static !important;
   }
 
-  .#{$utility-prefix}po-r#{$breakpoint} {
+  .#{$utility-prefix}po#{$utility-value-separator}r#{$breakpoint} {
     position: relative !important;
   }
 
-  .#{$utility-prefix}po-a#{$breakpoint} {
+  .#{$utility-prefix}po#{$utility-value-separator}a#{$breakpoint} {
     position: absolute !important;
   }
 
-  .#{$utility-prefix}po-f#{$breakpoint} {
+  .#{$utility-prefix}po#{$utility-value-separator}f#{$breakpoint} {
     position: fixed !important;
   }
 
-  .#{$utility-prefix}po-t#{$breakpoint} {
+  .#{$utility-prefix}po#{$utility-value-separator}t#{$breakpoint} {
     position: sticky !important; /* [1] */
   }
 
@@ -50,7 +50,7 @@ $position-factors: $global-spacing-factors !default;
       // `xs` = `u-l-xs`
       // null = `u-l`
       @if ($factor-namespace != null) {
-        $factor-namespace: '-#{$factor-namespace}';
+        $factor-namespace: '#{$utility-value-separator}#{$factor-namespace}';
       }
 
       .#{$utility-prefix}#{$direction-namespace}#{$factor-namespace}#{$breakpoint} {

@@ -4,39 +4,39 @@
 
 @mixin overflow-utility($breakpoint: null) {
 
-  .#{$utility-prefix}ov-a#{$breakpoint} {
+  .#{$utility-prefix}ov#{$utility-value-separator}a#{$breakpoint} {
     overflow: auto !important;
   }
 
-  .#{$utility-prefix}ovx-a#{$breakpoint} {
+  .#{$utility-prefix}ovx#{$utility-value-separator}a#{$breakpoint} {
     overflow-x: auto !important;
   }
 
-  .#{$utility-prefix}ovy-a#{$breakpoint} {
+  .#{$utility-prefix}ovy#{$utility-value-separator}a#{$breakpoint} {
     overflow-y: auto !important;
   }
 
-  .#{$utility-prefix}ov-h#{$breakpoint} {
+  .#{$utility-prefix}ov#{$utility-value-separator}h#{$breakpoint} {
     overflow: hidden !important;
   }
 
-  .#{$utility-prefix}ovx-h#{$breakpoint} {
+  .#{$utility-prefix}ovx#{$utility-value-separator}h#{$breakpoint} {
     overflow-x: hidden !important;
   }
 
-  .#{$utility-prefix}ovy-h#{$breakpoint} {
+  .#{$utility-prefix}ovy#{$utility-value-separator}h#{$breakpoint} {
     overflow-y: hidden !important;
   }
 
-  .#{$utility-prefix}ov-s#{$breakpoint} {
+  .#{$utility-prefix}ov#{$utility-value-separator}s#{$breakpoint} {
     overflow: scroll !important;
   }
 
-  .#{$utility-prefix}ovx-s#{$breakpoint} {
+  .#{$utility-prefix}ovx#{$utility-value-separator}s#{$breakpoint} {
     overflow-x: scroll !important;
   }
 
-  .#{$utility-prefix}ovy-s#{$breakpoint} {
+  .#{$utility-prefix}ovy#{$utility-value-separator}s#{$breakpoint} {
     overflow-y: scroll !important;
   }
 

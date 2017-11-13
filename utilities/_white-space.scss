@@ -4,23 +4,23 @@
 
 @mixin white-space-utility($breakpoint: null) {
 
-  .#{$utility-prefix}ws-n#{$breakpoint} {
+  .#{$utility-prefix}ws#{$utility-value-separator}n#{$breakpoint} {
     white-space: normal !important;
   }
 
-  .#{$utility-prefix}ws-p#{$breakpoint} {
+  .#{$utility-prefix}ws#{$utility-value-separator}p#{$breakpoint} {
     white-space: pre !important;
   }
 
-  .#{$utility-prefix}ws-nw#{$breakpoint} {
+  .#{$utility-prefix}ws#{$utility-value-separator}nw#{$breakpoint} {
     white-space: nowrap !important;
   }
 
-  .#{$utility-prefix}ws-pw#{$breakpoint} {
+  .#{$utility-prefix}ws#{$utility-value-separator}pw#{$breakpoint} {
     white-space: pre-wrap !important;
   }
 
-  .#{$utility-prefix}ws-pl#{$breakpoint} {
+  .#{$utility-prefix}ws#{$utility-value-separator}pl#{$breakpoint} {
     white-space: pre-line !important;
   }
 
