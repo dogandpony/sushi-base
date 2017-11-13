@@ -189,7 +189,7 @@
       $measure-variant: '-#{$measure-variant}';
     }
 
-    .#{$utility-prefix}-measure#{$measure-variant}#{$breakpoint} {
+    .#{$utility-prefix}measure#{$measure-variant}#{$breakpoint} {
       max-width: $measure-width !important;
     }
 
