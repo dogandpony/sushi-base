@@ -44,7 +44,7 @@
   top: 0;
   right: 0;
   left: 0;
-  @extend .u-z-5;
+  @extend .#{$utility-prefix}z-5;
 }
 
 // Horizontal fill element inside first non-static parent and fix bottom.
@@ -53,12 +53,12 @@
   right: 0;
   bottom: 0;
   left: 0;
-  @extend .u-z-5;
+  @extend .#{$utility-prefix}z-5;
 }
 
 // Sticky element top.
 @mixin sticky-top {
   position: sticky;
   top: 0;
-  @extend .u-z-5;
+  @extend .#{$utility-prefix}z-5;
 }

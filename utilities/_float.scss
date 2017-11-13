@@ -4,15 +4,15 @@
 
 @mixin float-utility($breakpoint: null) {
 
-  .u-f-l#{$breakpoint} {
+  .#{$utility-prefix}f-l#{$breakpoint} {
     float: left !important;
   }
 
-  .u-f-r#{$breakpoint} {
+  .#{$utility-prefix}f-r#{$breakpoint} {
     float: right !important;
   }
 
-  .u-f-n#{$breakpoint} {
+  .#{$utility-prefix}f-n#{$breakpoint} {
     float: none !important;
   }
 

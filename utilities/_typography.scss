@@ -10,7 +10,7 @@
 
   @each $font-size-name, $font-size in $font-sizes {
 
-    .u-fz-#{$font-size-name}#{$breakpoint} {
+    .#{$utility-prefix}fz-#{$font-size-name}#{$breakpoint} {
       font-size: get-font-size($font-size-name) !important;
     }
 
@@ -21,15 +21,15 @@
   /* Text Align
      ========================================================================== */
 
-  .u-ta-l#{$breakpoint} {
+  .#{$utility-prefix}ta-l#{$breakpoint} {
     text-align: left !important;
   }
 
-  .u-ta-r#{$breakpoint} {
+  .#{$utility-prefix}ta-r#{$breakpoint} {
     text-align: right !important;
   }
 
-  .u-ta-c#{$breakpoint} {
+  .#{$utility-prefix}ta-c#{$breakpoint} {
     text-align: center !important;
   }
 
@@ -39,12 +39,12 @@
   /* Font Style
      ========================================================================== */
 
-  .u-normal#{$breakpoint} {
+  .#{$utility-prefix}normal#{$breakpoint} {
     font-style: italic !important;
     font-weight: normal !important;
   }
 
-  .u-fs-i#{$breakpoint} {
+  .#{$utility-prefix}fs-i#{$breakpoint} {
     font-style: italic !important;
   }
 
@@ -54,43 +54,43 @@
   /* Font Weight
      ========================================================================== */
 
-  .u-b#{$breakpoint} {
+  .#{$utility-prefix}b#{$breakpoint} {
     font-weight: bold !important;
   }
 
-  .u-fw-1#{$breakpoint} {
+  .#{$utility-prefix}fw-1#{$breakpoint} {
     font-weight: 100 !important;
   }
 
-  .u-fw-2#{$breakpoint} {
+  .#{$utility-prefix}fw-2#{$breakpoint} {
     font-weight: 200 !important;
   }
 
-  .u-fw-3#{$breakpoint} {
+  .#{$utility-prefix}fw-3#{$breakpoint} {
     font-weight: 300 !important;
   }
 
-  .u-fw-4#{$breakpoint} {
+  .#{$utility-prefix}fw-4#{$breakpoint} {
     font-weight: 400 !important;
   }
 
-  .u-fw-5#{$breakpoint} {
+  .#{$utility-prefix}fw-5#{$breakpoint} {
     font-weight: 500 !important;
   }
 
-  .u-fw-6#{$breakpoint} {
+  .#{$utility-prefix}fw-6#{$breakpoint} {
     font-weight: 600 !important;
   }
 
-  .u-fw-7#{$breakpoint} {
+  .#{$utility-prefix}fw-7#{$breakpoint} {
     font-weight: 700 !important;
   }
 
-  .u-fw-8#{$breakpoint} {
+  .#{$utility-prefix}fw-8#{$breakpoint} {
     font-weight: 800 !important;
   }
 
-  .u-fw-9#{$breakpoint} {
+  .#{$utility-prefix}fw-9#{$breakpoint} {
     font-weight: 900 !important;
   }
 
@@ -100,19 +100,19 @@
   /* Text Transform
      ========================================================================== */
 
-  .u-tt-c#{$breakpoint} {
+  .#{$utility-prefix}tt-c#{$breakpoint} {
     text-transform: capitalize !important;
   }
 
-  .u-tt-l#{$breakpoint} {
+  .#{$utility-prefix}tt-l#{$breakpoint} {
     text-transform: lowercase !important;
   }
 
-  .u-tt-u#{$breakpoint} {
+  .#{$utility-prefix}tt-u#{$breakpoint} {
     text-transform: uppercase !important;
   }
 
-  .u-tt-n#{$breakpoint} {
+  .#{$utility-prefix}tt-n#{$breakpoint} {
     text-transform: none !important;
   }
 
@@ -122,15 +122,15 @@
   /* Line Height
      ========================================================================== */
 
-  .u-lh-solid#{$breakpoint} {
+  .#{$utility-prefix}lh-solid#{$breakpoint} {
     line-height: 1 !important;
   }
 
-  .u-lh-title#{$breakpoint} {
+  .#{$utility-prefix}lh-title#{$breakpoint} {
     line-height: 1.25 !important;
   }
 
-  .u-lh-copy#{$breakpoint} {
+  .#{$utility-prefix}lh-copy#{$breakpoint} {
     line-height: $base-line-height !important;
   }
 
@@ -139,15 +139,15 @@
   /* Letter Spacing
      ========================================================================== */
 
-  .u-ls-tight#{$breakpoint} {
+  .#{$utility-prefix}ls-tight#{$breakpoint} {
     letter-spacing: -0.5em !important;
   }
 
-  .u-ls#{$breakpoint} {
+  .#{$utility-prefix}ls#{$breakpoint} {
     letter-spacing: 0.1em !important;
   }
 
-  .u-ls-loose#{$breakpoint} {
+  .#{$utility-prefix}ls-loose#{$breakpoint} {
     letter-spacing: 0.25em !important;
   }
 
@@ -159,7 +159,7 @@
 
   // Combine this class with a width to truncate text (or just leave as
   // is to truncate at width of containing element.
-  .u-truncate#{$breakpoint} {
+  .#{$utility-prefix}truncate#{$breakpoint} {
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
@@ -186,10 +186,10 @@
   @each $measure-variant, $measure-width in $measure-widths {
 
     @if ($measure-variant != null) {
-      $measure-variant: "-#{$measure-variant}";
+      $measure-variant: '-#{$measure-variant}';
     }
 
-    .u-measure#{$measure-variant}#{$breakpoint} {
+    .#{$utility-prefix}-measure#{$measure-variant}#{$breakpoint} {
       max-width: $measure-width !important;
     }
 

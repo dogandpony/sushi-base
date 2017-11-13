@@ -4,15 +4,15 @@
 
 @mixin tracking-utility($breakpoint: null) {
 
-  .u-tracking#{$breakpoint} {
+  .#{$utility-prefix}tracking#{$breakpoint} {
     letter-spacing: 0.1em;
   }
 
-  .u-tracking-tight#{$breakpoint} {
+  .#{$utility-prefix}tracking-tight#{$breakpoint} {
     letter-spacing: -0.05em;
   }
 
-  .u-tracking-mega#{$breakpoint} {
+  .#{$utility-prefix}tracking-mega#{$breakpoint} {
     letter-spacing: 0.25em;
   }
 
