@@ -18,7 +18,7 @@ $elevation-available-depths: 1, 2, 4, 8, 16, 24 !default;
 
   @each $zValue in $elevation-available-depths {
 
-    .#{$utility-prefix}elevation-#{$zValue}#{$breakpoint} {
+    .#{$utility-prefix}elevation#{$utility-value-separator}#{$zValue}#{$breakpoint} {
 
       @include elevation($zValue);
 

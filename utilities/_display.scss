@@ -24,75 +24,75 @@
     @include hide();
   }
 
-  .#{$utility-prefix}d-n#{$breakpoint} {
+  .#{$utility-prefix}d#{$utility-value-separator}n#{$breakpoint} {
     display: none !important;
   }
 
-  .#{$utility-prefix}d-i#{$breakpoint} {
+  .#{$utility-prefix}d#{$utility-value-separator}i#{$breakpoint} {
     display: inline !important;
   }
 
-  .#{$utility-prefix}d-b#{$breakpoint} {
+  .#{$utility-prefix}d#{$utility-value-separator}b#{$breakpoint} {
     display: block !important;
   }
 
-  .#{$utility-prefix}d-li#{$breakpoint} {
+  .#{$utility-prefix}d#{$utility-value-separator}li#{$breakpoint} {
     display: list-item !important;
   }
 
-  .#{$utility-prefix}d-ib#{$breakpoint} {
+  .#{$utility-prefix}d#{$utility-value-separator}ib#{$breakpoint} {
     display: inline-block !important;
   }
 
-  .#{$utility-prefix}d-it#{$breakpoint} {
+  .#{$utility-prefix}d#{$utility-value-separator}it#{$breakpoint} {
     display: inline-table !important;
   }
 
-  .#{$utility-prefix}d-t#{$breakpoint} {
+  .#{$utility-prefix}d#{$utility-value-separator}t#{$breakpoint} {
     display: table !important;
   }
 
-  .#{$utility-prefix}d-tc#{$breakpoint} {
+  .#{$utility-prefix}d#{$utility-value-separator}tc#{$breakpoint} {
     display: table-cell !important;
   }
 
-  .#{$utility-prefix}d-tcl#{$breakpoint} {
+  .#{$utility-prefix}d#{$utility-value-separator}tcl#{$breakpoint} {
     display: table-column !important;
   }
 
-  .#{$utility-prefix}d-tcg#{$breakpoint} {
+  .#{$utility-prefix}d#{$utility-value-separator}tcg#{$breakpoint} {
     display: table-column-group !important;
   }
 
-  .#{$utility-prefix}d-tfg#{$breakpoint} {
+  .#{$utility-prefix}d#{$utility-value-separator}tfg#{$breakpoint} {
     display: table-footer-group !important;
   }
 
-  .#{$utility-prefix}d-thg#{$breakpoint} {
+  .#{$utility-prefix}d#{$utility-value-separator}thg#{$breakpoint} {
     display: table-header-group !important;
   }
 
-  .#{$utility-prefix}d-tr#{$breakpoint} {
+  .#{$utility-prefix}d#{$utility-value-separator}tr#{$breakpoint} {
     display: table-row !important;
   }
 
-  .#{$utility-prefix}d-trg#{$breakpoint} {
+  .#{$utility-prefix}d#{$utility-value-separator}trg#{$breakpoint} {
     display: table-row-group !important;
   }
 
-  .#{$utility-prefix}d-f#{$breakpoint} {
+  .#{$utility-prefix}d#{$utility-value-separator}f#{$breakpoint} {
     display: flex !important;
   }
 
-  .#{$utility-prefix}d-if#{$breakpoint} {
+  .#{$utility-prefix}d#{$utility-value-separator}if#{$breakpoint} {
     display: inline-flex !important;
   }
 
-  .#{$utility-prefix}d-g#{$breakpoint} {
+  .#{$utility-prefix}d#{$utility-value-separator}g#{$breakpoint} {
     display: grid !important;
   }
 
-  .#{$utility-prefix}d-ig#{$breakpoint} {
+  .#{$utility-prefix}d#{$utility-value-separator}ig#{$breakpoint} {
     display: inline-grid !important;
   }
 

@@ -10,7 +10,7 @@
 
   @each $font-size-name, $font-size in $font-sizes {
 
-    .#{$utility-prefix}fz-#{$font-size-name}#{$breakpoint} {
+    .#{$utility-prefix}fz#{$utility-value-separator}#{$font-size-name}#{$breakpoint} {
       font-size: get-font-size($font-size-name) !important;
     }
 
@@ -21,15 +21,15 @@
   /* Text Align
      ========================================================================== */
 
-  .#{$utility-prefix}ta-l#{$breakpoint} {
+  .#{$utility-prefix}ta#{$utility-value-separator}l#{$breakpoint} {
     text-align: left !important;
   }
 
-  .#{$utility-prefix}ta-r#{$breakpoint} {
+  .#{$utility-prefix}ta#{$utility-value-separator}r#{$breakpoint} {
     text-align: right !important;
   }
 
-  .#{$utility-prefix}ta-c#{$breakpoint} {
+  .#{$utility-prefix}ta#{$utility-value-separator}c#{$breakpoint} {
     text-align: center !important;
   }
 
@@ -44,7 +44,7 @@
     font-weight: normal !important;
   }
 
-  .#{$utility-prefix}fs-i#{$breakpoint} {
+  .#{$utility-prefix}fs#{$utility-value-separator}i#{$breakpoint} {
     font-style: italic !important;
   }
 
@@ -58,39 +58,39 @@
     font-weight: bold !important;
   }
 
-  .#{$utility-prefix}fw-1#{$breakpoint} {
+  .#{$utility-prefix}fw#{$utility-value-separator}1#{$breakpoint} {
     font-weight: 100 !important;
   }
 
-  .#{$utility-prefix}fw-2#{$breakpoint} {
+  .#{$utility-prefix}fw#{$utility-value-separator}2#{$breakpoint} {
     font-weight: 200 !important;
   }
 
-  .#{$utility-prefix}fw-3#{$breakpoint} {
+  .#{$utility-prefix}fw#{$utility-value-separator}3#{$breakpoint} {
     font-weight: 300 !important;
   }
 
-  .#{$utility-prefix}fw-4#{$breakpoint} {
+  .#{$utility-prefix}fw#{$utility-value-separator}4#{$breakpoint} {
     font-weight: 400 !important;
   }
 
-  .#{$utility-prefix}fw-5#{$breakpoint} {
+  .#{$utility-prefix}fw#{$utility-value-separator}5#{$breakpoint} {
     font-weight: 500 !important;
   }
 
-  .#{$utility-prefix}fw-6#{$breakpoint} {
+  .#{$utility-prefix}fw#{$utility-value-separator}6#{$breakpoint} {
     font-weight: 600 !important;
   }
 
-  .#{$utility-prefix}fw-7#{$breakpoint} {
+  .#{$utility-prefix}fw#{$utility-value-separator}7#{$breakpoint} {
     font-weight: 700 !important;
   }
 
-  .#{$utility-prefix}fw-8#{$breakpoint} {
+  .#{$utility-prefix}fw#{$utility-value-separator}8#{$breakpoint} {
     font-weight: 800 !important;
   }
 
-  .#{$utility-prefix}fw-9#{$breakpoint} {
+  .#{$utility-prefix}fw#{$utility-value-separator}9#{$breakpoint} {
     font-weight: 900 !important;
   }
 
@@ -100,19 +100,19 @@
   /* Text Transform
      ========================================================================== */
 
-  .#{$utility-prefix}tt-c#{$breakpoint} {
+  .#{$utility-prefix}tt#{$utility-value-separator}c#{$breakpoint} {
     text-transform: capitalize !important;
   }
 
-  .#{$utility-prefix}tt-l#{$breakpoint} {
+  .#{$utility-prefix}tt#{$utility-value-separator}l#{$breakpoint} {
     text-transform: lowercase !important;
   }
 
-  .#{$utility-prefix}tt-u#{$breakpoint} {
+  .#{$utility-prefix}tt#{$utility-value-separator}u#{$breakpoint} {
     text-transform: uppercase !important;
   }
 
-  .#{$utility-prefix}tt-n#{$breakpoint} {
+  .#{$utility-prefix}tt#{$utility-value-separator}n#{$breakpoint} {
     text-transform: none !important;
   }
 
@@ -189,7 +189,7 @@
       $measure-variant: '-#{$measure-variant}';
     }
 
-    .#{$utility-prefix}-measure#{$measure-variant}#{$breakpoint} {
+    .#{$utility-prefix}measure#{$measure-variant}#{$breakpoint} {
       max-width: $measure-width !important;
     }
 

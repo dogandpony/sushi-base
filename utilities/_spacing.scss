@@ -54,7 +54,7 @@ $spacing-factors: $global-spacing-factors !default;
           // `xs` = `u-p-xs`
           // null = `u-p`
           @if ($factor-namespace != null) {
-            $factor-namespace: "-#{$factor-namespace}";
+            $factor-namespace: '#{$utility-value-separator}#{$factor-namespace}';
           }
 
           .#{$utility-prefix}#{$property-namespace}#{$direction-namespace}#{$factor-namespace}#{$breakpoint} {

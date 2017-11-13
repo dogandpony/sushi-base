@@ -8,27 +8,27 @@
    * Vertical alignment classes.
    */
 
-  .#{$utility-prefix}va-bl#{$breakpoint} {
+  .#{$utility-prefix}va#{$utility-value-separator}bl#{$breakpoint} {
     vertical-align: baseline !important;
   }
 
-  .#{$utility-prefix}va-b#{$breakpoint} {
+  .#{$utility-prefix}va#{$utility-value-separator}b#{$breakpoint} {
     vertical-align: bottom !important;
   }
 
-  .#{$utility-prefix}va-m#{$breakpoint} {
+  .#{$utility-prefix}va#{$utility-value-separator}m#{$breakpoint} {
     vertical-align: middle !important;
   }
 
-  .#{$utility-prefix}va-t#{$breakpoint} {
+  .#{$utility-prefix}va#{$utility-value-separator}t#{$breakpoint} {
     vertical-align: top !important;
   }
 
-  .#{$utility-prefix}va-s#{$breakpoint} {
+  .#{$utility-prefix}va#{$utility-value-separator}s#{$breakpoint} {
     vertical-align: sub !important;
   }
 
-  .#{$utility-prefix}va-p#{$breakpoint} {
+  .#{$utility-prefix}va#{$utility-value-separator}p#{$breakpoint} {
     vertical-align: super !important;
   }
 
