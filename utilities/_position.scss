@@ -3,8 +3,8 @@
  * ===================================================================== */
 
 // Utility classes for position direction values, for example:
-// .u-l-xs
-// .u-b-l
+// ._lxs
+// ._bl
 
 $positionDirections: (
   "t": "top",
@@ -38,8 +38,8 @@ $positionFactors: $globalSpacingFactors !default;
     position: sticky !important; /* [1] */
   }
 
-  // Add zero and null modifiers to the factor list so classes like `u-b-0` and
-  // `u-b` are created automatically
+  // Add zero and null modifiers to the factor list so classes like `_b0` and
+  // `_b` are created automatically
   $factors: map-merge(("0": 0, null: 1), $positionFactors);
 
   @each $directionNamespace, $directionRules in $positionDirections {
@@ -47,8 +47,8 @@ $positionFactors: $globalSpacingFactors !default;
     @each $factorNamespace, $factor in $factors {
 
       // Add a hyphen before the namespace if it's not null
-      // `xs` = `u-l-xs`
-      // null = `u-l`
+      // `xs` = `_lxs`
+      // null = `_l`
       @if ($factorNamespace != null) {
         $factorNamespace: "#{$utilityValueSeparator}#{$factorNamespace}";
       }
@@ -72,7 +72,7 @@ $positionFactors: $globalSpacingFactors !default;
  * A series of spacing helper classes that you can use to give spacing.
  * Use these in your markup:
  *
- * <div class="u-r-xs">
+ * <div class="_rxs">
  *
  * The following will generate spacing helper classes.
  */

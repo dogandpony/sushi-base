@@ -37,8 +37,8 @@ $spacingFactors: $globalSpacingFactors !default;
 
 @mixin spacingUtility($breakpoint: null) {
 
-  // Add zero and null modifiers to the factor list so classes like `u-ph-0` and
-  // `u-pl` are created automatically
+  // Add zero and null modifiers to the factor list so classes like `_ph-0` and
+  // `_pl` are created automatically
   $factors: map-merge(("0": 0, null: 1), $spacingFactors);
 
   @each $propertyNamespace, $property in $spacingProperties {
@@ -80,7 +80,7 @@ $spacingFactors: $globalSpacingFactors !default;
  * A series of spacing helper classes that you can use to give spacing.
  * Use these in your markup:
  *
- * <div class="u-pl-xs">
+ * <div class="_plxs">
  *
  * The following will generate spacing helper classes.
  */
