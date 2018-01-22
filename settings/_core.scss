@@ -12,10 +12,12 @@ $globalSpacing: 32px !default;
 // Global spacing factors
 
 $globalSpacingFactors: (
+  "xxs": 0.25,
   "xs": 0.5,
   "sm": 0.75,
   "lg": 1.5,
   "xl": 2,
+  "xxl": 4,
 ) !default;
 
 
@@ -59,7 +61,9 @@ $utilityValueSeparator: '-';
  * `$globalSpacingFactors` to add new factors.
  */
 
+$globalSpacingXxs: round($globalSpacing * map_get($globalSpacingFactors, "xxs"));
 $globalSpacingXs: round($globalSpacing * map_get($globalSpacingFactors, "xs"));
 $globalSpacingSm: round($globalSpacing * map_get($globalSpacingFactors, "sm"));
 $globalSpacingLg: round($globalSpacing * map_get($globalSpacingFactors, "lg"));
 $globalSpacingXl: round($globalSpacing * map_get($globalSpacingFactors, "xl"));
+$globalSpacingXxl: round($globalSpacing * map_get($globalSpacingFactors, "xxl"));
