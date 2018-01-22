@@ -37,7 +37,7 @@
 //   .u-2/5
 //   .u-3/4
 //   .u-2/3
-$width-fractions: 1 2 3 4 5 12 !default;
+$widthFractions: 1 2 3 4 5 12 !default;
 
 
 // Optionally, Sushi can generate classes to offset items by a certain width.
@@ -47,24 +47,19 @@ $width-fractions: 1 2 3 4 5 12 !default;
 //   .u-pull-2/4
 //   .u-pull-1/5
 //   .u-push-2/3
-$width-enable-offsets: false !default;
+$widthEnableOffsets: false !default;
 
 
 // By default, Sushi uses fractions-like classes like `<div class="u-1/4">`.
 // You can change the `/` to whatever you fancy with this variable.
-$width-delimiter: \/ !default;
+$widthDelimiter: \/ !default;
 
 
-// A mixin to spit out our width classes. Pass in the columns we want the widths
-// to have, and an optional suffix for responsive widths. E.g. to create thirds
-// and quarters for a small breakpoint:
-//
-// @include widths(3 4, -s);
-
-@mixin widths-utility($breakpoint: null) {
+// A mixin to spit out our width classes.
+@mixin widthsUtility($breakpoint: null) {
 
   // Loop through the number of columns for each denominator of our fractions.
-  @each $denominator in $width-fractions {
+  @each $denominator in $widthFractions {
 
     // Begin creating a numerator for our fraction up until we hit the
     // denominator.
@@ -72,23 +67,23 @@ $width-delimiter: \/ !default;
 
       @if ($numerator != $denominator) {
 
-        // Build a class in the format `.u-3/4[@<breakpoint>]`.
-        .#{$utility-prefix}#{$numerator}#{$width-delimiter}#{$denominator}#{$breakpoint} {
+        // Build a class in the format `._3/4[@<breakpoint>]`.
+        .#{$utilityPrefix}#{$numerator}#{$widthDelimiter}#{$denominator}#{$breakpoint} {
           width: ($numerator / $denominator) * 100% !important;
         }
 
       }
 
-      @if ($width-enable-offsets == true) {
+      @if ($widthEnableOffsets == true) {
 
         // Build a class in the format `.u-push-1/2[@<breakpoint>]`.
-        .#{$utility-prefix}push#{$utility-value-separator}#{$numerator}#{$width-delimiter}#{$denominator}#{$breakpoint} {
+        .#{$utilityPrefix}push#{$utilityValueSeparator}#{$numerator}#{$widthDelimiter}#{$denominator}#{$breakpoint} {
           position: relative !important;
           margin-left: ($numerator / $denominator) * 100% !important;
         }
 
         // Build a class in the format `.u-pull-5/6[@<breakpoint>]`.
-        .#{$utility-prefix}pull#{$utility-value-separator}#{$numerator}#{$width-delimiter}#{$denominator}#{$breakpoint} {
+        .#{$utilityPrefix}pull#{$utilityValueSeparator}#{$numerator}#{$widthDelimiter}#{$denominator}#{$breakpoint} {
           position: relative !important;
           margin-right: ($numerator / $denominator) * 100% !important;
         }
@@ -99,22 +94,22 @@ $width-delimiter: \/ !default;
 
   }
 
-  .#{$utility-prefix}1#{$width-delimiter}1#{$breakpoint} {
+  .#{$utilityPrefix}1#{$widthDelimiter}1#{$breakpoint} {
     width: 100% !important;
   }
 
-  .#{$utility-prefix}auto#{$breakpoint} {
+  .#{$utilityPrefix}auto#{$breakpoint} {
     width: auto !important;
   }
 
-  @if ($width-enable-offsets == true) {
+  @if ($widthEnableOffsets == true) {
 
-    .#{$utility-prefix}push#{$utility-value-separator}0#{$breakpoint} {
+    .#{$utilityPrefix}push#{$utilityValueSeparator}0#{$breakpoint} {
       position: relative;
       margin-left: 0 !important;
     }
 
-    .#{$utility-prefix}pull#{$utility-value-separator}0#{$breakpoint} {
+    .#{$utilityPrefix}pull#{$utilityValueSeparator}0#{$breakpoint} {
       position: relative;
       margin-right: 0 !important;
     }
@@ -135,4 +130,4 @@ $width-delimiter: \/ !default;
  * defined in the `$width-fractions` list.
  */
 
-@include widths-utility();
+@include widthsUtility();

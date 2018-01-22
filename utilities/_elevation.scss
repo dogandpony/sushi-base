@@ -7,18 +7,18 @@
  * https://github.com/prestopasto/SCSS-Material-Shadows/blob/master/src/md-material-shadows.scss
  */
 
-$elevation-available-depths: 1, 2, 4, 8, 16, 24 !default;
+$elevationAvailableDepths: 1, 2, 4, 8, 16, 24 !default;
 
 
 /**
  * CSS md-elevation-z# classes
  */
 
-@mixin elevation-utility($breakpoint: null) {
+@mixin elevationUtility($breakpoint: null) {
 
-  @each $zValue in $elevation-available-depths {
+  @each $zValue in $elevationAvailableDepths {
 
-    .#{$utility-prefix}elevation#{$utility-value-separator}#{$zValue}#{$breakpoint} {
+    .#{$utilityPrefix}elevation#{$utilityValueSeparator}#{$zValue}#{$breakpoint} {
 
       @include elevation($zValue);
 
@@ -29,4 +29,4 @@ $elevation-available-depths: 1, 2, 4, 8, 16, 24 !default;
 }
 
 
-@include elevation-utility();
+@include elevationUtility();

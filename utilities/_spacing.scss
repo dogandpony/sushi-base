@@ -17,7 +17,7 @@
 
 /* stylelint-disable string-quotes, max-nesting-depth */
 
-$spacing-directions: (
+$spacingDirections: (
   null: null,
   't': '-top',
   'r': '-right',
@@ -27,40 +27,40 @@ $spacing-directions: (
   'v': '-top' '-bottom',
 ) !default;
 
-$spacing-properties: (
   'p': 'padding',
   'm': 'margin',
+$spacingProperties: (
 ) !default;
 
-$spacing-factors: $global-spacing-factors !default;
+$spacingFactors: $globalSpacingFactors !default;
 
 
-@mixin spacing-utility($breakpoint: null) {
+@mixin spacingUtility($breakpoint: null) {
 
   // Add zero and null modifiers to the factor list so classes like `u-ph-0` and
   // `u-pl` are created automatically
-  $factors: map-merge(('0': 0, null: 1), $spacing-factors);
+  $factors: map-merge(("0": 0, null: 1), $spacingFactors);
 
-  @each $property-namespace, $property in $spacing-properties {
+  @each $propertyNamespace, $property in $spacingProperties {
 
-    @each $direction-namespace, $direction-rules in $spacing-directions {
+    @each $directionNamespace, $directionRules in $spacingDirections {
 
-      @each $factor-namespace, $factor in $factors {
+      @each $factorNamespace, $factor in $factors {
 
         // do not print negative padding rules
-        @if ($factor >= 0) or ($property != 'padding') {
+        @if ($factor >= 0) or ($property != "padding") {
 
           // Add a hyphen before the namespace if it's not null
-          // `xs` = `u-p-xs`
-          // null = `u-p`
-          @if ($factor-namespace != null) {
-            $factor-namespace: '#{$utility-value-separator}#{$factor-namespace}';
+          // `xs` = `_pxs`
+          // null = `_p`
+          @if ($factorNamespace != null) {
+            $factorNamespace: "#{$utilityValueSeparator}#{$factorNamespace}";
           }
 
-          .#{$utility-prefix}#{$property-namespace}#{$direction-namespace}#{$factor-namespace}#{$breakpoint} {
+          .#{$utilityPrefix}#{$propertyNamespace}#{$directionNamespace}#{$factorNamespace}#{$breakpoint} {
 
-            @each $direction in $direction-rules {
-              #{$property}#{$direction}: ($factor * $global-spacing) !important;
+            @each $direction in $directionRules {
+              #{$property}#{$direction}: ($factor * $globalSpacing) !important;
             }
 
           }
@@ -85,4 +85,4 @@ $spacing-factors: $global-spacing-factors !default;
  * The following will generate spacing helper classes.
  */
 
-@include spacing-utility();
+@include spacingUtility();

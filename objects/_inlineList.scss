@@ -1,13 +1,16 @@
 /* =========================================================================
- * LIST-BARE OBJECT
+ * LIST-INLINE OBJECT
  * ========================================================================= */
 
 /**
- * Strip list-like appearance from lists by removing their bullets, and any
- * indentation.
+ * The list-inline object simply displays a list of items in one line.
  */
 
-.o-list-bare {
-  list-style: none;
+.o-inlineList {
   margin-left: 0;
+  list-style: none;
+}
+
+.o-inlineList__item {
+  display: inline-block;
 }

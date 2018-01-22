@@ -2,21 +2,21 @@
  * FLOAT UTILITIES
  * ========================================================================= */
 
-@mixin float-utility($breakpoint: null) {
+@mixin floatUtility($breakpoint: null) {
 
-  .#{$utility-prefix}f#{$utility-value-separator}l#{$breakpoint} {
+  .#{$utilityPrefix}f#{$utilityValueSeparator}l#{$breakpoint} {
     float: left !important;
   }
 
-  .#{$utility-prefix}f#{$utility-value-separator}r#{$breakpoint} {
+  .#{$utilityPrefix}f#{$utilityValueSeparator}r#{$breakpoint} {
     float: right !important;
   }
 
-  .#{$utility-prefix}f#{$utility-value-separator}n#{$breakpoint} {
+  .#{$utilityPrefix}f#{$utilityValueSeparator}n#{$breakpoint} {
     float: none !important;
   }
 
 }
 
 
-@include float-utility();
+@include floatUtility();

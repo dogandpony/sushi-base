@@ -22,31 +22,31 @@
  * Article: https://philipwalton.com/articles/what-no-one-told-you-about-z-index/
  */
 
-$z-index-depths: 0 1 2 3 4 5 10 20 30 40 50 60 70 80 90 100 !default;
+$zIndexDepths: 0 1 2 3 4 5 10 20 30 40 50 60 70 80 90 100 !default;
 
-@mixin z-index-utility($breakpoint: null) {
+@mixin zIndexUtility($breakpoint: null) {
 
-  @each $depth in $z-index-depths {
+  @each $depth in $zIndexDepths {
 
-    .#{$utility-prefix}z#{$utility-value-separator}#{$depth}#{$breakpoint} {
+    .#{$utilityPrefix}z#{$utilityValueSeparator}#{$depth}#{$breakpoint} {
       z-index: $depth !important;
     }
 
   }
 
-  .#{$utility-prefix}z#{$utility-value-separator}inh#{$breakpoint} {
+  .#{$utilityPrefix}z#{$utilityValueSeparator}inh#{$breakpoint} {
     z-index: inherit !important;
   }
 
-  .#{$utility-prefix}z#{$utility-value-separator}ini#{$breakpoint} {
+  .#{$utilityPrefix}z#{$utilityValueSeparator}ini#{$breakpoint} {
     z-index: initial !important;
   }
 
-  .#{$utility-prefix}z#{$utility-value-separator}uns#{$breakpoint} {
+  .#{$utilityPrefix}z#{$utilityValueSeparator}uns#{$breakpoint} {
     z-index: unset !important;
   }
 
 }
 
 
-@include z-index-utility();
+@include zIndexUtility();

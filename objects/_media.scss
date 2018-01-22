@@ -22,7 +22,7 @@
 
 .o-media__img {
   float: left;
-  margin-right: $global-spacing;
+  margin-right: $globalSpacing;
 
   > img {
     display: block;
@@ -52,7 +52,7 @@
   > .o-media__img {
     float: right;
     margin-right: 0;
-    margin-left: $global-spacing;
+    margin-left: $globalSpacing;
   }
 
 }
@@ -83,19 +83,19 @@
  * reversible options for all available sizes.
  */
 
-@each $spacing-name, $spacing-factor in $global-spacing-factors {
+@each $spacingName, $spacingFactor in $globalSpacingFactors {
 
-  .o-media--#{$spacing-name} {
+  .o-media--#{$spacingName} {
 
     > .o-media__img {
-      padding-right: ($global-spacing * $spacing-factor);
+      padding-right: ($globalSpacing * $spacingFactor);
     }
 
     &.o-media--reverse {
 
       > .o-media__img {
         padding-right: 0;
-        padding-left: ($global-spacing * $spacing-factor);
+        padding-left: ($globalSpacing * $spacingFactor);
       }
 
     }

@@ -4,31 +4,31 @@
 
 // Base typographical styles
 
-$base-font-size: 16px !default;
-$base-line-height: 1.5 !default;
+$baseFontSize: 16px !default;
+$baseLineHeight: 1.5 !default;
 
 
 // Font size variants
 
-$font-sizes: (
-  hero1: ($base-font-size * 4), // 64px
-  hero2: ($base-font-size * 3), // 48px
-  1: ($base-font-size * 2.25),  // 36px
-  2: ($base-font-size * 1.75),  // 28px
-  3: ($base-font-size * 1.5),   // 24px
-  4: ($base-font-size * 1.25),  // 20px
-  5: ($base-font-size * 1.125), // 18px
-  6: $base-font-size,           // 16px
+$fontSizes: (
+  hero1: ($baseFontSize * 4), // 64px
+  hero2: ($baseFontSize * 3), // 48px
+  1: ($baseFontSize * 2.25),  // 36px
+  2: ($baseFontSize * 1.75),  // 28px
+  3: ($baseFontSize * 1.5),   // 24px
+  4: ($baseFontSize * 1.25),  // 20px
+  5: ($baseFontSize * 1.125), // 18px
+  6: $baseFontSize,           // 16px
 ) !default;
 
-@function get-font-size($key) {
-  @return map-get($font-sizes, $key);
+@function getFontSize($key) {
+  @return map-get($fontSizes, $key);
 }
 
 
 // Measure widths
 
-$measure-widths: (
+$measureWidths: (
   "narrow": 20em, // ~45 characters
   null: 30em,       // ~66 characters
   "wide": 34em,   // ~80 characters

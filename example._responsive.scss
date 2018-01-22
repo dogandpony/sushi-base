@@ -1,23 +1,31 @@
-/* ==========================================================================
-   SUSHI RESPONSIVE
-   ========================================================================== */
+/* =====================================================================
+ * SUSHI RESPONSIVE
+ *
+ * All files are disabled to save bandwidth by default. You may enable
+ * all responsive modifiers/utilities at once, but that will increase
+ * the file size substantially.
+ *
+ * You may (actually should) include here the responsive classes from
+ * any custom modules you create. This makes the code cleaner (and
+ * smaller) since equal media queries will be written in the same place.
+ * ===================================================================== */
 
-@if (variable-exists(mq-breakpoints)) {
+@if (variable-exists(mqBreakpoints)) {
 
-  @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+  @each $breakpointName, $breakpointValue in $mqBreakpoints {
 
-    $breakpoint: #{$breakpoint-separator}#{$breakpoint-name};
+    $breakpoint: #{$breakpointSeparator}#{$breakpointName};
 
-    @include mq($from: $breakpoint-name) {
+    @include mq($from: $breakpointName) {
 
-      @include layout-modifiers($breakpoint);
-      @include wrapper-modifiers($breakpoint);
+      @include layoutModifiers($breakpoint);
+      @include wrapperModifiers($breakpoint);
 
-      @include display-utility($breakpoint);
-      @include overflow-utility($breakpoint);
-      @include position-utility($breakpoint);
-      @include spacing-utility($breakpoint);
-      @include typography-utility($breakpoint);
+      @include displayUtility($breakpoint);
+      @include overflowUtility($breakpoint);
+      @include positionUtility($breakpoint);
+      @include spacingUtility($breakpoint);
+      @include typographyUtility($breakpoint);
 
     }
 

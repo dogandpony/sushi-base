@@ -34,13 +34,13 @@
 /* Size variants.
    ========================================================================== */
 
-@each $spacing-name, $spacing-factor in $global-spacing-factors {
+@each $spacingName, $spacingFactor in $globalSpacingFactors {
 
-  .o-table--#{$spacing-name} {
+  .o-table--#{$spacingName} {
 
     th,
     td {
-      padding: ($global-spacing * $spacing-factor);
+      padding: ($globalSpacing * $spacingFactor);
     }
 
   }

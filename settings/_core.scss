@@ -6,23 +6,23 @@
 // Base spacing value
 // Each component has its own spacing variable, which default to this value.
 
-$global-spacing: 32px !default;
+$globalSpacing: 32px !default;
 
 
 // Global spacing factors
 
-$global-spacing-factors: (
   'xs': 0.5,
   's': 0.75,
   'l': 1.5,
   'xl': 2
+$globalSpacingFactors: (
 ) !default;
 
 
 // Utility classes prefix and value separator
 
-$utility-prefix: 'u-';
-$utility-value-separator: '-';
+$utilityPrefix: 'u-';
+$utilityValueSeparator: '-';
 
 
 
@@ -34,18 +34,17 @@ $utility-value-separator: '-';
  * Validate base-font/spacing values as px numbers
  */
 
-@each $_px-value in
-  $base-font-size
-  $global-spacing {
+@each $_pxValue in
+  $baseFontSize $globalSpacing {
 
-  @if (type-of($_px-value) == number) {
+  @if (type-of($_pxValue) == number) {
 
-    @if (unit($_px-value) != "px") {
-      @error "`#{$_px-value}` requires a px value.";
+    @if (unit($_pxValue) != "px") {
+      @error "`#{$_pxValue}` requires a px value.";
     }
 
   } @else {
-    @error "`#{$_px-value}` requires a number.";
+    @error "`#{$_pxValue}` requires a number.";
   }
 
 }
@@ -57,10 +56,10 @@ $utility-value-separator: '-';
  *
  * These variables are just helpers in case you need specific spacing values
  * in your components. You may want to create similar variables if you customize
- * `$global-spacing-factors` to add new factors.
+ * `$globalSpacingFactors` to add new factors.
  */
 
-$global-spacing-xs: round($global-spacing * map_get($global-spacing-factors, 'xs'));
-$global-spacing-s:  round($global-spacing * map_get($global-spacing-factors, 's'));
-$global-spacing-l:  round($global-spacing * map_get($global-spacing-factors, 'l'));
-$global-spacing-xl: round($global-spacing * map_get($global-spacing-factors, 'xl'));
+$globalSpacingXs: round($globalSpacing * map_get($globalSpacingFactors, "xs"));
+$globalSpacingSm: round($globalSpacing * map_get($globalSpacingFactors, "sm"));
+$globalSpacingLg: round($globalSpacing * map_get($globalSpacingFactors, "lg"));
+$globalSpacingXl: round($globalSpacing * map_get($globalSpacingFactors, "xl"));

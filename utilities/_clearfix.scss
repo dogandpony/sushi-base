@@ -6,13 +6,13 @@
  * Attach our clearfix mixin to a utility class.
  */
 
-@mixin clearfix-utility($breakpoint: null) {
+@mixin clearfixUtility($breakpoint: null) {
 
-  .#{$utility-prefix}clearfix {
+  .#{$utilityPrefix}clearfix {
     @include clearfix();
   }
 
 }
 
 
-@include clearfix-utility();
+@include clearfixUtility();

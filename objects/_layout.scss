@@ -55,13 +55,13 @@
 // items. Set this to true in order to use a markup-based strategy like
 // commenting out whitespace or minifying HTML.
 
-$enable-layout-markup-fix: false !default;
+$enableLayoutMarkupFix: false !default;
 
 
 // By default we won't generate breakpoint-targeted classes such as
 // `.o-layout--s@desktop`.
 
-$enable-responsive-layout: false !default;
+$enableResponsiveLayout: false !default;
 
 
 
@@ -85,11 +85,11 @@ $enable-responsive-layout: false !default;
 
 .o-layout {
   display: block; /* [1] */
-  margin: 0 (($global-spacing / 2) * -1); /* [2] [4] */
+  margin: 0 (($globalSpacing / 2) * -1); /* [2] [4] */
   padding: 0; /* [2] */
   list-style: none; /* [1] */
 
-  @if ($enable-layout-markup-fix == false) {
+  @if ($enableLayoutMarkupFix == false) {
     font-size: 0; /* [5] */
   }
 }
@@ -114,10 +114,10 @@ $enable-responsive-layout: false !default;
   display: inline-block; /* [2] */
   vertical-align: top; /* [3] */
   width: 100%; /* [4] */
-  padding-right: ($global-spacing / 2); /* [5] */
-  padding-left: ($global-spacing / 2); /* [5] */
+  padding-right: ($globalSpacing / 2); /* [5] */
+  padding-left: ($globalSpacing / 2); /* [5] */
 
-  @if ($enable-layout-markup-fix == false) {
+  @if ($enableLayoutMarkupFix == false) {
     font-size: 1rem; /* [6] */
   }
 
@@ -129,7 +129,7 @@ $enable-responsive-layout: false !default;
 /* Modifiers
    ========================================================================== */
 
-@mixin layout-modifiers($breakpoint: null) {
+@mixin layoutModifiers($breakpoint: null) {
 
   /* Flush
      ========================================================================= */
@@ -163,14 +163,14 @@ $enable-responsive-layout: false !default;
   /* Spacing
      ========================================================================= */
 
-  @each $spacing-name, $spacing-factor in $global-spacing-factors {
+  @each $spacingName, $spacingFactor in $globalSpacingFactors {
 
-    .o-layout--#{$spacing-name}#{$breakpoint} {
-      margin: (0 (($global-spacing * $spacing-factor) / 2) * -1);
+    .o-layout--#{$spacingName}#{$breakpoint} {
+      margin: (0 (($globalSpacing * $spacingFactor) / 2) * -1);
 
       > .o-layout__item {
-        padding-right: (($global-spacing * $spacing-factor) / 2);
-        padding-left: (($global-spacing * $spacing-factor) / 2);
+        padding-right: (($globalSpacing * $spacingFactor) / 2);
+        padding-left: (($globalSpacing * $spacingFactor) / 2);
       }
 
     }
@@ -296,4 +296,4 @@ $enable-responsive-layout: false !default;
 }
 
 
-@include layout-modifiers();
+@include layoutModifiers();

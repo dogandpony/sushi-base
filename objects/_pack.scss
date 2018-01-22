@@ -68,10 +68,10 @@
 /* Size variants.
    ========================================================================== */
 
-@each $spacing-name, $spacing-factor in $global-spacing-factors {
+@each $spacingName, $spacingFactor in $globalSpacingFactors {
 
-  .o-pack--#{$spacing-name} {
-    border-spacing: ($global-spacing * $spacing-factor);
+  .o-pack--#{$spacingName} {
+    border-spacing: ($globalSpacing * $spacingFactor);
   }
 
 }
