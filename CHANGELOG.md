@@ -1,49 +1,16 @@
-### 1.5.1: 2017-07-03
+# Changelog
+All notable changes to this project will be documented in this file.
 
-* Standardize code to match proposed stylelint tests
+The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
+and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] - 2018-01-22
+### Changed
+- CHANGELOG.md to match Sushi's own changelog.
+- Start using camelCase BEM vs traditional BEM styling.
+- Filenames match camelCase BEM styling.
+- Double quotes are now standard.
+- Utility separator is now an empty string instead of `-`.
+- Utility prefix is now an underscore instead of `u-`.
 
-### 1.5.0: 2017-07-03
-
-* Fix push/pull classes being looped for each denominator
-* Fix layout object forcing top/bottom margins
-* Prevent repeating of 1/1-equivalent classes in widths utility
-* Add auto width to the widths utility
-
-
-### 1.4.3: 2017-05-15
-
-* Minor improvements to print-related stylesheet
-
-
-### 1.4.2: 2017-05-15
-
-* Fix spacing utility not printing zero and null values
-* Change `whs` to `ws` in whitespace utility
-* Remove `h` suffix from font size variables
-* Add list of depths to the z-index utility
-* Other minor fixes and improvements
-
-
-### 1.4.1: 2017-05-09
-
-* Change all utilities to match the `prefix-property-value` standard
-
-
-### 1.4.0: 2017-05-09
-
-* Change z-index utility to match `prefix-property-value` standard
-* Remove headings utility
-* Remove redundant class from display utility
-* Add responsive capability to all utilities (also layout and wrapper objects)
-* Add `.editorconfig` to list of tracked files in npm
-* Add utilities:
-    * Whitespace
-    * Display: inline
-    * Overflow
-* Other minor fixes and improvements
-
-
-### 1.3.0: 2017-04-25
-
-* Initial production-ready release
+[2.0.0]: https://github.com/dogandpony/sushi-base/compare/v1.7.1...v2.0.0
