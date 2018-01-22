@@ -1,5 +1,5 @@
 /* =========================================================================
- * DISPLAY UTILITIES
+ * DISPLAY UTILITY
  * ========================================================================= */
 
 /**
@@ -8,7 +8,7 @@
  * https://github.com/tachyons-css/tachyons/blob/master/src/_display.css
  */
 
-@mixin display-utility($breakpoint: null) {
+@mixin displayUtility($breakpoint: null) {
 
   /**
    * Hide only visually, but have it available for screen readers:
@@ -20,83 +20,83 @@
    * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
    */
 
-  .#{$utility-prefix}hidden#{$breakpoint} {
+  .#{$utilityPrefix}hidden#{$breakpoint} {
     @include hide();
   }
 
-  .#{$utility-prefix}d#{$utility-value-separator}n#{$breakpoint} {
+  .#{$utilityPrefix}d#{$utilityValueSeparator}n#{$breakpoint} {
     display: none !important;
   }
 
-  .#{$utility-prefix}d#{$utility-value-separator}i#{$breakpoint} {
+  .#{$utilityPrefix}d#{$utilityValueSeparator}i#{$breakpoint} {
     display: inline !important;
   }
 
-  .#{$utility-prefix}d#{$utility-value-separator}b#{$breakpoint} {
+  .#{$utilityPrefix}d#{$utilityValueSeparator}b#{$breakpoint} {
     display: block !important;
   }
 
-  .#{$utility-prefix}d#{$utility-value-separator}li#{$breakpoint} {
+  .#{$utilityPrefix}d#{$utilityValueSeparator}li#{$breakpoint} {
     display: list-item !important;
   }
 
-  .#{$utility-prefix}d#{$utility-value-separator}ib#{$breakpoint} {
+  .#{$utilityPrefix}d#{$utilityValueSeparator}ib#{$breakpoint} {
     display: inline-block !important;
   }
 
-  .#{$utility-prefix}d#{$utility-value-separator}it#{$breakpoint} {
+  .#{$utilityPrefix}d#{$utilityValueSeparator}it#{$breakpoint} {
     display: inline-table !important;
   }
 
-  .#{$utility-prefix}d#{$utility-value-separator}t#{$breakpoint} {
+  .#{$utilityPrefix}d#{$utilityValueSeparator}t#{$breakpoint} {
     display: table !important;
   }
 
-  .#{$utility-prefix}d#{$utility-value-separator}tc#{$breakpoint} {
+  .#{$utilityPrefix}d#{$utilityValueSeparator}tc#{$breakpoint} {
     display: table-cell !important;
   }
 
-  .#{$utility-prefix}d#{$utility-value-separator}tcl#{$breakpoint} {
+  .#{$utilityPrefix}d#{$utilityValueSeparator}tcl#{$breakpoint} {
     display: table-column !important;
   }
 
-  .#{$utility-prefix}d#{$utility-value-separator}tcg#{$breakpoint} {
+  .#{$utilityPrefix}d#{$utilityValueSeparator}tcg#{$breakpoint} {
     display: table-column-group !important;
   }
 
-  .#{$utility-prefix}d#{$utility-value-separator}tfg#{$breakpoint} {
+  .#{$utilityPrefix}d#{$utilityValueSeparator}tfg#{$breakpoint} {
     display: table-footer-group !important;
   }
 
-  .#{$utility-prefix}d#{$utility-value-separator}thg#{$breakpoint} {
+  .#{$utilityPrefix}d#{$utilityValueSeparator}thg#{$breakpoint} {
     display: table-header-group !important;
   }
 
-  .#{$utility-prefix}d#{$utility-value-separator}tr#{$breakpoint} {
+  .#{$utilityPrefix}d#{$utilityValueSeparator}tr#{$breakpoint} {
     display: table-row !important;
   }
 
-  .#{$utility-prefix}d#{$utility-value-separator}trg#{$breakpoint} {
+  .#{$utilityPrefix}d#{$utilityValueSeparator}trg#{$breakpoint} {
     display: table-row-group !important;
   }
 
-  .#{$utility-prefix}d#{$utility-value-separator}f#{$breakpoint} {
+  .#{$utilityPrefix}d#{$utilityValueSeparator}f#{$breakpoint} {
     display: flex !important;
   }
 
-  .#{$utility-prefix}d#{$utility-value-separator}if#{$breakpoint} {
+  .#{$utilityPrefix}d#{$utilityValueSeparator}if#{$breakpoint} {
     display: inline-flex !important;
   }
 
-  .#{$utility-prefix}d#{$utility-value-separator}g#{$breakpoint} {
+  .#{$utilityPrefix}d#{$utilityValueSeparator}g#{$breakpoint} {
     display: grid !important;
   }
 
-  .#{$utility-prefix}d#{$utility-value-separator}ig#{$breakpoint} {
+  .#{$utilityPrefix}d#{$utilityValueSeparator}ig#{$breakpoint} {
     display: inline-grid !important;
   }
 
 }
 
-@include display-utility();
+@include displayUtility();
 

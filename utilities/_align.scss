@@ -1,34 +1,34 @@
 /* =========================================================================
- * ALIGNMENT UTILITIES
+ * ALIGNMENT UTILITY
  * ========================================================================= */
 
-@mixin align-utility($breakpoint: null) {
+@mixin alignUtility($breakpoint: null) {
 
   /**
    * Vertical alignment classes.
    */
 
-  .#{$utility-prefix}va#{$utility-value-separator}bl#{$breakpoint} {
+  .#{$utilityPrefix}va#{$utilityValueSeparator}bl#{$breakpoint} {
     vertical-align: baseline !important;
   }
 
-  .#{$utility-prefix}va#{$utility-value-separator}b#{$breakpoint} {
+  .#{$utilityPrefix}va#{$utilityValueSeparator}b#{$breakpoint} {
     vertical-align: bottom !important;
   }
 
-  .#{$utility-prefix}va#{$utility-value-separator}m#{$breakpoint} {
+  .#{$utilityPrefix}va#{$utilityValueSeparator}m#{$breakpoint} {
     vertical-align: middle !important;
   }
 
-  .#{$utility-prefix}va#{$utility-value-separator}t#{$breakpoint} {
+  .#{$utilityPrefix}va#{$utilityValueSeparator}t#{$breakpoint} {
     vertical-align: top !important;
   }
 
-  .#{$utility-prefix}va#{$utility-value-separator}s#{$breakpoint} {
+  .#{$utilityPrefix}va#{$utilityValueSeparator}s#{$breakpoint} {
     vertical-align: sub !important;
   }
 
-  .#{$utility-prefix}va#{$utility-value-separator}p#{$breakpoint} {
+  .#{$utilityPrefix}va#{$utilityValueSeparator}p#{$breakpoint} {
     vertical-align: super !important;
   }
 
@@ -37,7 +37,7 @@
    * Horizontal alignment
    */
 
-  .#{$utility-prefix}center#{$breakpoint} {
+  .#{$utilityPrefix}center#{$breakpoint} {
     margin-right: auto !important;
     margin-left: auto !important;
   }
@@ -45,4 +45,4 @@
 }
 
 
-@include align-utility();
+@include alignUtility();

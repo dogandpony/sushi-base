@@ -87,7 +87,7 @@
 @import 'tools/clearfix';
 @import 'tools/elevation';
 @import 'tools/hide';
-@import 'tools/input-reset';
+@import 'tools/inputReset';
 @import 'tools/position';
 @import 'node_modules/sass-mq/mq';
 
@@ -98,8 +98,8 @@
 
 @import 'generic/normalize';
 @import 'generic/reset';
-@import 'generic/background-images';
-@import 'generic/box-sizing';
+@import 'generic/backgroundImages';
+@import 'generic/boxSizing';
 @import 'generic/margins';
 @import 'generic/base';
 
@@ -120,16 +120,16 @@
 @import 'objects/wrapper';
 @import 'objects/layout';
 
+@import 'objects/bareList';
 @import 'objects/box';
 @import 'objects/crop';
-@import 'objects/list-bare';
-@import 'objects/list-inline';
+@import 'objects/inlineList';
 @import 'objects/media';
-@import 'objects/media-valign';
-@import 'objects/media-stacked';
 @import 'objects/pack';
 @import 'objects/ratio';
+@import 'objects/stackedMedia';
 @import 'objects/table';
+@import 'objects/vAlignMedia';
 
 
 
@@ -154,8 +154,8 @@
 @import 'utilities/tracking';
 @import 'utilities/typography';
 @import 'utilities/widths';
-@import 'utilities/white-space';
-@import 'utilities/z-index';
+@import 'utilities/whiteSpace';
+@import 'utilities/zIndex';
 
 
 

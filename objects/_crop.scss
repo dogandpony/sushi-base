@@ -4,7 +4,7 @@
 
 // A list of cropping ratios that get generated as modifier classes.
 
-$crop-ratios: (
+$cropRatios: (
   (2:1),
   (4:3),
   (16:9),
@@ -29,8 +29,8 @@ $crop-ratios: (
 /**
  * Apply this class to the content (usually `img`) that needs cropping.
  *
- * 1. Image’s default positioning is top-left in the cropping box.
- * 2. Make sure the media doesn’t stop itself too soon.
+ * 1. Image's default positioning is top-left in the cropping box.
+ * 2. Make sure the media doesn't stop itself too soon.
  */
 
 .o-crop__content {
@@ -76,7 +76,7 @@ $crop-ratios: (
  *
  */
 
-@each $crop in $crop-ratios {
+@each $crop in $cropRatios {
 
   @each $antecedent, $consequent in $crop {
 

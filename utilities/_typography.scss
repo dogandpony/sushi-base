@@ -1,17 +1,17 @@
 /* =========================================================================
- * TYPOGRAPHY UTILITIES
+ * TYPOGRAPHY UTILITY
  * ========================================================================= */
 
 
-@mixin typography-utility($breakpoint: null) {
+@mixin typographyUtility($breakpoint: null) {
 
   /* Font Sizes
      ========================================================================= */
 
-  @each $font-size-name, $font-size in $font-sizes {
+  @each $fontSizeName, $fontSize in $fontSizes {
 
-    .#{$utility-prefix}fz#{$utility-value-separator}#{$font-size-name}#{$breakpoint} {
-      font-size: get-font-size($font-size-name) !important;
+    .#{$utilityPrefix}fz#{$utilityValueSeparator}#{$fontSizeName}#{$breakpoint} {
+      font-size: getFontSize($fontSizeName) !important;
     }
 
   }
@@ -21,15 +21,15 @@
   /* Text Align
      ========================================================================== */
 
-  .#{$utility-prefix}ta#{$utility-value-separator}l#{$breakpoint} {
+  .#{$utilityPrefix}ta#{$utilityValueSeparator}l#{$breakpoint} {
     text-align: left !important;
   }
 
-  .#{$utility-prefix}ta#{$utility-value-separator}r#{$breakpoint} {
+  .#{$utilityPrefix}ta#{$utilityValueSeparator}r#{$breakpoint} {
     text-align: right !important;
   }
 
-  .#{$utility-prefix}ta#{$utility-value-separator}c#{$breakpoint} {
+  .#{$utilityPrefix}ta#{$utilityValueSeparator}c#{$breakpoint} {
     text-align: center !important;
   }
 
@@ -39,12 +39,12 @@
   /* Font Style
      ========================================================================== */
 
-  .#{$utility-prefix}normal#{$breakpoint} {
+  .#{$utilityPrefix}normal#{$breakpoint} {
     font-style: italic !important;
     font-weight: normal !important;
   }
 
-  .#{$utility-prefix}fs#{$utility-value-separator}i#{$breakpoint} {
+  .#{$utilityPrefix}fs#{$utilityValueSeparator}i#{$breakpoint} {
     font-style: italic !important;
   }
 
@@ -54,43 +54,43 @@
   /* Font Weight
      ========================================================================== */
 
-  .#{$utility-prefix}b#{$breakpoint} {
+  .#{$utilityPrefix}b#{$breakpoint} {
     font-weight: bold !important;
   }
 
-  .#{$utility-prefix}fw#{$utility-value-separator}1#{$breakpoint} {
+  .#{$utilityPrefix}fw#{$utilityValueSeparator}1#{$breakpoint} {
     font-weight: 100 !important;
   }
 
-  .#{$utility-prefix}fw#{$utility-value-separator}2#{$breakpoint} {
+  .#{$utilityPrefix}fw#{$utilityValueSeparator}2#{$breakpoint} {
     font-weight: 200 !important;
   }
 
-  .#{$utility-prefix}fw#{$utility-value-separator}3#{$breakpoint} {
+  .#{$utilityPrefix}fw#{$utilityValueSeparator}3#{$breakpoint} {
     font-weight: 300 !important;
   }
 
-  .#{$utility-prefix}fw#{$utility-value-separator}4#{$breakpoint} {
+  .#{$utilityPrefix}fw#{$utilityValueSeparator}4#{$breakpoint} {
     font-weight: 400 !important;
   }
 
-  .#{$utility-prefix}fw#{$utility-value-separator}5#{$breakpoint} {
+  .#{$utilityPrefix}fw#{$utilityValueSeparator}5#{$breakpoint} {
     font-weight: 500 !important;
   }
 
-  .#{$utility-prefix}fw#{$utility-value-separator}6#{$breakpoint} {
+  .#{$utilityPrefix}fw#{$utilityValueSeparator}6#{$breakpoint} {
     font-weight: 600 !important;
   }
 
-  .#{$utility-prefix}fw#{$utility-value-separator}7#{$breakpoint} {
+  .#{$utilityPrefix}fw#{$utilityValueSeparator}7#{$breakpoint} {
     font-weight: 700 !important;
   }
 
-  .#{$utility-prefix}fw#{$utility-value-separator}8#{$breakpoint} {
+  .#{$utilityPrefix}fw#{$utilityValueSeparator}8#{$breakpoint} {
     font-weight: 800 !important;
   }
 
-  .#{$utility-prefix}fw#{$utility-value-separator}9#{$breakpoint} {
+  .#{$utilityPrefix}fw#{$utilityValueSeparator}9#{$breakpoint} {
     font-weight: 900 !important;
   }
 
@@ -100,19 +100,19 @@
   /* Text Transform
      ========================================================================== */
 
-  .#{$utility-prefix}tt#{$utility-value-separator}c#{$breakpoint} {
+  .#{$utilityPrefix}tt#{$utilityValueSeparator}c#{$breakpoint} {
     text-transform: capitalize !important;
   }
 
-  .#{$utility-prefix}tt#{$utility-value-separator}l#{$breakpoint} {
+  .#{$utilityPrefix}tt#{$utilityValueSeparator}l#{$breakpoint} {
     text-transform: lowercase !important;
   }
 
-  .#{$utility-prefix}tt#{$utility-value-separator}u#{$breakpoint} {
+  .#{$utilityPrefix}tt#{$utilityValueSeparator}u#{$breakpoint} {
     text-transform: uppercase !important;
   }
 
-  .#{$utility-prefix}tt#{$utility-value-separator}n#{$breakpoint} {
+  .#{$utilityPrefix}tt#{$utilityValueSeparator}n#{$breakpoint} {
     text-transform: none !important;
   }
 
@@ -122,16 +122,16 @@
   /* Line Height
      ========================================================================== */
 
-  .#{$utility-prefix}lh-solid#{$breakpoint} {
+  .#{$utilityPrefix}lh-solid#{$breakpoint} {
     line-height: 1 !important;
   }
 
-  .#{$utility-prefix}lh-title#{$breakpoint} {
+  .#{$utilityPrefix}lh-title#{$breakpoint} {
     line-height: 1.25 !important;
   }
 
-  .#{$utility-prefix}lh-copy#{$breakpoint} {
-    line-height: $base-line-height !important;
+  .#{$utilityPrefix}lh-copy#{$breakpoint} {
+    line-height: $baseLineHeight !important;
   }
 
 
@@ -139,15 +139,15 @@
   /* Letter Spacing
      ========================================================================== */
 
-  .#{$utility-prefix}ls-tight#{$breakpoint} {
+  .#{$utilityPrefix}ls-tight#{$breakpoint} {
     letter-spacing: -0.5em !important;
   }
 
-  .#{$utility-prefix}ls#{$breakpoint} {
+  .#{$utilityPrefix}ls#{$breakpoint} {
     letter-spacing: 0.1em !important;
   }
 
-  .#{$utility-prefix}ls-loose#{$breakpoint} {
+  .#{$utilityPrefix}ls-loose#{$breakpoint} {
     letter-spacing: 0.25em !important;
   }
 
@@ -159,7 +159,7 @@
 
   // Combine this class with a width to truncate text (or just leave as
   // is to truncate at width of containing element.
-  .#{$utility-prefix}truncate#{$breakpoint} {
+  .#{$utilityPrefix}truncate#{$breakpoint} {
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
@@ -183,18 +183,18 @@
    * http://tachyons.io/docs/typography/measure/
    */
 
-  @each $measure-variant, $measure-width in $measure-widths {
+  @each $measureVariant, $measureWidth in $measureWidths {
 
-    @if ($measure-variant != null) {
-      $measure-variant: '-#{$measure-variant}';
+    @if ($measureVariant != null) {
+      $measureVariant: "-#{$measureVariant}";
     }
 
-    .#{$utility-prefix}measure#{$measure-variant}#{$breakpoint} {
-      max-width: $measure-width !important;
+    .#{$utilityPrefix}measure#{$measureVariant}#{$breakpoint} {
+      max-width: $measureWidth !important;
     }
 
   }
 
 }
 
-@include typography-utility();
+@include typographyUtility();

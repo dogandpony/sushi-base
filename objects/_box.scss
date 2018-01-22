@@ -14,7 +14,7 @@
 .o-box {
   @include clearfix();
   display: block; /* [1] */
-  padding: $global-spacing; /* [2] */
+  padding: $globalSpacing; /* [2] */
 
   > :last-child {
     margin-bottom: 0;
@@ -28,10 +28,10 @@
 /* Size variants
    ========================================================================== */
 
-@each $spacing-name, $spacing-factor in $global-spacing-factors {
+@each $spacingName, $spacingFactor in $globalSpacingFactors {
 
-  .o-box#{$spacing-name} {
-    padding: ($global-spacing * $spacing-factor);
+  .o-box#{$spacingName} {
+    padding: ($globalSpacing * $spacingFactor);
   }
 
 }

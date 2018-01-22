@@ -1,22 +1,22 @@
 /* =========================================================================
- * TRACKING UTILITIES
+ * TRACKING UTILITY
  * ========================================================================= */
 
-@mixin tracking-utility($breakpoint: null) {
+@mixin trackingUtility($breakpoint: null) {
 
-  .#{$utility-prefix}tracking#{$breakpoint} {
+  .#{$utilityPrefix}tracking#{$breakpoint} {
     letter-spacing: 0.1em;
   }
 
-  .#{$utility-prefix}tracking-tight#{$breakpoint} {
+  .#{$utilityPrefix}tracking-tight#{$breakpoint} {
     letter-spacing: -0.05em;
   }
 
-  .#{$utility-prefix}tracking-mega#{$breakpoint} {
+  .#{$utilityPrefix}tracking-mega#{$breakpoint} {
     letter-spacing: 0.25em;
   }
 
 }
 
 
-@include tracking-utility();
+@include trackingUtility();

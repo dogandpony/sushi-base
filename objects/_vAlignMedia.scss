@@ -3,17 +3,17 @@
  * ========================================================================= */
 
 /**
- * The media-valign object is a design pattern similar to the media object,
+ * The vAlignMedia object is a design pattern similar to the media object,
  * however it utilises 'display: table[-cell];' to give us control over the
  * vertical alignments of the text and image.
  *
  * http://csswizardry.com/2013/05/the-flag-object/
  *
- * <div class="o-media-valign">
- *   <div class="o-media-valign__img">
+ * <div class="o-vAlignMedia">
+ *   <div class="o-vAlignMedia__img">
  *     <img />
  *   </div>
- *   <div class="o-media-valign__body">
+ *   <div class="o-vAlignMedia__body">
  *     <p>Body Content</p>
  *   </div>
  * </div>
@@ -24,20 +24,20 @@
  * 3. Reset inherited 'border-spacing' declarations.
  */
 
-.o-media-valign {
+.o-vAlignMedia {
   display: table; /* [1] */
   width: 100%; /* [2] */
   border-spacing: 0; /* [3] */
 }
 
 /**
- * Items within a media-valign object. Can only contain one of each.
+ * Items within a vAlignMedia object. Can only contain one of each.
  *
  * 1. Default valign to middle, otherwise just use o-media instead.
  */
 
-.o-media-valign__img,
-.o-media-valign__body {
+.o-vAlignMedia__img,
+.o-vAlignMedia__body {
   display: table-cell;
   vertical-align: middle; /* [1] */
 }
@@ -45,13 +45,13 @@
 /**
  * Add space between image and the body.
  *
- * 1. Forces '.media-valign__img' cell to shrink-wrap the image:
+ * 1. Forces `.vAlignMedia__img` cell to shrink-wrap the image:
  *    https://pixelsvsbytes.com/2012/02/this-css-layout-grid-is-no-holy-grail/
  */
 
-.o-media-valign__img {
+.o-vAlignMedia__img {
   width: 1px; /* [1] */
-  padding-right: $global-spacing;
+  padding-right: $globalSpacing;
 
   /**
 	 * 1. Fix for responsive images shrinking to 1px cell size.
@@ -64,12 +64,12 @@
 }
 
 /**
- * The container for the body content of the media-valign object.
+ * The container for the body content of the vAlignMedia object.
  *
- * 1. Forces '.media-valign__body' cell to fill remaining horizontal space.
+ * 1. Forces '.vAlignMedia__body' cell to fill remaining horizontal space.
  */
 
-.o-media-valign__body {
+.o-vAlignMedia__body {
   width: auto; /* [1] */
 
   &,
@@ -91,17 +91,17 @@
  * 3. Reassign margins to the correct sides.
  */
 
-.o-media-valign--reverse {
+.o-vAlignMedia--reverse {
   direction: rtl; /* [1] */
 
-  > .o-media-valign__img,
-  > .o-media-valign__body {
+  > .o-vAlignMedia__img,
+  > .o-vAlignMedia__body {
     direction: ltr; /* [2] */
   }
 
-  > .o-media-valign__img {
+  > .o-vAlignMedia__img {
     padding-right: 0; /* [3] */
-    padding-left: $global-spacing; /* [3] */
+    padding-left: $globalSpacing; /* [3] */
   }
 
 }
@@ -116,19 +116,19 @@
  * Vertically align the image and body-content. Defaults to middle.
  */
 
-.o-media-valign--top {
+.o-vAlignMedia--top {
 
-  > .o-media-valign__img,
-  > .o-media-valign__body {
+  > .o-vAlignMedia__img,
+  > .o-vAlignMedia__body {
     vertical-align: top;
   }
 
 }
 
-.o-media-valign--bottom {
+.o-vAlignMedia--bottom {
 
-  > .o-media-valign__img,
-  > .o-media-valign__body {
+  > .o-vAlignMedia__img,
+  > .o-vAlignMedia__body {
     vertical-align: bottom;
   }
 
@@ -145,19 +145,19 @@
  * the reverse modifier for all size variants.
  */
 
-@each $spacing-name, $spacing-factor in $global-spacing-factors {
+@each $spacingName, $spacingFactor in $globalSpacingFactors {
 
-  .o-media-valign--#{$spacing-name} {
+  .o-vAlignMedia--#{$spacingName} {
 
-    > .o-media-valign__img {
-      padding-right: ($global-spacing * $spacing-factor);
+    > .o-vAlignMedia__img {
+      padding-right: ($globalSpacing * $spacingFactor);
     }
 
-    &.o-media-valign--reverse {
+    &.o-vAlignMedia--reverse {
 
-      > .o-media-valign__img {
+      > .o-vAlignMedia__img {
         padding-right: 0;
-        padding-left: ($global-spacing * $spacing-factor);
+        padding-left: ($globalSpacing * $spacingFactor);
       }
 
     }
