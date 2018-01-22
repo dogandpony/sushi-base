@@ -66,11 +66,11 @@ $ratios: (
   @each $antecedent, $consequent in $ratio {
 
     @if (type-of($antecedent) != number) {
-      @error '`#{$antecedent}` needs to be a number.'
+      @error "`#{$antecedent}` needs to be a number."
     }
 
     @if (type-of($consequent) != number) {
-      @error '`#{$consequent}` needs to be a number.'
+      @error "`#{$consequent}` needs to be a number."
     }
 
     .o-ratio--#{$antecedent}\:#{$consequent}:before {

@@ -1,35 +1,35 @@
 /* =========================================================================
- * SPACING UTILITIES
+ * SPACING UTILITY
  * ========================================================================= */
 
 /**
  * Utility classes to put specific spacing values onto elements. The below loop
  * will generate us a suite of classes like:
  *
- *   .u-mt {}
- *   .u-pl-xs {}
- *   .u-mr-s {}
- *   .u-p {}
- *   .u-pr-0 {}
- *   .u-ph {}
- *   .u-pv-l {}
+ *   ._mt {}
+ *   ._plxs {}
+ *   ._mrsm {}
+ *   ._p {}
+ *   ._pr0 {}
+ *   ._ph {}
+ *   ._pvlg {}
  */
 
 /* stylelint-disable string-quotes, max-nesting-depth */
 
 $spacingDirections: (
   null: null,
-  't': '-top',
-  'r': '-right',
-  'b': '-bottom',
-  'l': '-left',
-  'h': '-left' '-right',
-  'v': '-top' '-bottom',
+  "t": "-top",
+  "r": "-right",
+  "b": "-bottom",
+  "l": "-left",
+  "h": "-left" "-right",
+  "v": "-top" "-bottom",
 ) !default;
 
-  'p': 'padding',
-  'm': 'margin',
 $spacingProperties: (
+  "p": "padding",
+  "m": "margin",
 ) !default;
 
 $spacingFactors: $globalSpacingFactors !default;

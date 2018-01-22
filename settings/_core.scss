@@ -11,11 +11,11 @@ $globalSpacing: 32px !default;
 
 // Global spacing factors
 
-  'xs': 0.5,
-  's': 0.75,
-  'l': 1.5,
-  'xl': 2
 $globalSpacingFactors: (
+  "xs": 0.5,
+  "sm": 0.75,
+  "lg": 1.5,
+  "xl": 2,
 ) !default;
 
 
