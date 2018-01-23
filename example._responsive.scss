@@ -10,9 +10,9 @@
  * smaller) since equal media queries will be written in the same place.
  * ===================================================================== */
 
-@if (variable-exists(mqBreakpoints)) {
+@if (variable-exists(mq-breakpoints)) {
 
-  @each $breakpointName, $breakpointValue in $mqBreakpoints {
+  @each $breakpointName, $breakpointValue in $mq-breakpoints {
 
     $breakpoint: #{$breakpointSeparator}#{$breakpointName};
 
