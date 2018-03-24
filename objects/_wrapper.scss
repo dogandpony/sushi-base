@@ -49,8 +49,8 @@ $wrapperMaxWidth: 1200px !default;
   @each $spacingName, $spacingFactor in $globalSpacingFactors {
 
     .o-wrapper--#{$spacingName}#{$breakpoint} {
-      padding-right: ($globalSpacing * $spacingFactor);
-      padding-left: ($globalSpacing * $spacingFactor);
+      padding-right: (($globalSpacing * $spacingFactor) / 2);
+      padding-left: (($globalSpacing * $spacingFactor) / 2);
     }
 
   }
