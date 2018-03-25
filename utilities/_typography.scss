@@ -139,16 +139,17 @@
   /* Letter Spacing
      ========================================================================== */
 
-  .#{$utilityPrefix}ls-tight#{$breakpoint} {
-    letter-spacing: -0.5em !important;
-  }
+  @each $letterSpacingVariant, $letterSpacingSize in $letterSpacings {
 
-  .#{$utilityPrefix}ls#{$breakpoint} {
-    letter-spacing: 0.1em !important;
-  }
+    // letter-spacing values are always preceded by a hyphen
+    @if ($letterSpacingVariant != null) {
+      $letterSpacingVariant: "-#{$letterSpacingVariant}";
+    }
 
-  .#{$utilityPrefix}ls-loose#{$breakpoint} {
-    letter-spacing: 0.25em !important;
+    .#{$utilityPrefix}ls#{$letterSpacingVariant}#{$breakpoint} {
+      max-width: $letterSpacingSize !important;
+    }
+
   }
 
 

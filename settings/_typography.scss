@@ -37,6 +37,17 @@ $measureWidths: (
 
 
 
+// Letter-spacing
+// ---------------------------
+
+$letterSpacings: (
+  "tight": -0.5em,
+  null: normal,
+  "loose": 0.25em,
+) !default;
+
+
+
 
 /* Accessors
    ===================================================================== */
@@ -47,5 +58,9 @@ $measureWidths: (
 
 @function getMeasure($key) {
   @return map-get($measureWidths, $key);
+}
+
+@function getLetterSpacing($key) {
+  @return map-get($letterSpacings, $key);
 }
 
