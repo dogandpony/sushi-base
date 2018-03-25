@@ -33,3 +33,7 @@ $measureWidths: (
   null: 30em,       // ~66 characters
   "wide": 34em,   // ~80 characters
 ) !default;
+
+@function getMeasure($key) {
+  @return map-get($measureWidths, $key);
+}
