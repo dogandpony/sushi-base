@@ -185,6 +185,7 @@
 
   @each $measureVariant, $measureWidth in $measureWidths {
 
+    // measure values are always preceded by a hyphen
     @if ($measureVariant != null) {
       $measureVariant: "-#{$measureVariant}";
     }
