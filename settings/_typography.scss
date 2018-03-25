@@ -3,16 +3,19 @@
  * ========================================================================= */
 
 // Base typographical styles
+// ---------------------------
 
 $baseFontSize: 16px !default;
 $baseLineHeight: 1.5 !default;
 
 
+
 // Font size variants
+// ---------------------------
 
 $fontSizes: (
-  hero1: ($baseFontSize * 4), // 64px
-  hero2: ($baseFontSize * 3), // 48px
+  "hero1": ($baseFontSize * 4), // 64px
+  "hero2": ($baseFontSize * 3), // 48px
   1: ($baseFontSize * 2.25),  // 36px
   2: ($baseFontSize * 1.75),  // 28px
   3: ($baseFontSize * 1.5),   // 24px
@@ -21,15 +24,58 @@ $fontSizes: (
   6: $baseFontSize,           // 16px
 ) !default;
 
-@function getFontSize($key) {
-  @return map-get($fontSizes, $key);
-}
 
 
 // Measure widths
+// ---------------------------
 
 $measureWidths: (
   "narrow": 20em, // ~45 characters
   null: 30em,       // ~66 characters
   "wide": 34em,   // ~80 characters
 ) !default;
+
+
+
+// Line-height
+// ---------------------------
+
+$lineHeights: (
+  "solid": 1,
+  "title": 1.25,
+  "copy": $baseLineHeight,
+);
+
+
+
+// Letter-spacing
+// ---------------------------
+
+$letterSpacings: (
+  "tight": -0.5em,
+  null: normal,
+  "loose": 0.25em,
+) !default;
+
+
+
+
+/* Accessors
+   ===================================================================== */
+
+@function getFontSize($key) {
+  @return map-get($fontSizes, $key);
+}
+
+@function getMeasure($key) {
+  @return map-get($measureWidths, $key);
+}
+
+@function getLineHeight($key) {
+  @return map-get($lineHeights, $key);
+}
+
+@function getLetterSpacing($key) {
+  @return map-get($letterSpacings, $key);
+}
+

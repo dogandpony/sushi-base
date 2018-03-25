@@ -36,8 +36,7 @@ $utilityValueSeparator: "";
  * Validate base-font/spacing values as px numbers
  */
 
-@each $_pxValue in
-  $baseFontSize $globalSpacing {
+@each $_pxValue in $baseFontSize $globalSpacing {
 
   @if (type-of($_pxValue) == number) {
 

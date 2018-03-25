@@ -122,16 +122,17 @@
   /* Line Height
      ========================================================================== */
 
-  .#{$utilityPrefix}lh-solid#{$breakpoint} {
-    line-height: 1 !important;
-  }
+  @each $lineHeightVariant, $lineHeightSize in $lineHeights {
 
-  .#{$utilityPrefix}lh-title#{$breakpoint} {
-    line-height: 1.25 !important;
-  }
+    // line-height values are always preceded by a hyphen
+    @if ($lineHeightVariant != null) {
+      $lineHeightVariant: "-#{$lineHeightVariant}";
+    }
 
-  .#{$utilityPrefix}lh-copy#{$breakpoint} {
-    line-height: $baseLineHeight !important;
+    .#{$utilityPrefix}lh#{$lineHeightVariant}#{$breakpoint} {
+      max-width: $lineHeightSize !important;
+    }
+
   }
 
 
@@ -139,16 +140,17 @@
   /* Letter Spacing
      ========================================================================== */
 
-  .#{$utilityPrefix}ls-tight#{$breakpoint} {
-    letter-spacing: -0.5em !important;
-  }
+  @each $letterSpacingVariant, $letterSpacingSize in $letterSpacings {
 
-  .#{$utilityPrefix}ls#{$breakpoint} {
-    letter-spacing: 0.1em !important;
-  }
+    // letter-spacing values are always preceded by a hyphen
+    @if ($letterSpacingVariant != null) {
+      $letterSpacingVariant: "-#{$letterSpacingVariant}";
+    }
 
-  .#{$utilityPrefix}ls-loose#{$breakpoint} {
-    letter-spacing: 0.25em !important;
+    .#{$utilityPrefix}ls#{$letterSpacingVariant}#{$breakpoint} {
+      max-width: $letterSpacingSize !important;
+    }
+
   }
 
 
@@ -185,6 +187,7 @@
 
   @each $measureVariant, $measureWidth in $measureWidths {
 
+    // measure values are always preceded by a hyphen
     @if ($measureVariant != null) {
       $measureVariant: "-#{$measureVariant}";
     }
