@@ -3,12 +3,15 @@
  * ========================================================================= */
 
 // Base typographical styles
+// ---------------------------
 
 $baseFontSize: 16px !default;
 $baseLineHeight: 1.5 !default;
 
 
+
 // Font size variants
+// ---------------------------
 
 $fontSizes: (
   "hero1": ($baseFontSize * 4), // 64px
@@ -22,7 +25,9 @@ $fontSizes: (
 ) !default;
 
 
+
 // Measure widths
+// ---------------------------
 
 $measureWidths: (
   "narrow": 20em, // ~45 characters
