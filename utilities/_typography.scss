@@ -130,7 +130,7 @@
     }
 
     .#{$utilityPrefix}lh#{$lineHeightVariant}#{$breakpoint} {
-      max-width: $lineHeightSize !important;
+      line-height: $lineHeightSize !important;
     }
 
   }
@@ -148,7 +148,7 @@
     }
 
     .#{$utilityPrefix}ls#{$letterSpacingVariant}#{$breakpoint} {
-      max-width: $letterSpacingSize !important;
+      letter-spacing: $letterSpacingSize !important;
     }
 
   }
