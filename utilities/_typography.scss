@@ -122,16 +122,17 @@
   /* Line Height
      ========================================================================== */
 
-  .#{$utilityPrefix}lh-solid#{$breakpoint} {
-    line-height: 1 !important;
-  }
+  @each $lineHeightVariant, $lineHeightSize in $lineHeights {
 
-  .#{$utilityPrefix}lh-title#{$breakpoint} {
-    line-height: 1.25 !important;
-  }
+    // line-height values are always preceded by a hyphen
+    @if ($lineHeightVariant != null) {
+      $lineHeightVariant: "-#{$lineHeightVariant}";
+    }
 
-  .#{$utilityPrefix}lh-copy#{$breakpoint} {
-    line-height: $baseLineHeight !important;
+    .#{$utilityPrefix}lh#{$lineHeightVariant}#{$breakpoint} {
+      max-width: $lineHeightSize !important;
+    }
+
   }
 
 

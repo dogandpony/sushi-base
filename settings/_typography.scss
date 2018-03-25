@@ -37,6 +37,17 @@ $measureWidths: (
 
 
 
+// Line-height
+// ---------------------------
+
+$lineHeights: (
+  "solid": 1,
+  "title": 1.25,
+  "copy": $baseLineHeight,
+);
+
+
+
 // Letter-spacing
 // ---------------------------
 
@@ -58,6 +69,10 @@ $letterSpacings: (
 
 @function getMeasure($key) {
   @return map-get($measureWidths, $key);
+}
+
+@function getLineHeight($key) {
+  @return map-get($lineHeights, $key);
 }
 
 @function getLetterSpacing($key) {
