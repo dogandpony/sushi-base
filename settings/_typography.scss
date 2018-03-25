@@ -21,10 +21,6 @@ $fontSizes: (
   6: $baseFontSize,           // 16px
 ) !default;
 
-@function getFontSize($key) {
-  @return map-get($fontSizes, $key);
-}
-
 
 // Measure widths
 
@@ -34,6 +30,17 @@ $measureWidths: (
   "wide": 34em,   // ~80 characters
 ) !default;
 
+
+
+
+/* Accessors
+   ===================================================================== */
+
+@function getFontSize($key) {
+  @return map-get($fontSizes, $key);
+}
+
 @function getMeasure($key) {
   @return map-get($measureWidths, $key);
 }
+
