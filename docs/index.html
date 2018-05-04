@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sushi Base</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="description" content="Description">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: "Sushi Base",
+      repo: "https://github.com/dogandpony/sushi-base",
+      loadSidebar: true,
+      subMaxLevel: 2,
+      loadNavbar: true,
+      mergeNavbar: true,
+      alias: {
+        "/.*/_navbar.md": "/_navbar.md",
+        "/pt-br/(.*/)+_sidebar.md": "/pt-br/_sidebar.md",
+      },
+      auto2top: true,
+      noEmoji: true,
+      themeColor: "#ff7b92",
+      plugins: [
+        function (hook, vm) {
+
+          var footer = [
+            "<hr/>",
+            "<footer>",
+              "<div>Proudly based on " +
+                "<a href=\"https://github.com/inuitcss/inuitcss\" target=\"_blank\">" +
+                  "inuitcss" +
+                "</a>" +
+                " and published with " +
+                "<a href=\"https://github.com/QingWei-Li/docsify\" target=\"_blank\">" +
+                  "docsify" +
+                "</a>." +
+              "</div>",
+            "</footer>"
+          ].join("");
+
+          hook.afterEach(function (html) {
+            return html + footer;
+          });
+
+          // hook.beforeEach(function(content) {
+          //   return content += "\n[filename](_links.md ":include")";
+          // });
+        },
+      ],
+    }
+  </script>
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+</body>
+</html>
