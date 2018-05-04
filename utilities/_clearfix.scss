@@ -8,7 +8,7 @@
 
 @mixin clearfixUtility($breakpoint: null) {
 
-  .#{$utilityPrefix}clearfix {
+  .#{$utilityPrefix}clearfix#{$breakpoint} {
     @include clearfix();
   }
 
