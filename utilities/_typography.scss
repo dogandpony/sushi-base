@@ -119,6 +119,28 @@
 
 
 
+  /* Text Decoration
+     ========================================================================== */
+
+  .#{$utilityPrefix}td#{$utilityValueSeparator}l#{$breakpoint} {
+    text-decoration: line-through !important;
+  }
+
+  .#{$utilityPrefix}td#{$utilityValueSeparator}n#{$breakpoint} {
+    text-decoration: none !important;
+  }
+
+  .#{$utilityPrefix}td#{$utilityValueSeparator}o#{$breakpoint} {
+    text-decoration: overline !important;
+  }
+
+  .#{$utilityPrefix}td#{$utilityValueSeparator}u#{$breakpoint} {
+    text-decoration: underline !important;
+  }
+
+
+
+
   /* Line Height
      ========================================================================== */
 
