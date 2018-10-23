@@ -1,8 +1,6 @@
 /* =========================================================================
  * Z-INDEX
- * ========================================================================= */
-
-/**
+ *
  * Base
  *  z = z-index
  * Modifiers
@@ -20,18 +18,15 @@
  * MDN: https://developer.mozilla.org/en/docs/Web/CSS/z-index
  * Spec: http://www.w3.org/TR/CSS2/zindex.html
  * Article: https://philipwalton.com/articles/what-no-one-told-you-about-z-index/
- */
+ * ========================================================================= */
 
 $zIndexDepths: 0 1 2 3 4 5 10 20 30 40 50 60 70 80 90 100 !default;
 
 @mixin zIndexUtility($breakpoint: null) {
-
   @each $depth in $zIndexDepths {
-
     .#{$utilityPrefix}z#{$utilityValueSeparator}#{$depth}#{$breakpoint} {
       z-index: $depth !important;
     }
-
   }
 
   .#{$utilityPrefix}z#{$utilityValueSeparator}inh#{$breakpoint} {
@@ -45,8 +40,6 @@ $zIndexDepths: 0 1 2 3 4 5 10 20 30 40 50 60 70 80 90 100 !default;
   .#{$utilityPrefix}z#{$utilityValueSeparator}uns#{$breakpoint} {
     z-index: unset !important;
   }
-
 }
-
 
 @include zIndexUtility();

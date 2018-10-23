@@ -1,9 +1,8 @@
-/* =========================================================================
+/* ==========================================================================
  * OVERFLOW UTILITY
- * ========================================================================= */
+ * ========================================================================== */
 
 @mixin overflowUtility($breakpoint: null) {
-
   .#{$utilityPrefix}ov#{$utilityValueSeparator}a#{$breakpoint} {
     overflow: auto !important;
   }
@@ -40,6 +39,17 @@
     overflow-y: scroll !important;
   }
 
+  .#{$utilityPrefix}ov#{$utilityValueSeparator}v#{$breakpoint} {
+    overflow: visible !important;
+  }
+
+  .#{$utilityPrefix}ovx#{$utilityValueSeparator}v#{$breakpoint} {
+    overflow-x: visible !important;
+  }
+
+  .#{$utilityPrefix}ovy#{$utilityValueSeparator}v#{$breakpoint} {
+    overflow-y: visible !important;
+  }
 }
 
 @include overflowUtility();

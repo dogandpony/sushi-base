@@ -1,8 +1,6 @@
-/* =========================================================================
+/* ==========================================================================
  * BUTTON COMPONENT
- * ========================================================================= */
-
-/**
+ *
  * Button
  *
  * Classes that can be used on an `<a>`, `<button>` or `<input>` element.
@@ -11,7 +9,7 @@
  *                   feature of this form.
  * .c-btn--remove  - Use this class to indicate that the button will remove a
  *                   feature, or other negative connotations.
- */
+ * ========================================================================== */
 
 /**
  * 1. Allow us to style box model properties.
@@ -21,7 +19,6 @@
  * 4. Reset/normalize some styles.
  * 5. Force all button-styled elements to appear clickable.
  */
-
 .c-btn {
   display: inline-block; /* [1] */
   vertical-align: middle; /* [2] */
@@ -36,7 +33,7 @@
 
 
 /* Style variants
-   ========================================================================== */
+ * ========================================================================== */
 
 .c-btn--primary {
   background-color: #4a8ec2;
@@ -53,7 +50,6 @@
   &:focus {
     background-color: #3774a2;
   }
-
 }
 
 .c-btn--secondary {
@@ -71,7 +67,6 @@
   &:focus {
     background-color: #1d2733;
   }
-
 }
 
 .c-btn--tertiary {
@@ -90,14 +85,13 @@
   &:focus {
     color: #3774a2;
   }
-
 }
 
 
 
 
 /* Size variants
-   ========================================================================== */
+ * ========================================================================== */
 
 .c-btn--small {
   padding: $globalSpacingXs $globalSpacingSm;
@@ -111,11 +105,9 @@
 
 
 /* Ghost buttons
-   ========================================================================== */
-
-/**
+ *
  * Ghost buttons have see-through backgrounds and are bordered.
- */
+ * ========================================================================== */
 
 $btnGhostBorderWidth: 2px;
 
@@ -145,7 +137,6 @@ $btnGhostBorderWidth: 2px;
     &:focus {
       color: #3774a2;
     }
-
   }
 
   &.c-btn--secondary {
@@ -155,7 +146,6 @@ $btnGhostBorderWidth: 2px;
     &:focus {
       color: #1d2733;
     }
-
   }
 
   &.c-btn--tertiary {
@@ -165,7 +155,5 @@ $btnGhostBorderWidth: 2px;
     &:focus {
       color: #fff;
     }
-
   }
-
 }

@@ -1,8 +1,6 @@
-/* =========================================================================
+/* ==========================================================================
  * LAYOUT
- * ========================================================================= */
-
-/**
+ *
  * Grid-like layout system.
  *
  * The layout object provides us with a column-style layout system. This file
@@ -48,20 +46,18 @@
  * hand side. Default behaviour is to fill up the layout system from the left.
  *
  * There are plenty more options available to us: explore them below.
- */
-
+ * ========================================================================== */
 
 // By default we use the `font-size: 0;` trick to remove whitespace between
 // items. Set this to true in order to use a markup-based strategy like
 // commenting out whitespace or minifying HTML.
-
 $enableLayoutMarkupFix: false !default;
 
 
 
 
-/* Default/mandatory classes.
-   ========================================================================== */
+/* Default/mandatory Classes
+ * ========================================================================== */
 
 /**
  * 1. Allows us to use the layout object on any type of element.
@@ -76,7 +72,6 @@ $enableLayoutMarkupFix: false !default;
  *    gutters between grid items.
  * 5. Use `font-size: 0;` trick to remove whitespace between items
  */
-
 .o-layout {
   display: block; /* [1] */
   margin: 0 (($globalSpacing / 2) * -1); /* [2] [4] */
@@ -102,7 +97,6 @@ $enableLayoutMarkupFix: false !default;
  *    http://alistapart.com/article/learning-from-lego-a-step-forward-in-modular-web-design/
  * 6. Set base font size to revert 'font-size: 0;' setting above
  */
-
 .o-layout__item {
   box-sizing: border-box; /* [1] */
   display: inline-block; /* [2] */
@@ -114,19 +108,18 @@ $enableLayoutMarkupFix: false !default;
   @if ($enableLayoutMarkupFix == false) {
     font-size: 1rem; /* [6] */
   }
-
 }
 
 
 
 
 /* Modifiers
-   ========================================================================== */
+ * ========================================================================== */
 
 @mixin layoutModifiers($breakpoint: null) {
 
   /* Flush
-     ========================================================================= */
+   * --------------------------- */
 
   .o-layout--flush#{$breakpoint} {
     margin: 0;
@@ -139,26 +132,22 @@ $enableLayoutMarkupFix: false !default;
 
 
 
-
-  /* Auto width
-     ========================================================================= */
+  /* Auto Width
+   * --------------------------- */
 
   /**
    * Cause layout items to take up a non-explicit amount of width.
    */
-
   .o-layout--auto#{$breakpoint} > .o-layout__item {
     width: auto;
   }
 
 
 
-
   /* Spacing
-     ========================================================================= */
+   * --------------------------- */
 
   @each $spacingName, $spacingFactor in $globalSpacingFactors {
-
     .o-layout--#{$spacingName}#{$breakpoint} {
       margin: (0 (($globalSpacing * $spacingFactor) / 2) * -1);
 
@@ -166,21 +155,17 @@ $enableLayoutMarkupFix: false !default;
         padding-right: (($globalSpacing * $spacingFactor) / 2);
         padding-left: (($globalSpacing * $spacingFactor) / 2);
       }
-
     }
-
   }
 
 
 
-
   /* Vertical Alignment
-     ========================================================================= */
+   * --------------------------- */
 
   /**
    * Align all grid items to the tops of each other.
    */
-
   .o-layout--top#{$breakpoint} > .o-layout__item {
     vertical-align: top;
   }
@@ -189,7 +174,6 @@ $enableLayoutMarkupFix: false !default;
   /**
    * Align all grid items to the middles of each other.
    */
-
   .o-layout--middle#{$breakpoint} > .o-layout__item {
     vertical-align: middle;
   }
@@ -198,21 +182,18 @@ $enableLayoutMarkupFix: false !default;
   /**
    * Align all grid items to the bottoms of each other.
    */
-
   .o-layout--bottom#{$breakpoint} > .o-layout__item {
     vertical-align: bottom;
   }
 
 
 
-
   /* Horizontal Alignment
-     ========================================================================= */
+   * --------------------------- */
 
   /**
    * Fill up the layout system from the left.
    */
-
   .o-layout--left#{$breakpoint} {
     text-align: left;
   }
@@ -221,35 +202,30 @@ $enableLayoutMarkupFix: false !default;
   /**
    * Fill up the layout system from the center.
    */
-
   .o-layout--center#{$breakpoint} {
     text-align: center;
 
     > .o-layout__item {
       text-align: left;
     }
-
   }
 
 
   /**
    * Fill up the layout system from the right.
    */
-
   .o-layout--right#{$breakpoint} {
     text-align: right;
 
     > .o-layout__item {
       text-align: left;
     }
-
   }
 
 
   /**
    * Reverse the rendered order of the grid system.
    */
-
   .o-layout--reverse#{$breakpoint} {
     direction: rtl;
 
@@ -257,23 +233,20 @@ $enableLayoutMarkupFix: false !default;
       direction: ltr;
       text-align: left;
     }
-
   }
 
 
   /**
    * Bring back rendered order of the grid system.
    */
-
   .o-layout--forward#{$breakpoint} {
     direction: ltr;
   }
 
 
 
-
   /* Inset
-     ========================================================================= */
+   * --------------------------- */
 
   /**
    * 1. Reset negative margins on the layout object to zero so that inner grid
@@ -281,13 +254,10 @@ $enableLayoutMarkupFix: false !default;
    *    layout object will include both inner and outer gutters around grid
    *    items. Note: when using the inset modifier, you'd like use a wrapper
    *    object with the flush modifier.
-   *
    */
-
   .o-layout--inset {
     margin: 0; /* [1] */
   }
 }
-
 
 @include layoutModifiers();

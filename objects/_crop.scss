@@ -1,9 +1,10 @@
-/* =========================================================================
+/* ==========================================================================
  * CROP OBJECT
- * ========================================================================= */
+ * ========================================================================== */
 
-// A list of cropping ratios that get generated as modifier classes.
-
+/**
+ * A list of cropping ratios that get generated as modifier classes.
+ */
 $cropRatios: (
   (2:1),
   (4:3),
@@ -18,7 +19,6 @@ $cropRatios: (
  * 1. Set up a positioning context in which the image can sit.
  * 2. This is the crucial part: where the cropping happens.
  */
-
 .o-crop {
   position: relative; /* [1] */
   display: block;
@@ -32,7 +32,6 @@ $cropRatios: (
  * 1. Image's default positioning is top-left in the cropping box.
  * 2. Make sure the media doesn't stop itself too soon.
  */
-
 .o-crop__content {
   position: absolute;
   top: 0; /* [1] */
@@ -41,9 +40,10 @@ $cropRatios: (
 }
 
 
-/**
- * We can position the media in different locations within the cropping area.
- */
+/* Alignment variants
+ *
+ * We can position the media in different locations within the cropping area
+ * ========================================================================== */
 
 .o-crop__content--right {
   right: 0;
@@ -66,20 +66,14 @@ $cropRatios: (
 
 
 
-/* Crop-ratio variants.
-   ========================================================================== */
-
-/**
+/* Crop-ratio Variants
+ *
  * Generate a series of crop classes to be used like so:
- *
- *   <div class="o-crop  o-crop--16:9">
- *
- */
+ * <div class="o-crop  o-crop--16:9">
+ * ========================================================================== */
 
 @each $crop in $cropRatios {
-
   @each $antecedent, $consequent in $crop {
-
     @if (type-of($antecedent) != number) {
       @error "`#{$antecedent}` needs to be a number."
     }
@@ -91,9 +85,7 @@ $cropRatios: (
     .o-crop--#{$antecedent}\:#{$consequent} {
       padding-bottom: ($consequent/$antecedent) * 100%;
     }
-
   }
-
 }
 
 /* stylelint-enable */

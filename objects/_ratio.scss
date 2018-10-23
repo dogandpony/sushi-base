@@ -1,24 +1,23 @@
-/* =========================================================================
+/* ==========================================================================
  * RATIO OBJECT
- * ========================================================================= */
+ *
+ * Create ratio-bound content blocks, to keep media (e.g. images, videos) in
+ * their correct aspect ratios.
+ *
+ * http://alistapart.com/article/creating-intrinsic-ratios-for-video
+ *
+ * 1. Default cropping is a 1:1 ratio (i.e. a square).
+ * ========================================================================== */
 
-// A list of aspect ratios that get generated as modifier classes.
-
+/**
+ * A list of aspect ratios that get generated as modifier classes.
+ */
 $ratios: (
   (2:1),
   (4:3),
   (16:9),
 ) !default;
 
-
-/**
- * Create ratio-bound content blocks, to keep media (e.g. images, videos) in
- * their correct aspect ratios.
- *
- * http://alistapart.com/article/creating-intrinsic-ratios-for-video
- *
- * 1. Default cropping is a 1:1 ratio (i.e. a perfect square).
- */
 
 .o-ratio {
   position: relative;
@@ -31,7 +30,6 @@ $ratios: (
     width: 100%;
     padding-bottom: 100%; /* [1] */
   }
-
 }
 
 .o-ratio__content,
@@ -51,20 +49,15 @@ $ratios: (
 
 
 
-/* Ratio variants.
-   ========================================================================== */
-
-/**
+/* Ratio Variants
+ *
  * Generate a series of ratio classes to be used like so:
  *
- *   <div class="o-ratio  o-ratio--16:9">
- *
- */
+ * <div class="o-ratio  o-ratio--16:9">
+ * ========================================================================== */
 
 @each $ratio in $ratios {
-
   @each $antecedent, $consequent in $ratio {
-
     @if (type-of($antecedent) != number) {
       @error "`#{$antecedent}` needs to be a number."
     }
@@ -76,9 +69,7 @@ $ratios: (
     .o-ratio--#{$antecedent}\:#{$consequent}:before {
       padding-bottom: ($consequent/$antecedent) * 100%;
     }
-
   }
-
 }
 
 /* stylelint-enable */

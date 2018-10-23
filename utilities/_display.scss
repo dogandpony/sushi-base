@@ -1,25 +1,16 @@
-/* =========================================================================
+/* ==========================================================================
  * DISPLAY UTILITY
- * ========================================================================= */
-
-/**
+ *
  * Display utility classes
  *
  * https://github.com/tachyons-css/tachyons/blob/master/src/_display.css
- */
+ * ========================================================================== */
 
 @mixin displayUtility($breakpoint: null) {
-
   /**
    * Hide only visually, but have it available for screen readers:
    * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
    */
-
-  /**
-   * Hide only visually, but have it available for screen readers:
-   * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-   */
-
   .#{$utilityPrefix}hidden#{$breakpoint} {
     @include hide();
   }
@@ -95,7 +86,6 @@
   .#{$utilityPrefix}d#{$utilityValueSeparator}ig#{$breakpoint} {
     display: inline-grid !important;
   }
-
 }
 
 @include displayUtility();

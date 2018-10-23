@@ -1,8 +1,6 @@
-/* =========================================================================
+/* ==========================================================================
  * SPACING UTILITY
- * ========================================================================= */
-
-/**
+ *
  * Utility classes to put specific spacing values onto elements. The below loop
  * will generate us a suite of classes like:
  *
@@ -13,7 +11,7 @@
  *   ._pr0 {}
  *   ._ph {}
  *   ._pvlg {}
- */
+ * ========================================================================== */
 
 /* stylelint-disable string-quotes, max-nesting-depth */
 
@@ -36,20 +34,15 @@ $spacingFactors: $globalSpacingFactors !default;
 
 
 @mixin spacingUtility($breakpoint: null) {
-
   // Add zero and null modifiers to the factor list so classes like `_ph-0` and
   // `_pl` are created automatically
   $factors: map-merge(("0": 0, null: 1), $spacingFactors);
 
   @each $propertyNamespace, $property in $spacingProperties {
-
     @each $directionNamespace, $directionRules in $spacingDirections {
-
       @each $factorNamespace, $factor in $factors {
-
         // do not print negative padding rules
         @if ($factor >= 0) or ($property != "padding") {
-
           // Add a hyphen before the namespace if it's not null
           // `xs` = `_pxs`
           // null = `_p`
@@ -58,21 +51,14 @@ $spacingFactors: $globalSpacingFactors !default;
           }
 
           .#{$utilityPrefix}#{$propertyNamespace}#{$directionNamespace}#{$factorNamespace}#{$breakpoint} {
-
             @each $direction in $directionRules {
               #{$property}#{$direction}: ($factor * $globalSpacing) !important;
             }
-
           }
-
         }
-
       }
-
     }
-
   }
-
 }
 
 
