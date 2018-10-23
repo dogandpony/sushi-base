@@ -58,12 +58,6 @@
 $enableLayoutMarkupFix: false !default;
 
 
-// By default we won't generate breakpoint-targeted classes such as
-// `.o-layout--s@desktop`.
-
-$enableResponsiveLayout: false !default;
-
-
 
 
 /* Default/mandatory classes.
