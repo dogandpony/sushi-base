@@ -54,10 +54,6 @@
   /* Font Weight
      ========================================================================== */
 
-  .#{$utilityPrefix}b#{$breakpoint} {
-    font-weight: bold !important;
-  }
-
   .#{$utilityPrefix}fw#{$utilityValueSeparator}1#{$breakpoint} {
     font-weight: 100 !important;
   }
