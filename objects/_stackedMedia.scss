@@ -1,8 +1,6 @@
-/* =========================================================================
+/* ==========================================================================
  * MEDIA STACKED OBJECT
- * ========================================================================= */
-
-/**
+ *
  * Stacked image-with-text object. A simple abstraction to cover a very
  * commonly occurring design pattern.
  *
@@ -12,7 +10,7 @@
  *     <p>Body Content</p>
  *   </div>
  * </div>
- */
+ * ========================================================================== */
 
 .o-stackedMedia {
   display: block;
@@ -30,8 +28,8 @@
 
 
 
-/* Alignment modifiers.
-   ========================================================================== */
+/* Alignment modifiers
+ * ========================================================================== */
 
 .o-stackedMedia--right {
   text-align: right;
@@ -44,17 +42,13 @@
 
 
 
-/* Spacing modifiers (margin-bottom).
-       ========================================================================== */
-
-/**
+/* Spacing Modifiers (margin-bottom)
+ *
  * Modify the amount of space between the image and body.
- */
+ * ========================================================================== */
 
 @each $spacing-name, $spacing-factor in $globalSpacingFactors {
-
   .o-stackedMedia--#{$spacing-name} > .o-stackedMedia__img {
     margin-bottom: ($globalSpacing * $spacing-factor);
   }
-
 }

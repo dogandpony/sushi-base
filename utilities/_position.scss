@@ -1,10 +1,11 @@
-/* =====================================================================
+/* ======================================================================
  * POSITION UTILITY
- * ===================================================================== */
-
-// Utility classes for position direction values, for example:
-// ._lxs
-// ._bl
+ *
+ * A series of spacing helper classes that you can use to give spacing.
+ * Use these in your markup:
+ *
+ * <div class="_rxs">
+ * ====================================================================== */
 
 $positionDirections: (
   "t": "top",
@@ -13,11 +14,11 @@ $positionDirections: (
   "l": "left"
 ) !default;
 
+
 $positionFactors: $globalSpacingFactors !default;
 
 
 @mixin positionUtility($breakpoint: null) {
-
   .#{$utilityPrefix}po#{$utilityValueSeparator}s#{$breakpoint} {
     position: static !important;
   }
@@ -43,9 +44,7 @@ $positionFactors: $globalSpacingFactors !default;
   $factors: map-merge(("0": 0, null: 1), $positionFactors);
 
   @each $directionNamespace, $directionRules in $positionDirections {
-
     @each $factorNamespace, $factor in $factors {
-
       // Add a hyphen before the namespace if it's not null
       // `xs` = `_lxs`
       // null = `_l`
@@ -54,27 +53,12 @@ $positionFactors: $globalSpacingFactors !default;
       }
 
       .#{$utilityPrefix}#{$directionNamespace}#{$factorNamespace}#{$breakpoint} {
-
         @each $direction in $directionRules {
           #{$direction}: ($factor * $globalSpacing) !important;
         }
-
       }
-
     }
-
   }
-
 }
-
-
-/**
- * A series of spacing helper classes that you can use to give spacing.
- * Use these in your markup:
- *
- * <div class="_rxs">
- *
- * The following will generate spacing helper classes.
- */
 
 @include positionUtility();

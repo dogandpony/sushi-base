@@ -1,6 +1,3 @@
-### Example files
-example.html
-
 ### Built files
 *.css
 *.css.map
@@ -9,7 +6,6 @@ test/*.css
 
 ### Package managers
 node_modules/
-bower_components/
 
 ### Sass cache
 .sass-cache

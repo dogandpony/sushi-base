@@ -1,6 +1,6 @@
 /* ==========================================================================
    SUSHI BASE
-   ========================================================================== */
+ * ========================================================================== */
 
 /**
  * Sushi Base, by @dogandpony
@@ -72,8 +72,8 @@
 
 
 
-// Settings
-// ---------------------------
+/* Settings
+ * --------------------------- */
 
 @import "settings/breakpoints";
 @import "settings/typography";
@@ -81,8 +81,8 @@
 
 
 
-// Tools
-// ---------------------------
+/* Tools
+ * --------------------------- */
 
 @import "tools/clearfix";
 @import "tools/elevation";
@@ -93,8 +93,8 @@
 
 
 
-// Generic
-// ---------------------------
+/* Generic
+ * --------------------------- */
 
 @import "generic/normalize";
 @import "generic/reset";
@@ -105,8 +105,8 @@
 
 
 
-// Elements
-// ---------------------------
+/* Elements
+ * --------------------------- */
 
 @import "elements/headings";
 @import "elements/images";
@@ -114,8 +114,8 @@
 
 
 
-// Objects
-// ---------------------------
+/* Objects
+ * --------------------------- */
 
 @import "objects/wrapper";
 @import "objects/layout";
@@ -133,21 +133,22 @@
 
 
 
-// Components
-// ---------------------------
+/* Components
+ * --------------------------- */
 
 @import "components/button";
 
 
 
-// Utilities
-// ---------------------------
+/* Utilities
+ * --------------------------- */
 
 @import "utilities/align";
 @import "utilities/clearfix";
 @import "utilities/display";
 @import "utilities/elevation";
 @import "utilities/float";
+@import "utilities/flex";
 @import "utilities/overflow";
 @import "utilities/position";
 @import "utilities/spacing";
@@ -158,14 +159,14 @@
 
 
 
-// Responsive classes
-// ---------------------------
+/* Responsive Classes
+ * --------------------------- */
 
 @import "example._responsive";
 
 
 
-// Print utilities
-// ---------------------------
+/* Print Utilities
+ * --------------------------- */
 
 @import "utilities/print";

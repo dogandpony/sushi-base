@@ -1,17 +1,17 @@
-/* =========================================================================
+/* ==========================================================================
  * TYPOGRAPHY SETTINGS
- * ========================================================================= */
+ * ========================================================================== */
 
-// Base typographical styles
-// ---------------------------
+/* Base Typographical Styles
+ * --------------------------- */
 
 $baseFontSize: 16px !default;
 $baseLineHeight: 1.5 !default;
 
 
 
-// Font size variants
-// ---------------------------
+/* Font Size Variants
+ * --------------------------- */
 
 $fontSizes: (
   "hero1": ($baseFontSize * 4), // 64px
@@ -26,19 +26,19 @@ $fontSizes: (
 
 
 
-// Measure widths
-// ---------------------------
+/* Measure Widths
+ * --------------------------- */
 
 $measureWidths: (
   "narrow": 20em, // ~45 characters
-  null: 30em,       // ~66 characters
+  null: 30em,     // ~66 characters
   "wide": 34em,   // ~80 characters
 ) !default;
 
 
 
-// Line-height
-// ---------------------------
+/* Line-height
+ * --------------------------- */
 
 $lineHeights: (
   "solid": 1,
@@ -48,8 +48,8 @@ $lineHeights: (
 
 
 
-// Letter-spacing
-// ---------------------------
+/* Letter-spacing
+ * --------------------------- */
 
 $letterSpacings: (
   "tight": -0.05em,
@@ -61,7 +61,7 @@ $letterSpacings: (
 
 
 /* Accessors
-   ===================================================================== */
+ * ========================================================================== */
 
 @function getFontSize($key) {
   @return map-get($fontSizes, $key);

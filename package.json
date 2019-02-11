@@ -1,11 +1,11 @@
 {
-  "name": "sushi-base",
-  "version": "2.2.0",
-  "description": "Extensible, scalable, Sass-based, OOCSS base structure for CSS projects.",
-  "main": "example.main.scss",
-  "scripts": {
-    "test": "npm run lint && mocha test/run.js",
-    "lint": "./node_modules/.bin/stylelint \"**/*.scss\" --syntax scss"
+  "name" : "sushi-base",
+  "version" : "2.3.0",
+  "description" : "Extensible, scalable, Sass-based, OOCSS base structure for CSS projects.",
+  "main" : "example.main.scss",
+  "scripts" : {
+    "test" : "npm run lint && mocha test/run.js",
+    "lint" : "./node_modules/.bin/stylelint \"**/*.scss\" --syntax scss"
   },
   "repository": {
     "type": "git",

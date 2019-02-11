@@ -22,6 +22,7 @@
       @include wrapperModifiers($breakpoint);
 
       @include displayUtility($breakpoint);
+      @include flexUtility($breakpoint);
       @include overflowUtility($breakpoint);
       @include positionUtility($breakpoint);
       @include spacingUtility($breakpoint);

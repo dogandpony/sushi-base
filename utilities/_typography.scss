@@ -1,25 +1,24 @@
-/* =========================================================================
+/* ==========================================================================
  * TYPOGRAPHY UTILITY
- * ========================================================================= */
+ * ========================================================================== */
 
 
 @mixin typographyUtility($breakpoint: null) {
 
   /* Font Sizes
-     ========================================================================= */
+   * ======================================================================== */
 
   @each $fontSizeName, $fontSize in $fontSizes {
-
     .#{$utilityPrefix}fz#{$utilityValueSeparator}#{$fontSizeName}#{$breakpoint} {
       font-size: getFontSize($fontSizeName) !important;
     }
-
   }
 
 
 
+
   /* Text Align
-     ========================================================================== */
+   * ======================================================================== */
 
   .#{$utilityPrefix}ta#{$utilityValueSeparator}l#{$breakpoint} {
     text-align: left !important;
@@ -37,7 +36,7 @@
 
 
   /* Font Style
-     ========================================================================== */
+   * ======================================================================== */
 
   .#{$utilityPrefix}normal#{$breakpoint} {
     font-style: italic !important;
@@ -52,11 +51,7 @@
 
 
   /* Font Weight
-     ========================================================================== */
-
-  .#{$utilityPrefix}b#{$breakpoint} {
-    font-weight: bold !important;
-  }
+   * ======================================================================== */
 
   .#{$utilityPrefix}fw#{$utilityValueSeparator}1#{$breakpoint} {
     font-weight: 100 !important;
@@ -98,7 +93,7 @@
 
 
   /* Text Transform
-     ========================================================================== */
+   * ======================================================================== */
 
   .#{$utilityPrefix}tt#{$utilityValueSeparator}c#{$breakpoint} {
     text-transform: capitalize !important;
@@ -120,7 +115,7 @@
 
 
   /* Text Decoration
-     ========================================================================== */
+   * ======================================================================== */
 
   .#{$utilityPrefix}td#{$utilityValueSeparator}l#{$breakpoint} {
     text-decoration: line-through !important;
@@ -142,10 +137,9 @@
 
 
   /* Line Height
-     ========================================================================== */
+   * ======================================================================== */
 
   @each $lineHeightVariant, $lineHeightSize in $lineHeights {
-
     // line-height values are always preceded by a hyphen
     @if ($lineHeightVariant != null) {
       $lineHeightVariant: "-#{$lineHeightVariant}";
@@ -154,16 +148,14 @@
     .#{$utilityPrefix}lh#{$lineHeightVariant}#{$breakpoint} {
       line-height: $lineHeightSize !important;
     }
-
   }
 
 
 
   /* Letter Spacing
-     ========================================================================== */
+   * ======================================================================== */
 
   @each $letterSpacingVariant, $letterSpacingSize in $letterSpacings {
-
     // letter-spacing values are always preceded by a hyphen
     @if ($letterSpacingVariant != null) {
       $letterSpacingVariant: "-#{$letterSpacingVariant}";
@@ -172,14 +164,13 @@
     .#{$utilityPrefix}ls#{$letterSpacingVariant}#{$breakpoint} {
       letter-spacing: $letterSpacingSize !important;
     }
-
   }
 
 
 
 
   /* Truncate
-     ========================================================================== */
+   * ======================================================================== */
 
   // Combine this class with a width to truncate text (or just leave as
   // is to truncate at width of containing element.
@@ -193,22 +184,19 @@
 
 
   /* Measure
-     ========================================================================== */
-
-  /**
+   *
    * Measure refers to the length of a line of text. It is one of the most
    * important aspects of readability.
    *
    * Provide 3 classes for setting measure:
-   *  .measure = line lengths ~66 characters
-   *  .measure-narrow = line lengths ~45 characters
-   *  .measure-wide = line lengths ~80 characters
+   *  ._measure = line lengths ~66 characters
+   *  ._measure-narrow = line lengths ~45 characters
+   *  ._measure-wide = line lengths ~80 characters
    *
    * http://tachyons.io/docs/typography/measure/
-   */
+   * ======================================================================== */
 
   @each $measureVariant, $measureWidth in $measureWidths {
-
     // measure values are always preceded by a hyphen
     @if ($measureVariant != null) {
       $measureVariant: "-#{$measureVariant}";
@@ -217,9 +205,7 @@
     .#{$utilityPrefix}measure#{$measureVariant}#{$breakpoint} {
       max-width: $measureWidth !important;
     }
-
   }
-
 }
 
 @include typographyUtility();
