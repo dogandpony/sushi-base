@@ -1,13 +1,11 @@
-/* =========================================================================
+/* ==========================================================================
  * ALIGNMENT UTILITY
- * ========================================================================= */
+ * ========================================================================== */
 
 @mixin alignUtility($breakpoint: null) {
-
   /**
    * Vertical alignment classes.
    */
-
   .#{$utilityPrefix}va#{$utilityValueSeparator}bl#{$breakpoint} {
     vertical-align: baseline !important;
   }
@@ -36,13 +34,10 @@
   /**
    * Horizontal alignment
    */
-
   .#{$utilityPrefix}center#{$breakpoint} {
     margin-right: auto !important;
     margin-left: auto !important;
   }
-
 }
-
 
 @include alignUtility();

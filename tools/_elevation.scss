@@ -1,6 +1,6 @@
-/* =========================================================================
+/* ==========================================================================
  * ELEVATION TOOLS
- * ========================================================================= */
+ * ========================================================================== */
 
 /**
  * Shadow colors.
@@ -85,7 +85,6 @@ $elevationMaxAnimationLength: 400ms !default;
 */
 
 @function _findBoundingShadowSets($elevation) {
-
   @if $elevation < 0 {
     @warn "Elevation is less than zero";
   }
@@ -102,7 +101,6 @@ $elevationMaxAnimationLength: 400ms !default;
   $upper: nth( $elevationReferenceShadows, length($elevationReferenceShadows));
 
   @return ($lower, $upper);
-
 }
 
 
@@ -112,9 +110,7 @@ $elevationMaxAnimationLength: 400ms !default;
  * outside this range, the return value is a linear extrapolation).
  */
 @function _lerp($x, $a, $b) {
-
   @return $a + $x * ($b - $a);
-
 }
 
 
@@ -125,7 +121,6 @@ $elevationMaxAnimationLength: 400ms !default;
  * a linear extrapolation).
  */
 @function _lerpShadow($x, $shadow1, $shadow2) {
-
   // Round all parameters, as shadow definitions do not support subpixels
   $newX: round(_lerp($x, nth($shadow1, 1), nth($shadow2, 1))) + 0px;
   $newY: round(_lerp($x, nth($shadow1, 2), nth($shadow2, 2))) + 0px;
@@ -134,16 +129,13 @@ $elevationMaxAnimationLength: 400ms !default;
   $newColor: nth($shadow1, 5); // No need to lerp the shadow color
 
   @return ($newX $newY $newBlur $newSpread $newColor);
-
 }
 
 
 /**
  * Calculates the set of shadows at a given elevation.
  */
-
 @function _calculateShadowSetAtDepth($elevation) {
-
   $bounds: _findBoundingShadowSets($elevation);
   $min: nth($bounds, 1);
   $max: nth($bounds, 2);
@@ -156,7 +148,6 @@ $elevationMaxAnimationLength: 400ms !default;
   }
 
   @return $elevationShadows;
-
 }
 
 
@@ -164,7 +155,6 @@ $elevationMaxAnimationLength: 400ms !default;
  * Generates the transition for a change between 2 elevations
  * The larger the elevation change the longer the animation takes
  */
-
 @mixin _elevationTransition($elevation-change: 6, $easing: cubic-bezier(.4, 0, .2, 1)) {
   $duration: _lerp($elevation-change / 24, $elevationMinAnimationLength, $elevationMaxAnimationLength);
   transition: box-shadow $duration $easing;
@@ -178,7 +168,6 @@ $elevationMaxAnimationLength: 400ms !default;
  * and another set that is activated by the state
  * tested with :hover and :active
  */
-
 @mixin elevation($elevation1, $elevation2: null, $state: null) {
   @if $elevation1 == none {
     box-shadow: none !important;

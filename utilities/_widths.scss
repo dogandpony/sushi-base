@@ -1,8 +1,6 @@
 /* =========================================================================
  * WIDTHS
- * ========================================================================= */
-
-/**
+ *
  * Sushi generates a series of utility classes that give a fluid width to
  * whichever element they’re applied, e.g.:
  *
@@ -25,9 +23,7 @@
  *
  * This is useful for making very granular changes to the rendered order of
  * items in a layout.
- *
- * N.B. This option is turned off by default.
- */
+ * ========================================================================= */
 
 // Which fractions would you like in your grid system(s)? By default, Sushi
 // provides you fractions of one whole, halves, thirds, quarters and fifths,
@@ -57,25 +53,19 @@ $widthDelimiter: \/ !default;
 
 // A mixin to spit out our width classes.
 @mixin widthsUtility($breakpoint: null) {
-
   // Loop through the number of columns for each denominator of our fractions.
   @each $denominator in $widthFractions {
-
     // Begin creating a numerator for our fraction up until we hit the
     // denominator.
     @for $numerator from 1 through $denominator {
-
       @if ($numerator != $denominator) {
-
         // Build a class in the format `._3/4[@<breakpoint>]`.
         .#{$utilityPrefix}#{$numerator}#{$widthDelimiter}#{$denominator}#{$breakpoint} {
           width: ($numerator / $denominator) * 100% !important;
         }
-
       }
 
       @if ($widthEnableOffsets == true) {
-
         // Build a class in the format `._push1/2[@<breakpoint>]`.
         .#{$utilityPrefix}push#{$utilityValueSeparator}#{$numerator}#{$widthDelimiter}#{$denominator}#{$breakpoint} {
           position: relative !important;
@@ -87,11 +77,8 @@ $widthDelimiter: \/ !default;
           position: relative !important;
           margin-right: ($numerator / $denominator) * 100% !important;
         }
-
       }
-
     }
-
   }
 
   .#{$utilityPrefix}1#{$widthDelimiter}1#{$breakpoint} {
@@ -103,7 +90,6 @@ $widthDelimiter: \/ !default;
   }
 
   @if ($widthEnableOffsets == true) {
-
     .#{$utilityPrefix}push#{$utilityValueSeparator}0#{$breakpoint} {
       position: relative;
       margin-left: 0 !important;
@@ -113,21 +99,7 @@ $widthDelimiter: \/ !default;
       position: relative;
       margin-right: 0 !important;
     }
-
   }
-
 }
-
-
-/**
- * A series of width helper classes that you can use to size things like grid
- * systems. Classes take a fraction-like format (e.g. `._2/3`). Use these in
- * your markup:
- *
- * <div class="_7/12">
- *
- * The following will generate widths helper classes based on the fractions
- * defined in the `$width-fractions` list.
- */
 
 @include widthsUtility();

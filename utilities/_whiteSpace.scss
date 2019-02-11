@@ -1,9 +1,8 @@
-/* =========================================================================
+/* ==========================================================================
  * WHITE SPACE UTILITY
- * ========================================================================= */
+ * ========================================================================== */
 
 @mixin whiteSpaceUtility($breakpoint: null) {
-
   .#{$utilityPrefix}ws#{$utilityValueSeparator}n#{$breakpoint} {
     white-space: normal !important;
   }
@@ -23,8 +22,6 @@
   .#{$utilityPrefix}ws#{$utilityValueSeparator}pl#{$breakpoint} {
     white-space: pre-line !important;
   }
-
 }
-
 
 @include whiteSpaceUtility();

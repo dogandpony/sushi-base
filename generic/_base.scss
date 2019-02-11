@@ -1,8 +1,6 @@
-/* =========================================================================
+/* ==========================================================================
  * BASE
- * ========================================================================= */
-
-/**
+ *
  * Simple page-level setup.
  *
  * 1. Set sitewide rem value to approximately 10px given that most browsers
@@ -12,7 +10,7 @@
  *    navigating between pages that do/do not have enough content to produce
  *    scrollbars naturally.
  * 4. Ensure the page always fills at least the entire height of the viewport.
- */
+ * ========================================================================== */
 
 html {
   font-size: ($baseFontSize / 16px) * 1em; /* [1] */
